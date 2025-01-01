@@ -87,6 +87,11 @@ p {
     padding: 2px;
 }
 
+.section-line {
+    display: block;
+    margin-bottom: 15px;
+}
+
 .card {
     background-color: hsla(180, 100%, 89%, 0.2);
     border-radius: 20px;
