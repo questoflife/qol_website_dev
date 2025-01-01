@@ -114,7 +114,6 @@ p {
 }
 
 .card-text-highlight {
-    color: greenyellow;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     display: inline-block;
