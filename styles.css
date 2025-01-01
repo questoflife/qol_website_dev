@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: 80%;
     color: rgba(255, 255, 255, 0.947);
-    font-family: "Montserrat", serif;
+    font-family: "Source Sans 3", serif;
     margin: 0;
 }
 
@@ -24,9 +24,15 @@ body::before {
     /* Ensure it doesn’t interfere with interactions */
 }
 
-h1,
+h1 {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 h2 {
-    font-family: "Barlow Condensed", serif;
+    font-family: "Permanent Marker", serif;
+    font-weight: 100;
 }
 
 p {
@@ -68,9 +74,9 @@ p {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     display: inline-block;
-    font-family: "Barlow Condensed", serif;
+    font-family: "Permanent Marker", serif;
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 100;    
     margin-bottom: 40px;
     padding: 2px 10px;
 }
@@ -120,7 +126,7 @@ p {
 
 .highlight-button {
     background-color: #ff9d00;
-    font-family: "Montserrat", serif;
+    font-family: "Source Sans 3", serif;
     font-size: 3rem;
     font-weight: 900;
     padding: 20px 50px;
@@ -133,7 +139,8 @@ p {
 
 .highlight-button:active {
     background-color: white;
-    transform: translateY(4px);}
+    transform: translateY(4px);
+}
 
 .button-container {
     text-align: center;
