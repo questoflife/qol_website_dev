@@ -87,6 +87,11 @@ p {
     padding: 2px;
 }
 
+.section-text-block {
+    margin-top: 50px;
+    font-size: 1.2rem;
+}
+
 .section-line {
     display: block;
     margin-bottom: 15px;
