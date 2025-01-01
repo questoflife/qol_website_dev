@@ -159,6 +159,22 @@ p {
     margin-top: 64px;
 }
 
+.testimonial {
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.highlight-text {
+    color: greenyellow;
+    font-weight: 900;
+}
+
+.testimonial-author {
+    text-align: right;
+    padding-right: 80px;
+    padding-top: 10px;
+}
+
 /* Footer */
 .footer {
     align-content: end;
