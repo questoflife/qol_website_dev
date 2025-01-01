@@ -117,3 +117,16 @@ p {
     font-weight: 600;
     padding: 2px;
 }
+
+.highlight-button {
+    background-color: greenyellow;
+    font-family: "Montserrat", serif;
+    font-size: 3rem;
+    font-weight: 900;
+    padding: 20px 50px;
+}
+
+.button-container {
+    text-align: center;
+    padding: 48px;
+}
