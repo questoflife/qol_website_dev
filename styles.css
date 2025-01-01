@@ -146,13 +146,34 @@ p {
 }
 
 
-
-
-
+/* Footer */
 .footer {
+    align-content: center;
     background-color: greenyellow;
     color: black;
     margin-top: 64px;
     min-height: 128px;
     padding: 20px 50px;
+}
+
+.social-links {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn-social {
+    color: black;
+}
+
+.btn-social:hover {
+    color: rgb(60, 60, 60);
+}
+
+.btn-social:active {
+    color: #ff9d00;
+}
+
+.copyright {
+    text-align: center;
 }
