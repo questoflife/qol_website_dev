@@ -68,6 +68,7 @@ p {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     display: inline-block;
+    font-family: "Barlow Condensed", serif;
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 40px;
