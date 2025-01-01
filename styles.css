@@ -84,7 +84,7 @@ p {
     border-radius: 15px;
     display: inline-block;
     font-size: 1.5rem;
-    padding: 2px;
+    padding: 2px 10px;
 }
 
 .section-text-block {
