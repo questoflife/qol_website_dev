@@ -145,15 +145,18 @@ p {
     margin: 0;
 }
 
+.disclaimer {
+    margin-top: 64px;
+}
 
 /* Footer */
 .footer {
-    align-content: center;
+    align-content: end;
     background-color: greenyellow;
     color: black;
     margin-top: 64px;
     min-height: 128px;
-    padding: 20px 50px;
+    padding: 30px 50px;
 }
 
 .social-links {
