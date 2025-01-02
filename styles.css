@@ -21,6 +21,22 @@ body::before {
     pointer-events: none; /* Avoid interaction issues */
 }
 
+.text-link:link {
+    color: #ff9d00;
+}
+
+.text-link:visited {
+    color: green;
+}
+
+.text-link:hover {
+    color: greenyellow;
+}
+
+.text-link:active {
+    color: #ff9d00;
+}
+
 h1 {
     font-family: "Bebas Neue", serif;
     font-weight: 400;
@@ -200,7 +216,7 @@ p {
 }
 
 .btn-social:active {
-    color: #ff9d00;
+    color: green;
 }
 
 .copyright {
