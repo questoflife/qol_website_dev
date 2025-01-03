@@ -96,7 +96,7 @@ p {
     left: 0;
     width: 100%; /* Make it span the full width */
     height: 10%; /* Match the height of the nav bar */
-    background-color: rgb(255 171 0);
+    background-color: greenyellow;
     z-index: 0; /* Ensure it is behind the buttons */
 }
 
