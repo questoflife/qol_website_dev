@@ -1,10 +1,12 @@
 :root {
     --max-page-width: 1024px;
     --color-green: rgb(173, 255, 47);
+    --color-darkgreen: rgb(0, 128, 0);
     --color-orange: rgb(255 171 0);
     --color-yellow: rgb(242, 255, 0);
     --color-dark: rgb(21, 21, 21);
     --color-light: rgb(245, 245, 245);
+    --color-text-highlight: rgba(0, 0, 0, 0.15);
 
 }
 
@@ -41,7 +43,7 @@ body::before {
 }
 
 .text-link:visited {
-    color: green;
+    color: var(--color-darkgreen);
 }
 
 .text-link:hover {
@@ -119,7 +121,7 @@ p {
 }
 
 .menu-button:hover {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--color-text-highlight);
     color: var(--color-dark);
 }
 
@@ -197,9 +199,9 @@ p {
 
 .benefit-item {
     align-content: center;
-    background-color: greenyellow;
+    background-color: var(--color-green);
     border-radius: 15px;
-    color: black;
+    color: var(--color-dark);
     padding: 20px 20px 40px 20px;
 }
 
@@ -208,7 +210,7 @@ p {
 }
 
 .card-text-highlight {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--color-text-highlight);
     border-radius: 15px;
     display: inline-block;
     margin: 64px 0 0 0;
@@ -232,7 +234,7 @@ p {
 }
 
 .highlight-text {
-    color: greenyellow;
+    color: var(--color-green);
     font-weight: 900;
 }
 
@@ -245,8 +247,8 @@ p {
 /* Footer */
 .footer {
     align-content: end;
-    background-color: greenyellow;
-    color: black;
+    background-color: var(--color-green);
+    color: var(--color-dark);
     margin-top: 64px;
     min-height: 128px;
     padding: 30px 50px;
@@ -259,7 +261,7 @@ p {
 }
 
 .btn-social {
-    color: black;
+    color: var(--color-dark);
 }
 
 .btn-social:hover {
@@ -267,7 +269,7 @@ p {
 }
 
 .btn-social:active {
-    color: green;
+    color: var(--color-darkgreen);
 }
 
 .copyright {
