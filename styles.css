@@ -8,6 +8,7 @@
     --color-dark: rgb(21, 21, 21);
     --color-light: rgb(245, 245, 245);
     --color-text-highlight: rgba(0, 0, 0, 0.15);
+    --corner-radius: 20px;
 
 }
 
@@ -149,6 +150,7 @@ p {
 }
 
 .section {
+    display: flex;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
@@ -158,7 +160,7 @@ p {
 
 .section-header {
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    border-radius: var(--corner-radius);
     display: inline-block;
     font-family: "Bebas Neue", serif;
     font-size: 3rem;
@@ -169,7 +171,7 @@ p {
 
 .section-text {
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    border-radius: var(--corner-radius);
     display: inline-block;
     font-size: 1.5rem;
     padding: 2px 10px;
@@ -187,7 +189,7 @@ p {
 
 .card {
     background-color: hsla(180, 100%, 89%, 0.2);
-    border-radius: 20px;
+    border-radius: var(--corner-radius);
     padding: 50px;
 }
 
@@ -200,7 +202,7 @@ p {
 .benefit-item {
     align-content: center;
     background-color: var(--color-green);
-    border-radius: 15px;
+    border-radius: var(--corner-radius);
     color: var(--color-dark);
     padding: 20px 20px 40px 20px;
 }
@@ -211,7 +213,7 @@ p {
 
 .card-text-highlight {
     background-color: var(--color-text-highlight);
-    border-radius: 15px;
+    border-radius: var(--corner-radius);
     display: inline-block;
     margin: 64px 0 0 0;
     font-size: 1.5rem;
@@ -231,6 +233,10 @@ p {
 .testimonial {
     font-size: 1.5rem;
     font-style: italic;
+}
+
+.coach-card {
+    border-radius: var(--corner-radius);
 }
 
 .highlight-text {
