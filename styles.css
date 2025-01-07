@@ -1,5 +1,6 @@
 :root {
     --max-page-width: 1024px;
+    --min-page-margin: 24px;
     --color-green: rgb(173, 255, 47);
     --color-darkgreen: rgb(0, 128, 0);
     --color-orange: rgb(255 171 0);
@@ -69,10 +70,6 @@ p {
     margin: 0;
 }
 
-.content-column {
-    max-width: var(--max-page-width);
-}
-
 .header-panel {
     align-content: center;
     background-color: rgba(255, 255, 255, 0.1);
@@ -94,6 +91,7 @@ p {
 
 #navbar {
     background-color: var(--color-green);
+    padding: 0 var(--min-page-margin);
     position: sticky;
     top: 0;
 }
@@ -101,7 +99,6 @@ p {
 #navbar-content {
     display: flex;
     justify-content: space-between;
-    margin: auto;
     max-width: var(--max-page-width);
 }
 
@@ -149,11 +146,11 @@ p {
 }
 
 .section {
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
+    margin: 0 var(--min-page-margin);
+    max-width: var(--max-page-width);
 }
 
 .section-header {
