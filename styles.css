@@ -90,6 +90,7 @@ p {
 }
 
 .navbar-block {
+    align-items: center;
     display: flex;
     flex-wrap: nowrap;
 }
