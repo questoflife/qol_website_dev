@@ -326,6 +326,36 @@ p {
 }
 
 
+#service-cards {
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.service-card {
+    background-color: var(--color-green);
+    color: var(--color-dark);
+    width: 30%;
+}
+
+.service-card > hr {
+    background-color: var(--color-dark);
+}
+
+.service-card > .fa {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.service-card-title {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
 /* Footer */
 .footer {
     align-content: end;
