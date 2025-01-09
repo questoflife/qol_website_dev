@@ -105,6 +105,7 @@ p {
 #navbar-content {
     background-color: var(--color-green);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: var(--max-page-width);
     width: var(--page-content-width);
