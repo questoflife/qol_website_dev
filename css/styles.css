@@ -35,12 +35,6 @@ body::before {
     pointer-events: none;
 }
 
-.page-content {
-    position: relative;
-    min-height: 100%;
-    padding-bottom: 256px;  /* Need padding as not to overlap footer */
-}
-
 hr {
     border: none;
     height: 2px;
@@ -431,14 +425,11 @@ p {
 
 /* Footer */
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     align-content: end;
     background-color: var(--color-green);
     color: var(--color-dark);
     margin-top: 64px;
-    height: 128px;
+    min-height: 128px;
     padding: 30px 50px;
 }
 
