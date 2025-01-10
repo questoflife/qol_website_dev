@@ -35,6 +35,15 @@ body::before {
     pointer-events: none;
 }
 
+.page-content {
+    min-height: 100vh;
+    position: relative;
+}
+
+.page-body {
+    padding-bottom: 256px;
+}
+
 hr {
     border: none;
     height: 2px;
@@ -425,12 +434,13 @@ p {
 
 /* Footer */
 .footer {
-    align-content: end;
     background-color: var(--color-green);
+    bottom: 0;
     color: var(--color-dark);
-    margin-top: 64px;
-    min-height: 128px;
-    padding: 30px 50px;
+    height: 128px;
+    padding: 30px 0;
+    position: absolute;
+    width: 100%;
 }
 
 .social-links {
