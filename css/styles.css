@@ -8,7 +8,7 @@
     --color-dark: rgb(21, 21, 21);
     --color-light: rgb(245, 245, 245);
     --color-text-highlight: rgba(0, 0, 0, 0.15);
-    --corner-radius: 20px;
+    --corner-radius: 0px;
     --default-gap-between-items: 64px;
 }
 
