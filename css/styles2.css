@@ -1,10 +1,11 @@
 :root {
     --color-dark: #002235;
+    --color-dark-transparent: rgba(0, 34, 53, 0.4);
     --color-gecko: #8FDC3E;
-    --color-gecko-transparent: rgba(143, 220, 62, 0.3);
+    --color-gecko-transparent: rgba(143, 220, 62, 0.4);
     --color-gray: #6B6B6B;
     --color-light: #D1D1D1;
-    --color-light-transparent: rgba(209, 209, 209, 0.3);
+    --color-light-transparent: rgba(209, 209, 209, 0.4);
     --color-accent-1: #A3E4B2;
     --color-accent-2: #1E3A5F;
     --color-neutral: rgba(79, 79, 79, 0.1);
@@ -18,7 +19,8 @@ body {
     background-color: var(--color-dark);
     box-sizing: border-box;
     margin: 0;
-    font-family: "ABeeZee", serif;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
 }
 
 body::before {
@@ -56,6 +58,13 @@ img {
     margin: 0;
 }
 
+.highlight-text {
+    color: var(--color-highlight);
+}
+
+.highlight-text-gecko {
+    color: var(--color-gecko);
+}
 /******************************************************************************************/
 /* BUTTONS */
 /******************************************************************************************/
@@ -80,6 +89,10 @@ img {
 .cta-button:active {
     background-color: var(--color-accent-2);
     color: var(--color-highlight);
+}
+
+.card-content > .cta-button {
+    padding: 10px 0;
 }
 
 .header-button {
@@ -270,6 +283,33 @@ img {
     width: 100%;
 }
 
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.card-title {
+    background-color: var(--color-dark-transparent);
+    font-family: "Bebas Neue", serif;
+    font-size: 3rem;
+    padding: 4px 12px 0 12px;
+}
+
+.title-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-content-block > p {
+    background-color: var(--color-dark-transparent);
+    font-size: 1.5rem;
+    padding: 6px;
+}
+
 .border-card {
     border-color: var(--color-gecko);
 }
@@ -286,9 +326,8 @@ img {
     padding-top: 0;
 }
 
-.card-title {
-    font-family: "Bebas Neue", serif;
-    font-size: 2rem;
+.centred-card {
+    text-align: center;
 }
 
 /******************************************************************************************/
