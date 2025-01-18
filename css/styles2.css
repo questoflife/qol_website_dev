@@ -2,6 +2,7 @@
     --color-dark: #002235;
     --color-dark-transparent: rgba(0, 34, 53, 0.4);
     --color-gecko: #8FDC3E;
+    --color-gecko: #3ec3dc;
     --color-gecko-transparent: rgba(143, 220, 62, 0.4);
     --color-gray: #6B6B6B;
     --color-light: #D1D1D1;
@@ -33,9 +34,9 @@ body::before {
     background: var(--color-dark);
     background: radial-gradient(circle farthest-corner at top left, rgba(8, 22, 40, 1) 0%, rgba(8, 22, 40, 0) 50%),
         radial-gradient(ellipse at center, rgba(30, 58, 95, 1) 0%, rgba(30, 58, 95, 0) 60%),
-        radial-gradient(circle at bottom left, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%),
-        radial-gradient(circle at bottom center, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%),
-        radial-gradient(circle at bottom right, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%);
+        radial-gradient(circle at bottom left, var(--color-gecko) 0%, rgba(143, 220, 62, 0) 60%),
+        radial-gradient(circle at bottom center, var(--color-gecko) 0%, rgba(143, 220, 62, 0) 60%),
+        radial-gradient(circle at bottom right, var(--color-gecko) 0%, rgba(143, 220, 62, 0) 60%);
 
     z-index: -1;
     pointer-events: none;
@@ -82,8 +83,8 @@ img {
 }
 
 .cta-button:hover {
-    background-color: var(--color-dark);
-    color: var(--color-highlight);
+    background-color: var(--color-gecko);
+    color: var(--color-dark);
 }
 
 .cta-button:active {
@@ -313,7 +314,7 @@ img {
 }
 
 .border-card {
-    border-color: var(--color-gecko);
+    border-color: var(--color-light);
 }
 
 .bg-card {
