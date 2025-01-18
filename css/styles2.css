@@ -366,17 +366,16 @@ img {
 }
 
 .benefit-item-even {
-    border-color: var(--color-highlight);
-    color: var(--color-dark);
-}
-
-.benefit-item-odd {
     border-color: var(--color-gecko);
     color: var(--color-dark);
 }
 
+.benefit-item-odd {
+    border-color: var(--color-highlight);
+    color: var(--color-dark);
+}
+
 .benefit-label {
-    min-height: 1rem;
     font-size: 1.2rem;
 }
 
@@ -400,11 +399,10 @@ img {
         flex-direction: column;
         padding-top: 40px;
         padding-bottom: 20px;
-        width: 150px;
     }
 
     .benefit-label {
-        min-height: 2rem;
+        font-size: 1rem;
     }
 }
 
