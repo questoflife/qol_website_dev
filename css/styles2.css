@@ -26,99 +26,23 @@ body::before {
     width: 100%;
     height: 100%;
     background: var(--color-dark);
-    background: radial-gradient(circle farthest-corner at top left, rgba(8, 22, 40, 1) 0%, rgba(8, 22, 40, 0) 50%), 
-    radial-gradient(ellipse at center, rgba(30, 58, 95, 1) 0%, rgba(30, 58, 95, 0) 60%), 
-    radial-gradient(circle at bottom center, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%);
-
-        z-index: -1;
+    background: radial-gradient(circle farthest-corner at top left, rgba(8, 22, 40, 1) 0%, rgba(8, 22, 40, 0) 50%),
+        radial-gradient(ellipse at center, rgba(30, 58, 95, 1) 0%, rgba(30, 58, 95, 0) 60%),
+        radial-gradient(circle at bottom center, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%);
+    z-index: -1;
     pointer-events: none;
 }
 
+a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
 
 /* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
-.page-content { 
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.page-content {
     height: 100%;
     width: 100%;
     margin: 0;
-}
-
-/************************************ PAGE STRUCTURE ******************************************************/
-.page-header {
-    background-color: aliceblue;
-    padding: 10px 0 10px 0;
-    border-bottom: var(--color-dark);
-    border-style: solid;
-    border-width: 0 0 4px 0;
-}
-
-/* Everything between the header and footer */
-.page-body {
-    flex-grow: 1; /* Fill available space between header and footer */
-}
-
-.page-footer {
-    bottom: 0;
-    background-color: var(--color-dark);
-    padding: 40px 0 20px 0;
-    position: fixed;
-    width: 100%;
-}
-
-.content-column {
-    width: 80%;
-    height: 100%;
-    margin: auto;
-}
-
-/************************************ HEADER ******************************************************/
-#header-top-row {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-#header-company-branding-block {
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin-right: 2%;
-}
-
-#header-company-logo {
-    height: 3rem;
-    width: 3rem;
-}
-
-#header-company-name {
-    font-family: "Bebas Neue", serif;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 400;
-    text-wrap: nowrap;
-    padding-top: 4px;
-}
-
-#header-menu-buttons {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin-top: 19px;
-}
-
-#header-space-filler {
-    flex-grow: 1;
-}
-
-/************************************ FOOTER ******************************************************/
-.copyright-notice {
-    text-align: center;
-    color: var(--color-light);
 }
 
 /************************************ BUTTONS ******************************************************/
@@ -149,24 +73,190 @@ body::before {
     align-self: center;
     color: var(--color-dark);
     font-family: "Bebas Neue", serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     height: auto;
-    padding: 10px 20px;
-    text-decoration: none;
-}
-
-.menu-button {
-    align-self: center;
-    color: var(--color-dark);
-    font-family: "Bebas Neue", serif;
-    font-size: 1.5rem;
-    height: auto;
-    padding: 0px 10px;
+    padding: 0px 10px 0px 10px;
     text-decoration: none;
     text-wrap: nowrap;
+    padding: 2px 5px;
 }
 
 .menu-button:hover {
     background-color: var(--color-neutral);
-    padding-top: 2px;
 }
+
+/************************************ PAGE STRUCTURE ******************************************************/
+.page-header {
+    background-color: aliceblue;
+    padding: 10px 0 10px 0;
+    border-bottom: var(--color-dark);
+    border-style: solid;
+    border-width: 0 0 4px 0;
+}
+
+/* Everything between the header and footer */
+.page-body {
+    flex-grow: 1;
+    /* Fill available space between header and footer */
+}
+
+.page-footer {
+    bottom: 0;
+    background-color: var(--color-dark);
+    padding: 40px 0 20px 0;
+    position: fixed;
+    width: 100%;
+}
+
+.content-column {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+/************************************ HEADER ******************************************************/
+#header-navbar {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+/* Left Branding Block (Logo + Name) */
+#header-company-branding-block {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: 2%;
+}
+
+#header-company-logo {
+    height: 3rem;
+    width: 3rem;
+    padding-left: 20px;
+}
+
+#header-company-name {
+    font-family: "Bebas Neue", serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    text-wrap: nowrap;
+    padding-top: 4px;
+}
+
+#header-company-branding-and-hamburger {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Menu Buttons */
+#header-menu-buttons {
+    display: none;
+    flex-wrap: nowrap;
+}
+
+/* Space Filler */
+#header-space-filler {
+    display: none;
+    flex-grow: 1;
+}
+
+/* Join Community Button */
+#navbar-join-community-button {
+    display: none;
+}
+
+/* Hamburger Menu */
+.navbar-hamburger {
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    padding: 0px 10px 0 10px;
+    margin-right: 20px;
+}
+.navbar-hamburger:hover {
+    background-color: var(--color-neutral);
+}
+
+#navbar-hamburger-open {
+    display: none;
+}
+
+
+/* When the hamburger button is clicked, i.e. menu open */
+.navbar.responsive {
+    flex-direction: column;
+}
+
+.navbar.responsive #header-menu-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar.responsive #header-menu-buttons > .menu-button {
+    box-sizing: border-box;
+    padding-left: 80px;
+    text-align: left;
+    font-size: 3rem;
+    width: 100%;
+}
+
+.navbar.responsive #navbar-hamburger-open {
+    display: flex;
+}
+
+.navbar.responsive #navbar-hamburger-closed {
+    display: none;
+}
+
+.navbar-responsive #navbar-join-community-button {
+    display: flex;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+    .navbar-hamburger {
+        display: none;
+    }
+
+    #header-menu-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-left: 2%;
+        margin-top: 15px;
+    }
+
+    #header-space-filler {
+        display: block;
+    }
+
+    #navbar-join-community-button {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.5rem;
+        margin-right: 20px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/************************************ FOOTER ******************************************************/
+.copyright-notice {
+    text-align: center;
+    color: var(--color-light);
+}
+

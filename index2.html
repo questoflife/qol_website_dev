@@ -10,54 +10,69 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Bebas+Neue&family=Permanent+Marker&display=swap"
-        rel="stylesheet"> 
+        rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/07f3e10377.js" crossorigin="anonymous"></script>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles2.css">
+
 </head>
 
 <body>
     <div class="page-content">
         <div class="page-header">
-            <div id="header-top-row">
-                <div id="header-company-branding-block">
-                    <img id="header-company-logo" src="images/gecko_big_circle.png"
-                        alt="Quest of Life logo - a gecko crawling around a crescent moon">
-                    <div id="header-company-name">Quest of Life</div>
+            <div id="header-navbar" class="navbar">
+                <div id="header-company-branding-and-hamburger">
+                    <a id="header-company-branding-block" href="index.html">
+                        <img id="header-company-logo" src="images/gecko_big_circle.png"
+                            alt="Quest of Life logo - a gecko crawling around a crescent moon">
+                        <div id="header-company-name">Quest of Life</div>
+                    </a>
+                    <a id="navbar-hamburger-open" href="javascript:void(0);" class="navbar-hamburger"
+                        onclick="handleResponsiveNavbar()">
+                        <i class="fa fa-bars"></i>
+                    </a>
                 </div>
-
                 <div id="header-menu-buttons">
-                    <a class="menu-button" href="index.html">Home</a>
                     <a class="menu-button" href="about_us.html">About Us</a>
                     <a class="menu-button" href="coaching.html">Coaching</a>
                     <a class="menu-button" href="training.html">Training</a>
+                    <a class="menu-button" href="training.html">Support Us</a>
+
                 </div>
 
                 <div id="header-space-filler"></div>
 
-                <a class="cta-button header-button" href="https://discord.gg/m9hVVajQU3" target="_blank">
-                    <i class="fa-brands fa-discord"></i> Join the Community
+                <a id="navbar-join-community-button" class="cta-button header-button"
+                    href="https://discord.gg/m9hVVajQU3" target="_blank">
+                    <i class="fa-brands fa-discord"></i> Join Us
+                </a>
+
+                <a id="navbar-hamburger-closed" href="javascript:void(0);" class="navbar-hamburger"
+                    onclick="handleResponsiveNavbar()">
+                    <i class="fa fa-bars"></i>
                 </a>
             </div>
 
-        </div>
+            <div class="page-body">
+                <div class="content-column">
 
-        <div class="page-body">
-            <div class="content-column">
-
-            </div>
-        </div>
-
-        <div class="page-footer">
-            <div class="content-column">
-                <!-- Copyright -->
-                <div class="copyright-notice">
-                    Copyright © 2025 Quest of Life CIC. All rights reserved.
                 </div>
-                <!-- Copyright -->
+            </div>
+
+            <div class="page-footer">
+                <div class="content-column">
+
+                    <!-- Copyright -->
+                    <div class="copyright-notice">
+                        Copyright © 2025 Quest of Life CIC. All rights reserved.
+                    </div>
+                    <!-- Copyright -->
+                </div>
             </div>
         </div>
-    </div>
+
+        <!-- Javascript -->
+        <script type="text/javascript" src="js/navbar.js"></script>
 </body>
