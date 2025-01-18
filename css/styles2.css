@@ -155,6 +155,7 @@ img {
     flex-direction: column;
     gap: 60px;
     min-width: 600px;
+    max-width: 1024px;
     width: 80%;
     margin: auto
 }
@@ -313,7 +314,6 @@ img {
 
 .card-content-block > p {
     background-color: var(--color-dark-transparent);
-    font-size: 1.2rem;
     padding: 6px;
 }
 
@@ -339,13 +339,24 @@ img {
 
 /* Card Grid */
 .benefit-grid {
+    align-items: stretch;
     background-color: var(--color-light-transparent);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding: 20px;
-    justify-content: center;
+    display: grid;
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
+}
 
+.benefit-grid > * {
+    padding: 1rem;
+}
+
+@media (min-width:768px) {
+    .benefit-grid {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .benefit-item {
@@ -361,7 +372,7 @@ img {
     text-wrap: wrap;
     width: 150px;
     min-height: 80px;
-    padding: 35px 15px;
+    padding: 35px 15px 25px 15px;
 }
 
 .benefit-item-even {
@@ -373,9 +384,20 @@ img {
 .benefit-item-odd {
     border-color: var(--color-gecko);
     color: var(--color-dark);
-
 }
 
+.benefit-label {
+    min-height: 2rem;
+    font-size: 1rem;
+}
+
+.small-card-text {
+    font-size: 1rem;
+}
+
+.medium-card-text {
+    font-size: 2rem;
+}
 
 /******************************************************************************************/
 /* FOOTER */
