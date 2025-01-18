@@ -1,8 +1,10 @@
 :root {
     --color-dark: #002235;
     --color-gecko: #8FDC3E;
+    --color-gecko-transparent: rgba(143, 220, 62, 0.3);
     --color-gray: #6B6B6B;
     --color-light: #D1D1D1;
+    --color-light-transparent: rgba(209, 209, 209, 0.3);
     --color-accent-1: #A3E4B2;
     --color-accent-2: #1E3A5F;
     --color-neutral: rgba(79, 79, 79, 0.1);
@@ -14,6 +16,7 @@
 
 body {
     background-color: var(--color-dark);
+    box-sizing: border-box;
     margin: 0;
     font-family: "ABeeZee", serif;
 }
@@ -43,12 +46,16 @@ img {
 }
 /* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
 .page-content {
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     width: 100%;
     margin: 0;
 }
 
-/************************************ BUTTONS ******************************************************/
+/******************************************************************************************/
+/* BUTTONS */
+/******************************************************************************************/
 .cta-button {
     display: flex;
     align-items: center;
@@ -100,7 +107,9 @@ img {
     justify-content: center;
 }
 
-/************************************ PAGE STRUCTURE ******************************************************/
+/******************************************************************************************/
+/* PAGE STRUCTURE */
+/******************************************************************************************/
 .page-header {
     background-color: aliceblue;
     border-bottom: var(--color-dark);
@@ -111,25 +120,27 @@ img {
 
 /* Everything between the header and footer */
 .page-body {
-    flex-grow: 1;
-    /* Fill available space between header and footer */
+    flex-grow: 1; /* Fill available space between header and footer */
+    padding: 30px 0;
 }
 
 .page-footer {
-    bottom: 0;
     background-color: var(--color-dark);
     padding: 40px 0 20px 0;
-    position: fixed;
     width: 100%;
 }
 
-.content-column {
+.body-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     width: 80%;
-    height: 100%;
-    margin: auto;
+    margin: auto
 }
 
-/************************************ HEADER ******************************************************/
+/******************************************************************************************/
+/* HEADER */
+/******************************************************************************************/
 #header-navbar {
     display: flex;
     gap: 5px;
@@ -243,7 +254,43 @@ img {
     width: 100%;
 }
 
-/************************************ FOOTER ******************************************************/
+/******************************************************************************************/
+/* BODY */
+/******************************************************************************************/
+
+.section {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 3px;
+    color:var(--color-light);
+    padding: 20px;
+    width: 100%;
+}
+
+.border-card {
+    border-color: var(--color-gecko);
+}
+
+.bg-card {
+    background-color: var(--color-light-transparent);
+    border-color: transparent;
+}
+
+.clear-card {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.card-title {
+    font-family: "Bebas Neue", serif;
+    font-size: 2rem;
+}
+
+/******************************************************************************************/
+/* FOOTER */
+/******************************************************************************************/
 #footer-columns {
     box-sizing: border-box;
     display: flex;
