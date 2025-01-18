@@ -31,7 +31,10 @@ body::before {
     background: var(--color-dark);
     background: radial-gradient(circle farthest-corner at top left, rgba(8, 22, 40, 1) 0%, rgba(8, 22, 40, 0) 50%),
         radial-gradient(ellipse at center, rgba(30, 58, 95, 1) 0%, rgba(30, 58, 95, 0) 60%),
-        radial-gradient(circle at bottom center, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%);
+        radial-gradient(circle at bottom left, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%),
+        radial-gradient(circle at bottom center, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%),
+        radial-gradient(circle at bottom right, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%);
+
     z-index: -1;
     pointer-events: none;
 }
