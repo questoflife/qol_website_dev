@@ -1,12 +1,12 @@
 :root {
     --color-dark: #002235;
-    --color-dark-transparent: rgba(0, 34, 53, 0.4);
+    --color-dark-transparent: rgba(0, 34, 53, 0.3);
     --color-gecko: #8FDC3E;
     --color-gecko: #3ec3dc;
-    --color-gecko-transparent: rgba(143, 220, 62, 0.4);
+    --color-gecko-transparent: rgba(143, 220, 62, 0.3);
     --color-gray: #6B6B6B;
     --color-light: #D1D1D1;
-    --color-light-transparent: rgba(209, 209, 209, 0.4);
+    --color-light-transparent: rgba(209, 209, 209, 0.3);
     --color-accent-1: #A3E4B2;
     --color-accent-2: #1E3A5F;
     --color-neutral: rgba(79, 79, 79, 0.1);
