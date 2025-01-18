@@ -121,7 +121,7 @@ img {
 /* Everything between the header and footer */
 .page-body {
     flex-grow: 1; /* Fill available space between header and footer */
-    padding: 30px 0;
+    padding: 70px 0;
 }
 
 .page-footer {
