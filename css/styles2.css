@@ -376,7 +376,7 @@ img {
 }
 
 .benefit-label {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .small-card-text {
@@ -399,10 +399,6 @@ img {
         flex-direction: column;
         padding-top: 40px;
         padding-bottom: 20px;
-    }
-
-    .benefit-label {
-        font-size: 1rem;
     }
 }
 
