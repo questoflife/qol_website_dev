@@ -38,6 +38,9 @@ a {
     color: var(--color-dark);
 }
 
+img {
+    pointer-events: none;
+}
 /* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
 .page-content {
     height: 100%;
@@ -232,11 +235,29 @@ a {
 }
 
 /************************************ FOOTER ******************************************************/
-.copyright-notice {
-    text-align: center;
+.page-footer * {
     color: var(--color-light);
 }
 
+.copyright-notice {
+    text-align: center;
+}
+
+#admin-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#admin-links a {
+    color: var(--color-gecko);
+}
+
+#admin-links a:hover {
+    color: var(--color-highlight);
+}
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /******************************************************************************************/
