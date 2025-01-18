@@ -94,6 +94,7 @@ img {
 
 .card-content > .cta-button {
     padding: 10px 0;
+    font-size: 2.5rem;
 }
 
 .header-button {
@@ -287,6 +288,7 @@ img {
     width: 100%;
 }
 
+/* Cards */
 .card-content {
     display: flex;
     flex-direction: column;
@@ -334,6 +336,43 @@ img {
 .centred-card {
     text-align: center;
 }
+
+/* Card Grid */
+.benefit-grid {
+    background-color: var(--color-light-transparent);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+
+}
+
+.benefit-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    text-wrap: wrap;
+    width: 150px;
+    min-height: 80px;
+    padding: 20px;
+}
+
+.benefit-item-even {
+    background-color: var(--color-highlight);
+    color: var(--color-dark);
+
+}
+
+.benefit-item-odd {
+    background-color: var(--color-gecko);
+    color: var(--color-dark);
+
+}
+
 
 /******************************************************************************************/
 /* FOOTER */
