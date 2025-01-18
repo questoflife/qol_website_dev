@@ -133,6 +133,8 @@ img {
     border-style: solid;
     border-width: 0 0 4px 0;
     padding: 10px 0 10px 0;
+    position: sticky;
+    top: 0;
 }
 
 /* Everything between the header and footer */
