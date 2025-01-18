@@ -47,9 +47,13 @@ a {
 
 /************************************ BUTTONS ******************************************************/
 .cta-button {
+    align-items: center;
     background-color: var(--color-highlight);
     color: var(--color-dark);
     font-family: "Permanent Marker", serif;
+    font-size: 1.5rem;
+    gap: 10px;
+    margin-right: 20px;
     text-decoration: none;
     text-wrap: nowrap;
 }
@@ -88,10 +92,10 @@ a {
 /************************************ PAGE STRUCTURE ******************************************************/
 .page-header {
     background-color: aliceblue;
-    padding: 10px 0 10px 0;
     border-bottom: var(--color-dark);
     border-style: solid;
     border-width: 0 0 4px 0;
+    padding: 10px 0 10px 0;
 }
 
 /* Everything between the header and footer */
@@ -186,6 +190,10 @@ a {
 
 
 /* When the hamburger button is clicked, i.e. menu open */
+.page-header.responsive {
+    padding-bottom: 5px;
+}
+
 .navbar.responsive {
     flex-direction: column;
 }
@@ -211,8 +219,16 @@ a {
     display: none;
 }
 
-.navbar-responsive #navbar-join-community-button {
+.navbar.responsive #navbar-join-community-button {
+    box-sizing: border-box;
     display: flex;
+    font-size: 3rem;
+    gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -225,7 +241,6 @@ a {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
     .navbar-hamburger {
         display: none;
     }
@@ -244,10 +259,6 @@ a {
 
     #navbar-join-community-button {
         display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 1.5rem;
-        margin-right: 20px;
     }
 }
 

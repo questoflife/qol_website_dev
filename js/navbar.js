@@ -6,6 +6,14 @@ function handleResponsiveNavbar() {
   } else {
     x.className = "navbar";
   }
+
+  var x = document.getElementById("page-header");
+  if (x.className === "page-header") {
+    x.className += " responsive";
+  } else {
+    x.className = "page-header";
+  }
+  
 }
 
 // Create a condition that targets viewports at least 992px wide
