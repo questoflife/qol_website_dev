@@ -167,8 +167,8 @@ a {
     flex-grow: 1;
 }
 
-/* Join Community Button */
-#navbar-join-community-button {
+/* Join Button */
+#navbar-join-button {
     display: none;
 }
 
@@ -219,7 +219,7 @@ a {
     display: none;
 }
 
-.navbar.responsive #navbar-join-community-button {
+.navbar.responsive #navbar-join-button {
     box-sizing: border-box;
     display: flex;
     font-size: 3rem;
@@ -257,7 +257,7 @@ a {
         display: block;
     }
 
-    #navbar-join-community-button {
+    #navbar-join-button {
         display: flex;
     }
 }
