@@ -190,6 +190,7 @@ p {
 
 .section {
     display: flex;
+    justify-content: center;
     gap: var(--default-gap-between-items);
     padding-top: 50px;
     padding-bottom: 50px;

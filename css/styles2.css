@@ -1,0 +1,172 @@
+:root {
+    --color-dark: #002235;
+    --color-gecko: #8FDC3E;
+    --color-gray: #6B6B6B;
+    --color-light: #D1D1D1;
+    --color-accent-1: #A3E4B2;
+    --color-accent-2: #1E3A5F;
+    --color-neutral: rgba(79, 79, 79, 0.1);
+    --color-highlight: #F2C12E;
+    --color-bg-accent: #011F34;
+
+    --corner-radius: 0px;
+}
+
+body {
+    background-color: var(--color-dark);
+    margin: 0;
+    font-family: "ABeeZee", serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-dark);
+    background: radial-gradient(circle farthest-corner at top left, rgba(8, 22, 40, 1) 0%, rgba(8, 22, 40, 0) 50%), 
+    radial-gradient(ellipse at center, rgba(30, 58, 95, 1) 0%, rgba(30, 58, 95, 0) 60%), 
+    radial-gradient(circle at bottom center, rgba(143, 220, 62, 1) 0%, rgba(143, 220, 62, 0) 60%);
+
+        z-index: -1;
+    pointer-events: none;
+}
+
+
+/* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
+.page-content { 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/************************************ PAGE STRUCTURE ******************************************************/
+.page-header {
+    background-color: aliceblue;
+    padding: 10px 0 10px 0;
+    border-bottom: var(--color-dark);
+    border-style: solid;
+    border-width: 0 0 4px 0;
+}
+
+/* Everything between the header and footer */
+.page-body {
+    flex-grow: 1; /* Fill available space between header and footer */
+}
+
+.page-footer {
+    bottom: 0;
+    background-color: var(--color-dark);
+    padding: 40px 0 20px 0;
+    position: fixed;
+    width: 100%;
+}
+
+.content-column {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+/************************************ HEADER ******************************************************/
+#header-top-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#header-company-branding-block {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: 2%;
+}
+
+#header-company-logo {
+    height: 3rem;
+    width: 3rem;
+}
+
+#header-company-name {
+    font-family: "Bebas Neue", serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    text-wrap: nowrap;
+    padding-top: 4px;
+}
+
+#header-menu-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin-top: 19px;
+}
+
+#header-space-filler {
+    flex-grow: 1;
+}
+
+/************************************ FOOTER ******************************************************/
+.copyright-notice {
+    text-align: center;
+    color: var(--color-light);
+}
+
+/************************************ BUTTONS ******************************************************/
+.cta-button {
+    background-color: var(--color-highlight);
+    color: var(--color-dark);
+    font-family: "Permanent Marker", serif;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.cta-button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-highlight);
+}
+
+.cta-button:active {
+    background-color: var(--color-accent-2);
+    color: var(--color-highlight);
+}
+
+.header-button {
+    padding: 10px 20px;
+    align-self: center;
+}
+
+.menu-button {
+    align-self: center;
+    color: var(--color-dark);
+    font-family: "Bebas Neue", serif;
+    font-size: 1.5rem;
+    height: auto;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.menu-button {
+    align-self: center;
+    color: var(--color-dark);
+    font-family: "Bebas Neue", serif;
+    font-size: 1.5rem;
+    height: auto;
+    padding: 0px 10px;
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+.menu-button:hover {
+    background-color: var(--color-neutral);
+    padding-top: 2px;
+}
