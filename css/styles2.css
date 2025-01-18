@@ -150,6 +150,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    min-width: 600px;
     width: 80%;
     margin: auto
 }
@@ -300,6 +301,7 @@ img {
 .title-group {
     display: flex;
     flex-direction: row;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
 }
