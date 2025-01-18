@@ -340,10 +340,10 @@ img {
 /* Card Grid */
 .benefit-grid {
     align-items: stretch;
-    background-color: var(--color-light-transparent);
+    /* background-color: var(--color-light-transparent); */
     display: grid;
     gap: 30px;
-    padding: 40px;
+    padding: 10px 40px;
     justify-items: center;
 }
 
@@ -385,6 +385,11 @@ img {
 
 .medium-card-text {
     font-size: 2rem;
+}
+
+.card-title-group {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (min-width:992px) {
