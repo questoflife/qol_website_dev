@@ -15,6 +15,10 @@
     --color-bg-accent: #011F34;
 
     --corner-radius: 0px;
+
+    --title-font: "Bebas Neue", serif;
+    --body-font: "Roboto", serif;
+    --cta-font: "Permanent Marker", serif;
 }
 
 body {
@@ -23,7 +27,7 @@ body {
     height: auto;
     margin: 0;
     padding: 0;
-    font-family: "Roboto", serif;
+    font-family: var(--body-font);
     font-optical-sizing: auto;
 }
 
@@ -52,6 +56,15 @@ img {
     pointer-events: none;
 }
 
+hr {
+    background-color: var(--color-light);
+    color: var(--color-light);
+    height: 2px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 /* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
 .page-content {
     display: flex;
@@ -75,7 +88,7 @@ img {
     align-items: center;
     background-color: var(--color-highlight);
     color: var(--color-dark);
-    font-family: "Permanent Marker", serif;
+    font-family: var(--cta-font);
     font-size: 1.5rem;
     gap: 10px;
     justify-content: center;
@@ -106,7 +119,7 @@ img {
 .menu-button {
     align-self: center;
     color: var(--color-dark);
-    font-family: "Bebas Neue", serif;
+    font-family: var(--title-font);
     font-size: 1.8rem;
     height: auto;
     padding: 0px 10px 0px 10px;
@@ -187,7 +200,7 @@ img {
 }
 
 #header-company-name {
-    font-family: "Bebas Neue", serif;
+    font-family: var(--title-font);
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
@@ -280,6 +293,18 @@ img {
 /******************************************************************************************/
 /* BODY */
 /******************************************************************************************/
+#main-title-section {
+    font-family: var(--title-font);
+    padding: 60px 0 100px 0;
+}
+#tagline-title {
+    font-size: 6rem;
+
+}
+#tagline-subtitle {
+    font-size: 3rem;
+    margin-bottom: 0 0 50px 0;
+}
 
 .section {
     box-sizing: border-box;
@@ -288,6 +313,15 @@ img {
     color:var(--color-light);
     padding: 20px;
     width: 100%;
+}
+
+.section-title {
+    color: var(--color-light);
+    font-family: var(--title-font);
+    font-size: 6rem;
+    margin: 60px 0 0 0;
+    padding: 0;
+    text-align: center;
 }
 
 /* Cards */
@@ -300,7 +334,7 @@ img {
 
 .card-title {
     background-color: var(--color-dark-transparent);
-    font-family: "Bebas Neue", serif;
+    font-family: var(--title-font);
     font-size: 3rem;
     padding: 4px 12px 0 12px;
 }
