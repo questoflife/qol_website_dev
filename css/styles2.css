@@ -114,10 +114,10 @@ hr {
 }
 
 #hideable-cta-button-text {
-    display: none;
+    display: block;
 }
 
-.card-content > .cta-button {
+.card .cta-button {
     font-size: 2.5rem;
     padding: 20px 0;
 }
@@ -214,14 +214,14 @@ hr {
 }
 
 #header-company-logo {
-    height: 3rem;
-    width: 3rem;
+    height: 5rem;
+    width: 5rem;
     padding-left: 20px;
 }
 
 #header-company-name {
     font-family: var(--title-font);
-    font-size: 3rem;
+    font-size: 6rem;
     font-style: normal;
     font-weight: 400;
     text-wrap: nowrap;
@@ -255,7 +255,7 @@ hr {
 .navbar-hamburger {
     display: flex;
     align-items: center;
-    font-size: 3rem;
+    font-size: 6rem;
     padding: 0px 10px 0 10px;
     margin-right: 20px;
 }
@@ -286,7 +286,7 @@ hr {
     box-sizing: border-box;
     padding-left: 80px;
     text-align: left;
-    font-size: 3rem;
+    font-size: 5rem;
     width: 100%;
 }
 
@@ -305,7 +305,7 @@ hr {
     gap: 20px;
     justify-content: center;
     margin: 0;
-    padding: 5px 0;
+    padding: 20px 0;
     text-align: center;
     width: 100%;
 }
@@ -556,6 +556,20 @@ hr {
     .benefit-label > br {
         display: block;
     }
+
+    #header-company-name {
+        font-size: 4rem;
+    }
+
+    #header-company-logo {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    #navbar-join-button {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 }
 
 /******************************************************************************************/
@@ -647,6 +661,9 @@ hr {
 
     #navbar-join-button {
         display: flex;
+    }
+    #hideable-cta-button-text {
+        display: none;
     }
 }
 
