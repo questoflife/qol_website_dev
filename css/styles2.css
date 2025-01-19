@@ -103,6 +103,10 @@ hr {
     text-wrap: nowrap;
 }
 
+.info-button {
+    background-color: var(--color-accent-2);
+    color: var(--color-highlight-2);}
+
 .cta-button:hover {
     background-color: var(--color-gecko);
     color: var(--color-dark);
@@ -119,7 +123,7 @@ hr {
 
 .card .cta-button {
     font-size: 2.5rem;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .header-button {
@@ -469,6 +473,18 @@ hr {
 .service-icon {
     padding-right: 5px;
     font-size: 2.5rem;
+}
+
+.service-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.service-buttons > .cta-button {
+    width: 50%;
 }
 
 /* Card Grid */
