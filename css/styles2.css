@@ -372,10 +372,6 @@ hr {
     min-width: 600px;
 }
 
-.c2 {
-
-}
-
 .spaced-content {
     display: flex;
     align-items: stretch;
@@ -457,6 +453,11 @@ hr {
     background-color: var(--color-gecko-a-bit-transparent);
     padding: 2px 7px;
     text-wrap: nowrap;
+}
+
+.service-icon {
+    padding-right: 5px;
+    font-size: 2.5rem;
 }
 
 /* Card Grid */
