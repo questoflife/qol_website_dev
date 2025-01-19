@@ -175,6 +175,16 @@ hr {
     margin: auto
 }
 
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 600px;
+    max-width: 1024px;
+    width: 80%;
+    margin: auto
+}
+
 
 
 /******************************************************************************************/
@@ -614,11 +624,11 @@ hr {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /******************************************************************************************/
 @media only screen and (min-width: 1200px) {
-    .section-content-column {
-        flex-direction: row;
-    }
     .spaced-content {
         height: 100%;        
+    }
+    .col-2 {
+        flex-direction: row;
     }
 
 }
