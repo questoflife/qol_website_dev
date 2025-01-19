@@ -583,8 +583,8 @@ hr {
     justify-content: space-between;
     margin: auto;
     margin-bottom: 20px;
-    max-width: 800px;
-    padding: 0 20px;
+    /* max-width: 800px; */
+    padding: 0;
 }
 
 #social-media {
