@@ -113,6 +113,10 @@ hr {
     color: var(--color-highlight);
 }
 
+#hideable-cta-button-text {
+    display: none;
+}
+
 .card-content > .cta-button {
     font-size: 2.5rem;
     padding: 20px 0;
@@ -663,6 +667,9 @@ hr {
         display: block;
     }
 
+    #hideable-cta-button-text {
+        display: block;
+    }
 }
 
 
