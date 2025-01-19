@@ -172,9 +172,6 @@ hr {
 }
 
 .section-content-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     min-width: 600px;
     max-width: 1024px;
     width: 80%;
