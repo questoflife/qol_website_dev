@@ -168,7 +168,7 @@ hr {
 .body-content-column {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 120px;
     min-width: 600px;
     max-width: 1024px;
     width: 80%;
@@ -295,47 +295,50 @@ hr {
 /* BODY */
 /******************************************************************************************/
 #main-title-section {
+    color: var(--color-light);
     font-family: var(--title-font);
-    padding: 60px 0 100px 0;
+    padding: 60px 0;
 }
 
-#main-title-section > hr {
+#main-title-section hr {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
     border-style: none;
     width: 70%;
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
 }
 
 #tagline-title {
     font-size: 6rem;
+    margin-bottom: 30px;
 
 }
 #tagline-subtitle {
     font-size: 3rem;
-    margin-bottom: 0 0 50px 0;
-}
-
-.section {
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 3px;
-    color:var(--color-light);
-    padding: 20px;
-    width: 100%;
+    margin-bottom: 100px;
 }
 
 .section-title {
     color: var(--color-light);
     font-family: var(--title-font);
     font-size: 6rem;
-    margin: 60px 0 0 0;
+    margin: 0 0 50px 0;
     padding: 0;
     text-align: center;
 }
 
 /* Cards */
+.card {
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 3px;
+    padding: 20px;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
 .card-content {
     display: flex;
+    color:var(--color-light);
     flex-direction: column;
     gap: 30px;
     justify-content: space-between;
