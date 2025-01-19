@@ -292,6 +292,12 @@ p {
     text-align: left;
 }
 
+.testimonial-author {
+    text-align: right;
+    padding-right: 80px;
+    padding-top: 10px;
+}
+
 .border-card-title {
     color: var(--color-orange);
     font-family: "Bebas Neue", serif;
@@ -302,11 +308,6 @@ p {
     text-align: left;
 }
 
-.testimonial-author {
-    text-align: right;
-    padding-right: 80px;
-    padding-top: 10px;
-}
 
 .coach-card {
     display: flex;

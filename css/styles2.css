@@ -338,6 +338,10 @@ hr {
     padding: 120px 0;
 }
 
+#testimonials-section {
+    padding: 120px 0;
+}
+
 #main-title-section hr {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
     border-style: none;
@@ -486,6 +490,27 @@ hr {
 .service-buttons > .cta-button {
     width: 50%;
 }
+
+.testimonial {
+    font-size: 2rem;
+    font-style: italic;
+    text-align: left;
+    padding: 0 40px;
+}
+
+#testimonials-section hr {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    border-style: none;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.testimonial-author {
+    text-align: right;
+    padding-right: 80px;
+}
+
 
 /* Card Grid */
 .benefit-grid {
