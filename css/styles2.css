@@ -108,8 +108,8 @@ hr {
 }
 
 .card-content > .cta-button {
-    padding: 10px 0;
     font-size: 2.5rem;
+    padding: 10px 0;
 }
 
 .header-button {
@@ -168,11 +168,14 @@ hr {
 .section-content-column {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     min-width: 600px;
     max-width: 1024px;
     width: 80%;
     margin: auto
 }
+
+
 
 /******************************************************************************************/
 /* HEADER */
@@ -355,16 +358,43 @@ hr {
     width: 100%;
 }
 
-.card-content {
+.c1 {
+    min-width: 600px;
+}
+
+.c2 {
+
+}
+
+.spaced-content {
     display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-content {
     color:var(--color-light);
+    display: flex;
     flex-direction: column;
     gap: 30px;
-    justify-content: space-between;
+    height: 100%;
+
 }
 
 .card-title {
     background-color: var(--color-dark-transparent);
+    font-family: var(--title-font);
+    font-size: 3rem;
+    padding: 4px 12px 0 12px;
+}
+
+.card-stat-box {
+    align-content: center;
+    background-color: var(--color-dark-transparent);
+    flex-grow: 1;
     font-family: var(--title-font);
     font-size: 3rem;
     padding: 4px 12px 0 12px;
@@ -583,7 +613,15 @@ hr {
 /******************************************************************************************/
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /******************************************************************************************/
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {
+    .section-content-column {
+        flex-direction: row;
+    }
+    .spaced-content {
+        height: 100%;        
+    }
+
+}
 
 
 
