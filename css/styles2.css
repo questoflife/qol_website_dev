@@ -481,30 +481,39 @@ hr {
 
 .benefit-item {
     align-items: center;
-    background-color: var(--color-light-a-bit-transparent);
+    background-color: var(--color-dark);
+    border-color: var(--color-light);
     border-style: solid;
     border-width: 6px;
     display: flex;
     flex-direction: row;
+    font-size: 2rem;
     gap: 30px;
     justify-content: left;
+    padding: 30px;
     text-align: center;
     text-wrap: wrap;
     width: 80%;
 }
 
 .benefit-item-even {
-    border-color: var(--color-gecko);
-    color: var(--color-dark);
+    color: var(--color-gecko);
 }
 
 .benefit-item-odd {
-    border-color: var(--color-highlight);
-    color: var(--color-dark);
+    color: var(--color-highlight);
+}
+
+.benefit-icon {
+    min-width: 80px;
 }
 
 .benefit-label {
-    font-size: 1rem;
+    font-size: 1.5rem;
+}
+
+.benefit-label > br {
+    display: none;
 }
 
 .small-card-text {
@@ -530,8 +539,12 @@ hr {
 
     .benefit-item {
         flex-direction: column;
-        padding-top: 40px;
-        padding-bottom: 20px;
+        justify-content: center;
+        padding: 40px 10px;
+    }
+
+    .benefit-label > br {
+        display: block;
     }
 }
 
