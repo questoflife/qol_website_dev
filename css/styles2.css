@@ -60,7 +60,7 @@ hr {
     background-color: var(--color-light);
     color: var(--color-light);
     height: 2px;
-    margin: 0;
+    margin: 60px 0;
     padding: 0;
     width: 100%;
 }
@@ -80,6 +80,7 @@ hr {
 .highlight-text-gecko {
     color: var(--color-gecko);
 }
+
 /******************************************************************************************/
 /* BUTTONS */
 /******************************************************************************************/
