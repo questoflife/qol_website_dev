@@ -11,7 +11,8 @@
     --color-accent-1: #A3E4B2;
     --color-accent-2: #1E3A5F;
     --color-neutral: rgba(79, 79, 79, 0.1);
-    --color-highlight: #F2C12E;
+    --color-highlight: greenyellow;
+    --color-highlight-2: #F2C12E;
     --color-bg-accent: #011F34;
 
     --corner-radius: 0px;
@@ -92,7 +93,7 @@ hr {
 .cta-button {
     display: flex;
     align-items: center;
-    background-color: var(--color-highlight);
+    background-color: var(--color-highlight-2);
     color: var(--color-dark);
     font-family: var(--cta-font);
     font-size: 1.5rem;
