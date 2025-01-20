@@ -136,7 +136,7 @@ hr {
     display: block;
 }
 
-.card .cta-button {
+.mycard .cta-button {
     font-size: 2.5rem;
     padding: 10px 30px;
 }
@@ -218,7 +218,7 @@ hr {
 /******************************************************************************************/
 /* HEADER */
 /******************************************************************************************/
-#header-navbar {
+#header-mynavbar {
     display: flex;
     gap: 5px;
     justify-content: space-between;
@@ -235,6 +235,7 @@ hr {
 }
 
 #header-company-logo {
+    box-sizing: content-box;
     height: 5rem;
     width: 5rem;
     padding-left: 20px;
@@ -260,7 +261,7 @@ hr {
     flex-wrap: nowrap;
 }
 
-#navbar-button-text-group {
+#mynavbar-button-text-group {
     display: flex;
     flex-wrap: nowrap;
     gap: 5px;
@@ -273,24 +274,24 @@ hr {
 }
 
 /* Join Button */
-#navbar-join-button {
+#mynavbar-join-button {
     display: none;
     margin-right: 20px;
 }
 
 /* Hamburger Menu */
-.navbar-hamburger {
+.mynavbar-hamburger {
     display: flex;
     align-items: center;
     font-size: 6rem;
     padding: 0px 10px 0 10px;
     margin-right: 20px;
 }
-.navbar-hamburger:hover {
+.mynavbar-hamburger:hover {
     background-color: var(--color-neutral);
 }
 
-#navbar-hamburger-open {
+#mynavbar-hamburger-open {
     display: none;
 }
 
@@ -300,16 +301,16 @@ hr {
     padding-bottom: 5px;
 }
 
-.navbar.responsive {
+.mynavbar.responsive {
     flex-direction: column;
 }
 
-.navbar.responsive #header-menu-buttons {
+.mynavbar.responsive #header-menu-buttons {
     display: flex;
     flex-direction: column;
 }
 
-.navbar.responsive #header-menu-buttons > .menu-button {
+.mynavbar.responsive #header-menu-buttons > .menu-button {
     box-sizing: border-box;
     padding-left: 80px;
     text-align: left;
@@ -317,15 +318,15 @@ hr {
     width: 100%;
 }
 
-.navbar.responsive #navbar-hamburger-open {
+.mynavbar.responsive #mynavbar-hamburger-open {
     display: flex;
 }
 
-.navbar.responsive #navbar-hamburger-closed {
+.mynavbar.responsive #mynavbar-hamburger-closed {
     display: none;
 }
 
-.navbar.responsive #navbar-join-button {
+.mynavbar.responsive #mynavbar-join-button {
     box-sizing: border-box;
     border-radius: 0;
     display: flex;
@@ -398,8 +399,8 @@ hr {
     text-align: center;
 }
 
-/* Cards */
-.card {
+/* mycards */
+.mycard {
     box-sizing: border-box;
     border-style: solid;
     border-width: 3px;
@@ -420,7 +421,7 @@ hr {
     justify-content: center;
 }
 
-.card-content {
+.mycard-content {
     color: var(--color-light);
     display: flex;
     flex-direction: column;
@@ -428,22 +429,22 @@ hr {
     height: 100%;
 }
 
-.card-title.dark-bg {
+.mycard-title.dark-bg {
     background-color: var(--color-dark-transparent);
 }
 
-.card-content-block.dark-bg {
+.mycard-content-block.dark-bg {
     background-color: var(--color-dark-transparent);
 }
 
-.card-title {
+.mycard-title {
     /* background-color: var(--color-dark-transparent); */
     font-family: var(--title-font);
     font-size: 3.25rem;
     padding: 4px 12px 0 12px;
 }
 
-.card-stat-box {
+.mycard-stat-box {
     align-content: center;
     background-color: var(--color-dark-transparent);
     flex-grow: 1;
@@ -452,7 +453,7 @@ hr {
     padding: 4px 12px 0 12px;
 }
 
-.card-stat-box br {
+.mycard-stat-box br {
     display: none;
 }
 
@@ -464,21 +465,21 @@ hr {
     align-items: center;
 }
 
-.card-content-block > p {
+.mycard-content-block > p {
     /* background-color: var(--color-dark-transparent); */
     padding: 6px;
 }
 
-.border-card {
+.border-mycard {
     border-color: var(--color-light);
 }
 
-.bg-card {
+.bg-mycard {
     background-color: var(--color-light-transparent);
     border-color: transparent;
 }
 
-.clear-card {
+.clear-mycard {
     border-style: none;
     background-color: transparent;
     border-color: transparent;
@@ -487,29 +488,29 @@ hr {
     padding-top: 0;
 }
 
-.centred-card {
+.centred-mycard {
     text-align: center;
 }
 
-#group-coaching-service-card {
+#group-coaching-service-mycard {
     border-color: var(--color-highlight-2);
     border-style: solid;
     border-width: 8px;
 }
 
-#personal-coaching-service-card {
+#personal-coaching-service-mycard {
     border-color: transparent;
     border-style: solid;
     border-width: 8px;
 }
 
-#facilitator-training-service-card {
+#facilitator-training-service-mycard {
     border-color: transparent;
     border-style: solid;
     border-width: 8px;
 }
 
-/* Card Content */
+/* mycard Content */
 .bubble-group {
     display: flex;
     flex-wrap: wrap;
@@ -563,7 +564,7 @@ hr {
 }
 
 
-/* Card Grid */
+/* mycard Grid */
 .benefit-grid {
     align-items: stretch;
     display: grid;
@@ -613,20 +614,20 @@ hr {
     display: none;
 }
 
-.small-card-text {
+.small-mycard-text {
     font-size: 1.5rem;
 }
 
-.medium-card-text {
+.medium-mycard-text {
     font-size: 3rem;
 }
 
-.large-card-text {
+.large-mycard-text {
     font-size: 5rem;
 }
 
 
-.card-title-group {
+.mycard-title-group {
     background-color: var(--color-dark-transparent);
     display: flex;
     justify-content: space-between;
@@ -659,7 +660,7 @@ hr {
         height: 4rem;
     }
     
-    #navbar-join-button {
+    #mynavbar-join-button {
         padding-top: 15px;
         padding-bottom: 15px;
     }
@@ -736,7 +737,7 @@ hr {
 /* Large devices (laptops/desktops, 992px and up) */
 /******************************************************************************************/
 @media only screen and (min-width: 992px) {
-    .navbar-hamburger {
+    .mynavbar-hamburger {
         display: none;
     }
 
@@ -752,7 +753,7 @@ hr {
         display: block;
     }
 
-    #navbar-join-button {
+    #mynavbar-join-button {
         display: flex;
     }
     #hideable-cta-button-text {
@@ -773,7 +774,7 @@ hr {
     .c2 {
         max-width: 300px;
     }
-    .card-stat-box br {
+    .mycard-stat-box br {
         display: block;
     }
 

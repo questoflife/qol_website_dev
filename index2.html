@@ -23,10 +23,20 @@
     <!-- Oswald & Source Sans 3 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    
+        <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/07f3e10377.js" crossorigin="anonymous"></script>
-
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles2.css">
 
@@ -38,7 +48,7 @@
         <!-- PAGE HEADER -->
         <!------------------------------------------------------------------------------------------------->
         <div id="page-header" class="page-header">
-            <div id="header-navbar" class="navbar">
+            <div id="header-mynavbar" class="mynavbar">
                 <!-- LHS / Top Line Block with company branding and menu icon -->
                 <div id="header-company-branding-and-hamburger">
                     <a id="header-company-branding-block" href="index.html">
@@ -47,7 +57,7 @@
                         <div id="header-company-name">QUEST OF LIFE</div>
                     </a>
                     <!-- Menu Hamburger Button -->
-                    <a id="navbar-hamburger-open" href="javascript:void(0);" class="navbar-hamburger"
+                    <a id="mynavbar-hamburger-open" href="javascript:void(0);" class="mynavbar-hamburger"
                         onclick="handleResponsiveNavbar()">
                         <i class="fa fa-bars"></i>
                     </a>
@@ -64,16 +74,16 @@
                 <div id="header-space-filler"></div>
 
                 <!-- Join Button -->
-                <a id="navbar-join-button" class="cta-button header-button" href="https://discord.gg/m9hVVajQU3"
+                <a id="mynavbar-join-button" class="cta-button header-button" href="https://discord.gg/m9hVVajQU3"
                     target="_blank">
-                    <i class="fa-brands fa-discord"></i> 
-                    <div id="navbar-button-text-group">
+                    <i class="fa-brands fa-discord"></i>
+                    <div id="mynavbar-button-text-group">
                         Join <span id="hideable-cta-button-text">the Community</span>
                     </div>
                 </a>
 
                 <!-- Menu Hamburger Button -->
-                <a id="navbar-hamburger-closed" href="javascript:void(0);" class="navbar-hamburger"
+                <a id="mynavbar-hamburger-closed" href="javascript:void(0);" class="mynavbar-hamburger"
                     onclick="handleResponsiveNavbar()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -87,7 +97,7 @@
             <div id="main-title-section" class="section">
                 <div class="section-content-column">
 
-                    <div class="card clear-card centred-card">
+                    <div class="mycard clear-mycard centred-mycard">
                         <div id="tagline-title">Peer Support for Young Adults</div>
                         <div id="tagline-subtitle">(And especially gamers)</div>
                         <hr>
@@ -99,10 +109,10 @@
                 <div class="section-content-column">
                     <div class="col-2">
                         <!-- Left Column -->
-                        <div class="card bg-card c1">
-                            <div class="card-content">
-                                <div class="card-content-block dark-bg">
-                                    <div class="card-title dark-bg title-group">
+                        <div class="mycard bg-mycard c1">
+                            <div class="mycard-content">
+                                <div class="mycard-content-block dark-bg">
+                                    <div class="mycard-title dark-bg title-group">
                                         <i class="fa-solid fa-circle-up highlight-text-gecko"></i>
                                         <span>
                                             <span class="highlight-text">Level Up</span> <span
@@ -124,8 +134,8 @@
                                     </p>
                                 </div>
 
-                                <div class="card-content-block dark-bg">
-                                    <div class="card-title dark-bg title-group highlight-text-gecko">
+                                <div class="mycard-content-block dark-bg">
+                                    <div class="mycard-title dark-bg title-group highlight-text-gecko">
                                         <i class="fa-regular fa-handshake highlight-text"></i>
                                         <span>
                                             With People Who <span class="highlight-text">Care</span>
@@ -144,8 +154,8 @@
                                     </p>
                                 </div>
 
-                                <div class="card-content-block dark-bg">
-                                    <div class="card-title dark-bg title-group">
+                                <div class="mycard-content-block dark-bg">
+                                    <div class="mycard-title dark-bg title-group">
                                         <i class="fa-solid fa-globe highlight-text-gecko"></i>
                                         <span>
                                             <span class="highlight-text">Anywhere</span> <span
@@ -165,17 +175,17 @@
                             </div>
                         </div>
                         <!-- Right Column -->
-                        <div class="card clear-card c2 centred-card">
-                            <div class="card-content">
-                                <div class="card-content-block spaced-content">
-                                    <div class="card-stat-box"><span class="highlight-text-green">40+ <br> Groups</span>
+                        <div class="mycard clear-mycard c2 centred-mycard">
+                            <div class="mycard-content">
+                                <div class="mycard-content-block spaced-content">
+                                    <div class="mycard-stat-box"><span class="highlight-text-green">40+ <br> Groups</span>
                                         Completed
                                     </div>
-                                    <div class="card-stat-box"><span class="highlight-text-green">250+ <br>
+                                    <div class="mycard-stat-box"><span class="highlight-text-green">250+ <br>
                                             Members</span>
                                         Supported
                                     </div>
-                                    <div class="card-stat-box"><span class="highlight-text-green">3000+ <br>
+                                    <div class="mycard-stat-box"><span class="highlight-text-green">3000+ <br>
                                             Hours</span>
                                         Volunteered
                                     </div>
@@ -189,13 +199,13 @@
             <div id="benefits-section" class="section">
                 <div class="section-content-column">
                     <div class="section-title">Why Join?</div>
-                    <div class="card border-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
-                                <div class="card-title">Members report <span class="highlight-text">improvements</span>
+                    <div class="mycard border-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="mycard-title">Members report <span class="highlight-text">improvements</span>
                                     across different areas of their lives</div>
                             </div>
-                            <div class="card-content-block">
+                            <div class="mycard-content-block">
                                 <div class="benefit-grid">
                                     <div class="benefit-item benefit-item-odd">
                                         <div class="benefit-icon">
@@ -284,13 +294,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="centred-card medium-card-text">
+                                <p class="centred-mycard medium-mycard-text">
                                     No matter what challenges you’re facing,
                                     <br>
                                     <span class="highlight-text">you are not alone</span>
                                 </p>
 
-                                <p class="centred-card small-card-text">
+                                <p class="centred-mycard small-mycard-text">
                                     **Our groups are run by volunteers with no formal training in coaching/therapy. We
                                     don't
                                     treat, diagnose or offer any kind of medical advice.
@@ -308,13 +318,13 @@
             <div id="services-section" class="section">
                 <div class="section-content-column">
                     <div class="section-title">Our Services</div>
-                    <div id="group-coaching-service-card" class="card bg-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
-                                <div class="card-title-group">
-                                    <div class="card-title"><span class="service-icon"><i
+                    <div id="group-coaching-service-mycard" class="mycard bg-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="mycard-title-group">
+                                    <div class="mycard-title"><span class="service-icon"><i
                                                 class="fa-solid fa-users"></i></span> Group Coaching</div>
-                                    <div class="card-title highlight-text-green">PWYW</div>
+                                    <div class="mycard-title highlight-text-green">PWYW</div>
                                 </div>
                                 <div class="bubble-group">
                                     <div class="bubble">Up to 7 Members</div>
@@ -340,13 +350,13 @@
                         </div>
                     </div>
                     <br>
-                    <div id="personal-coaching-service-card" class="card bg-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
-                                <div class="card-title-group">
-                                    <div class="card-title"><span class="service-icon"><i
+                    <div id="personal-coaching-service-mycard" class="mycard bg-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="mycard-title-group">
+                                    <div class="mycard-title"><span class="service-icon"><i
                                                 class="fa-solid fa-user"></i></span> 1-on-1 Coaching</div>
-                                    <div class="card-title highlight-text-green">£50</div>
+                                    <div class="mycard-title highlight-text-green">£50</div>
                                 </div>
                                 <div class="bubble-group">
                                     <div class="bubble">50mins</div>
@@ -383,14 +393,14 @@
                         </div>
                     </div>
                     <br>
-                    <div id="facilitator-training-service-card" class="card bg-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
-                                <div class="card-title-group">
-                                    <div class="card-title"><span class="service-icon"><i
+                    <div id="facilitator-training-service-mycard" class="mycard bg-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="mycard-title-group">
+                                    <div class="mycard-title"><span class="service-icon"><i
                                                 class="fa-solid fa-graduation-cap"></i></span> Facilitator Training
                                     </div>
-                                    <div class="card-title highlight-text-green">PWYW</div>
+                                    <div class="mycard-title highlight-text-green">PWYW</div>
                                 </div>
                                 <div class="bubble-group">
                                     <div class="bubble">16 Weeks</div>
@@ -435,9 +445,9 @@
             <div id="testimonials-section" class="section">
                 <div class="section-content-column">
                     <div class="section-title">Testimonials</div>
-                    <div class="card clear-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
+                    <div class="mycard clear-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
                                 <div class="testimonial">
                                     <p>
                                         "I didn't really know what to expect so didn't really expect much. I hoped I
@@ -463,7 +473,7 @@
 
                             <hr>
 
-                            <div class="card-content-block">
+                            <div class="mycard-content-block">
                                 <div class="testimonial">
                                     <p>
                                         "<em class="highlight-text">The group exceeded my expectations in many
@@ -489,7 +499,7 @@
 
                             <hr>
 
-                            <div class="card-content-block">
+                            <div class="mycard-content-block">
                                 <div class="testimonial">
                                     <p>
                                         "I was pleasantly surprised that this group ended up being one of the most
@@ -532,7 +542,7 @@
 
                             <hr>
 
-                            <div class="card-content-block">
+                            <div class="mycard-content-block">
                                 <div class="testimonial">
                                     <p>
                                         "The group created something that I could look forward to every week. <em
@@ -563,7 +573,7 @@
 
                             <hr>
 
-                            <div class="card-content-block">
+                            <div class="mycard-content-block">
                                 <div class="testimonial">
                                     <p>
                                         "Being part of a group which has people from different cultural backgrounds and
@@ -596,7 +606,7 @@
 
                             <hr>
 
-                            <div class="card-content-block">
+                            <div class="mycard-content-block">
                                 <div class="testimonial">
                                     <p>
                                         "The facilitators are organized, responsive, punctual and compassionate.
@@ -619,7 +629,7 @@
 
                             <hr>
 
-                            <div class="card-content-block">
+                            <div class="mycard-content-block">
                                 <div class="testimonial">
                                     <p>
                                         "Since joining group coaching, I've regained a sense of hope. Being able to
@@ -652,10 +662,10 @@
 
             <div class="section">
                 <div class="section-content-column">
-                    <div class="card border-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
-                                <div class="card-title">Card title</div>
+                    <div class="mycard border-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="mycard-title">mycard title</div>
                                 <p>
                                     Hello World!
                                 </p>
@@ -663,10 +673,10 @@
                         </div>
                     </div>
 
-                    <div class="card bg-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
-                                <div class="card-title">Card title</div>
+                    <div class="mycard bg-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="mycard-title">mycard title</div>
                                 <p>
                                     Hello Again!
 
@@ -675,10 +685,10 @@
                         </div>
                     </div>
 
-                    <div class="card clear-card">
-                        <div class="card-content">
-                            <div class="card-content-block">
-                                <div class="card-title">Card title</div>
+                    <div class="mycard clear-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="mycard-title">mycard title</div>
                                 <p>
                                     Hello Hello!
 
