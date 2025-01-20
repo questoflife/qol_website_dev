@@ -13,6 +13,8 @@
     --color-neutral: rgba(79, 79, 79, 0.1);
     --color-highlight: greenyellow;
     --color-highlight-2: #F2C12E;
+    --color-highlight-2: greenyellow;
+
     --color-bg-accent: #011F34;
 
     --corner-radius: 0px;
@@ -94,6 +96,7 @@ hr {
     display: flex;
     align-items: center;
     background-color: var(--color-highlight-2);
+    border-radius: 15px;
     color: var(--color-dark);
     font-family: var(--cta-font);
     font-size: 1.5rem;
@@ -561,7 +564,7 @@ hr {
 }
 
 .benefit-item-even {
-    color: var(--color-gecko);
+    color: var(--color-lig);
 }
 
 .benefit-item-odd {
