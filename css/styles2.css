@@ -426,11 +426,18 @@ hr {
     flex-direction: column;
     gap: 30px;
     height: 100%;
+}
 
+.card-title.dark-bg {
+    background-color: var(--color-dark-transparent);
+}
+
+.card-content-block.dark-bg {
+    background-color: var(--color-dark-transparent);
 }
 
 .card-title {
-    background-color: var(--color-dark-transparent);
+    /* background-color: var(--color-dark-transparent); */
     font-family: var(--title-font);
     font-size: 3.25rem;
     padding: 4px 12px 0 12px;
@@ -524,7 +531,7 @@ hr {
 .service-buttons {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     width: 100%;
 }
@@ -618,6 +625,7 @@ hr {
 
 
 .card-title-group {
+    background-color: var(--color-dark-transparent);
     display: flex;
     justify-content: space-between;
 }
