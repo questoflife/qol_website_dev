@@ -637,6 +637,9 @@ hr {
     font-size: 5rem;
 }
 
+#challenges-text {
+    margin-top: 70px;
+}
 
 .mycard-title-group {
     background-color: var(--color-dark-transparent);
