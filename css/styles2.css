@@ -496,13 +496,13 @@ hr {
 }
 
 #personal-coaching-service-card {
-    border-color: var(--color-light-transparent);
+    border-color: transparent;
     border-style: solid;
     border-width: 8px;
 }
 
 #facilitator-training-service-card {
-    border-color: var(--color-light-transparent);
+    border-color: transparent;
     border-style: solid;
     border-width: 8px;
 }
