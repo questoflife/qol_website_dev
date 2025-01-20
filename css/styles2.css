@@ -559,9 +559,9 @@ hr {
 .benefit-item {
     align-items: center;
     background-color: var(--color-dark);
-    border-color: var(--color-light-transparent);
+    /* border-color: var(--color-light-transparent);
     border-style: solid;
-    border-width: 6px;
+    border-width: 6px; */
     display: flex;
     flex-direction: row;
     font-size: 2rem;
@@ -574,7 +574,7 @@ hr {
 }
 
 .benefit-item-even {
-    color: var(--color-lig);
+    color: var(--color-gecko);
 }
 
 .benefit-item-odd {
@@ -622,7 +622,7 @@ hr {
     .benefit-item {
         flex-direction: column;
         justify-content: center;
-        padding: 40px 10px;
+        padding: 50px 10px 40px 10px;
     }
 
     .benefit-label > br {
