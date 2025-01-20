@@ -18,10 +18,19 @@
     --color-bg-accent: #011F34;
 
     --corner-radius: 0px;
-
+    
     --title-font: "Bebas Neue", serif;
-    --body-font: "Roboto", serif;
-    --cta-font: "Permanent Marker", serif;
+    /* --body-font: "Roboto", serif; */
+    /* --cta-font: "Permanent Marker", serif; */
+
+    /* --title-font: "Barlow Condensed", serif; */
+    /* --body-font: "Montserrat", serif;
+    --cta-font: "Montserrat", serif; */
+
+    /* --title-font: "Oswald", serif; */
+    --body-font: "Source Sans 3", serif;
+    --cta-font: "Source Sans 3", serif;
+
 }
 
 body {
@@ -100,6 +109,7 @@ hr {
     color: var(--color-dark);
     font-family: var(--cta-font);
     font-size: 1.5rem;
+    font-weight: bold;
     gap: 10px;
     justify-content: center;
     text-decoration: none;
@@ -400,7 +410,7 @@ hr {
 }
 
 .card-content {
-    color:var(--color-light);
+    color: var(--color-light);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -437,7 +447,7 @@ hr {
 }
 
 .card-content-block > p {
-    background-color: var(--color-dark-transparent);
+    /* background-color: var(--color-dark-transparent); */
     padding: 6px;
 }
 
@@ -549,7 +559,7 @@ hr {
 .benefit-item {
     align-items: center;
     background-color: var(--color-dark);
-    border-color: var(--color-light);
+    border-color: var(--color-light-transparent);
     border-style: solid;
     border-width: 6px;
     display: flex;
