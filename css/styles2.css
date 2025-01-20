@@ -464,6 +464,18 @@ hr {
     border-width: 8px;
 }
 
+#personal-coaching-service-card {
+    border-color: var(--color-light-transparent);
+    border-style: solid;
+    border-width: 8px;
+}
+
+#facilitator-training-service-card {
+    border-color: var(--color-light-transparent);
+    border-style: solid;
+    border-width: 8px;
+}
+
 /* Card Content */
 .bubble-group {
     display: flex;
