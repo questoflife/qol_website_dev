@@ -260,6 +260,12 @@ hr {
     flex-wrap: nowrap;
 }
 
+#navbar-button-text-group {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+}
+
 /* Space Filler */
 #header-space-filler {
     display: none;
@@ -321,6 +327,7 @@ hr {
 
 .navbar.responsive #navbar-join-button {
     box-sizing: border-box;
+    border-radius: 0;
     display: flex;
     font-size: 3rem;
     gap: 20px;
