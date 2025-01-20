@@ -547,7 +547,7 @@ hr {
     font-size: 2rem;
     font-style: italic;
     text-align: left;
-    padding: 0 40px;
+    padding: 0 120px;
 }
 
 #testimonials-section hr {
@@ -558,11 +558,22 @@ hr {
     margin-bottom: 30px;
 }
 
+#testimonials-section .mycard {
+    padding: 0;
+} 
+
 .testimonial-author {
     text-align: right;
     padding-right: 80px;
 }
 
+.carousel-control-prev {
+    justify-content: left;
+}
+
+.carousel-control-next {
+    justify-content: right;
+}
 
 /* mycard Grid */
 .benefit-grid {
