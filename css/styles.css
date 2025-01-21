@@ -686,7 +686,23 @@ hr {
 }
 
 @media (min-width:992px) {
+    #header-company-name {
+        font-size: 4rem;
+    }
 
+    #header-company-logo {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #mynavbar-join-button {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+@media (min-width:1200px) {
+    
     /* Switch to 3 column grid */
     .benefit-grid {
         display: grid;
@@ -716,20 +732,6 @@ hr {
 
     .benefit-label>br {
         display: block;
-    }
-
-    #header-company-name {
-        font-size: 4rem;
-    }
-
-    #header-company-logo {
-        width: 4rem;
-        height: 4rem;
-    }
-
-    #mynavbar-join-button {
-        padding-top: 15px;
-        padding-bottom: 15px;
     }
 }
 
