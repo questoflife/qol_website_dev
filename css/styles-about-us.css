@@ -1,6 +1,7 @@
 :root {
     --color-dark: #002235;
     --color-dark-transparent: rgba(0, 34, 53, 0.3);
+    --color-dark-a-bit-transparent: rgba(0, 34, 53, 0.5);
     --color-gecko: rgb(62, 195, 220);
     --color-gecko-a-bit-transparent: rgba(62, 195, 220, 0.8);
     --color-gecko-transparent: rgba(62, 195, 220, 0.3);
@@ -11,15 +12,16 @@
     --color-accent-1: #A3E4B2;
     --color-accent-2: #1E3A5F;
     --color-neutral: rgba(79, 79, 79, 0.1);
-    --color-highlight: greenyellow;
+    --color-highlight: #8FDC3E;
     --color-highlight-2: #F2C12E;
-    --color-highlight-2: greenyellow;
+    --color-highlight-2: #8FDC3E;
 
     --color-bg-accent: #011F34;
 
     --corner-radius: 0px;
     
     --title-font: "Bebas Neue", serif;
+    --subtitle-font: "Roboto Condensed", serif;
     --body-font: "Source Sans 3", serif;
     --cta-font: "Source Sans 3", serif;
 
