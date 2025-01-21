@@ -15,11 +15,12 @@
     --color-highlight: #8FDC3E;
     --color-highlight-2: #F2C12E;
     --color-highlight-2: #8FDC3E;
+    --color-transparent: rgba(0, 0, 0, 0);
 
     --color-bg-accent: #011F34;
 
     --corner-radius: 0px;
-    
+
     --title-font: "Bebas Neue", serif;
     --subtitle-font: "Roboto Condensed", serif;
     --body-font: "Source Sans 3", serif;
@@ -115,7 +116,8 @@ hr {
 
 .info-button {
     background-color: var(--color-accent-2);
-    color: var(--color-highlight-2);}
+    color: var(--color-highlight-2);
+}
 
 .cta-button:hover {
     background-color: var(--color-gecko);
@@ -182,7 +184,8 @@ hr {
 
 /* Everything between the header and footer */
 .page-body {
-    flex-grow: 1; /* Fill available space between header and footer */
+    flex-grow: 1;
+    /* Fill available space between header and footer */
     padding: 70px 0;
 }
 
@@ -283,6 +286,7 @@ hr {
     padding: 0px 10px 0 10px;
     margin-right: 20px;
 }
+
 .mynavbar-hamburger:hover {
     background-color: var(--color-neutral);
 }
@@ -306,7 +310,7 @@ hr {
     flex-direction: column;
 }
 
-.mynavbar.responsive #header-menu-buttons > .menu-button {
+.mynavbar.responsive #header-menu-buttons>.menu-button {
     box-sizing: border-box;
     padding-left: 80px;
     text-align: left;
@@ -461,7 +465,7 @@ hr {
     align-items: center;
 }
 
-.mycard-content-block > p {
+.mycard-content-block>p {
     /* background-color: var(--color-dark-transparent); */
     padding: 6px;
 }
@@ -513,7 +517,7 @@ hr {
     gap: 10px;
     justify-content: left;
     margin-top: 15px;
-    
+
 }
 
 .bubble {
@@ -535,7 +539,7 @@ hr {
     width: 100%;
 }
 
-.service-buttons > .cta-button {
+.service-buttons>.cta-button {
     width: 50%;
 }
 
@@ -556,7 +560,7 @@ hr {
 
 #testimonials-section .mycard {
     padding: 0;
-} 
+}
 
 .testimonial-author {
     text-align: right;
@@ -580,26 +584,68 @@ hr {
     justify-items: center;
 }
 
-.benefit-grid > * {
+.benefit-grid>* {
     padding: 1rem;
 }
 
 .benefit-item {
+    position: relative;
+    /* To allow child elements to be positioned relative to this container */
     align-items: center;
     background-color: var(--color-dark-transparent);
-    /* border-color: var(--color-light-transparent);
-    border-style: solid;
-    border-width: 6px; */
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 2rem;
-    gap: 30px;
-    justify-content: left;
+    gap: 10px;
+    /* Adjust spacing if needed */
+    justify-content: center;
     padding: 30px;
     text-align: center;
-    text-wrap: wrap;
-    width: 80%;
+    width: 100%;
+    overflow: hidden;
+    /* To prevent overflow issues */
+    transition: background-color 0.3s, color 0.3s;
 }
+
+.benefit-icon,
+.benefit-label {
+    transition: opacity 0.3s;
+    /* Smooth transition for fading out */
+}
+
+.benefit-quote {
+    align-items: center;
+    background-color: var(--color-dark);
+    box-sizing: border-box;
+    color: var(--color-light);
+    display: flex;
+    font-size: 1.5rem;
+    font-style: italic;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    /* Hidden by default */
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: opacity 0.3s;
+    /* Smooth fade-in */
+    width: 100%;
+}
+
+.benefit-item:hover .benefit-icon,
+.benefit-item:hover .benefit-label {
+    opacity: 0;
+    /* Fade out icon and label */
+}
+
+.benefit-item:hover .benefit-quote {
+    opacity: 1;
+    /* Fade in the quote */
+}
+
 
 .benefit-item-even {
     color: var(--color-gecko);
@@ -609,16 +655,12 @@ hr {
     color: var(--color-highlight);
 }
 
-.benefit-icon {
-    min-width: 80px;
-}
-
-.benefit-label {
-    font-size: 1.5rem;
-}
-
-.benefit-label > br {
+.benefit-label>br {
     display: none;
+}
+
+.benefit-item:hover .benefit-label {
+    color: var(--color-transparent)
 }
 
 .small-mycard-text {
@@ -644,6 +686,7 @@ hr {
 }
 
 @media (min-width:992px) {
+
     /* Switch to 3 column grid */
     .benefit-grid {
         display: grid;
@@ -652,12 +695,26 @@ hr {
     }
 
     .benefit-item {
+        position: relative;
+        /* To allow child elements to be positioned relative to this container */
+        align-items: center;
+        background-color: var(--color-dark-transparent);
+        display: flex;
         flex-direction: column;
+        font-size: 2rem;
+        gap: 30px;
         justify-content: center;
+        padding: 30px;
+        text-align: center;
+        width: 100%;
+        overflow: hidden;
+        /* To prevent overflow issues */
+        transition: background-color 0.3s, color 0.3s;
+
         padding: 50px 10px 40px 10px;
     }
 
-    .benefit-label > br {
+    .benefit-label>br {
         display: block;
     }
 
@@ -669,7 +726,7 @@ hr {
         width: 4rem;
         height: 4rem;
     }
-    
+
     #mynavbar-join-button {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -728,6 +785,7 @@ hr {
 #admin-links a:hover {
     color: var(--color-highlight);
 }
+
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /******************************************************************************************/
@@ -736,9 +794,7 @@ hr {
 /******************************************************************************************/
 /* Medium devices (landscape tablets, 768px and up) */
 /******************************************************************************************/
-@media only screen and (min-width: 768px) {
-    
-}
+@media only screen and (min-width: 768px) {}
 
 /******************************************************************************************/
 /* Large devices (laptops/desktops, 992px and up) */
@@ -763,6 +819,7 @@ hr {
     #mynavbar-join-button {
         display: flex;
     }
+
     #hideable-cta-button-text {
         display: none;
     }
@@ -773,14 +830,17 @@ hr {
 /******************************************************************************************/
 @media only screen and (min-width: 1200px) {
     .spaced-content {
-        height: 100%;        
+        height: 100%;
     }
+
     .col-2 {
         flex-direction: row;
     }
+
     .c2 {
         max-width: 300px;
     }
+
     .mycard-stat-box br {
         display: block;
     }
@@ -789,6 +849,3 @@ hr {
         display: block;
     }
 }
-
-
-
