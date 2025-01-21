@@ -21,6 +21,7 @@
     --corner-radius: 0px;
     
     --title-font: "Bebas Neue", serif;
+    --subtitle-font: "Roboto Condensed", serif;
     --body-font: "Source Sans 3", serif;
     --cta-font: "Source Sans 3", serif;
 
@@ -340,7 +341,7 @@ hr {
 
 .page-title-section {
     color: var(--color-light);
-    font-family: var(--title-font);
+    font-family: var(--subtitle-font);
     padding: 60px 0;
 }
 
@@ -387,7 +388,7 @@ hr {
 
 .section-title {
     color: var(--color-light);
-    font-family: var(--title-font);
+    font-family: var(--subtitle-font);
     font-size: 6rem;
     padding: 0;
     margin-bottom: 60px;
