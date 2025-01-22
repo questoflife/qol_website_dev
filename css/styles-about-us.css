@@ -28,6 +28,11 @@
     align-items: center;
 }
 
+#people-grid-section .section-content-column {
+    max-width: 100%;
+    width: 90%;
+}
+
 .staff-card-grid {
     display: flex;
     flex-wrap: wrap;
@@ -48,6 +53,11 @@
     font-size: 3rem;
 }
 
+.staff-card .img {
+    max-height: 256px;
+    max-width: 256px;
+}
+
 .staff-card .roles {
     font-size: 1.5rem;
 }
@@ -65,7 +75,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 .staff-card .person-details .fa-icon {
     min-width: 2rem;
