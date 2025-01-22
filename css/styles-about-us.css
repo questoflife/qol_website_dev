@@ -31,9 +31,14 @@
     background-color: var(--color-highlight-2);
     display: flex;
     gap: 30px;
+
 }
 
 .staff-card {
-    background-color: red;
+    background-color: var(--color-dark);
     padding: 20px 30px;
+}
+
+#people-grid-section .mycard-content {
+    align-items: center;
 }
