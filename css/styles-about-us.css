@@ -1,7 +1,7 @@
 :root {
-    --color-dark: #002235;
-    --color-dark-transparent: rgba(0, 34, 53, 0.3);
-    --color-dark-a-bit-transparent: rgba(0, 34, 53, 0.5);
+    --color-dark: rgb(30, 58, 95);
+    --color-dark-transparent: rgba(30, 58, 95, 0.3);
+    --color-dark-a-bit-transparent: rgba(30, 58, 95, 0.6);
     --color-gecko: rgb(62, 195, 220);
     --color-gecko-a-bit-transparent: rgba(62, 195, 220, 0.8);
     --color-gecko-transparent: rgba(62, 195, 220, 0.3);
@@ -9,17 +9,14 @@
     --color-light: rgba(240, 248, 255, 1);
     --color-light-a-bit-transparent: rgba(240, 248, 255, 0.9);
     --color-light-transparent: rgba(240, 248, 255, 0.3);
-    --color-accent-1: #A3E4B2;
-    --color-accent-2: #1E3A5F;
     --color-neutral: rgba(79, 79, 79, 0.1);
     --color-highlight: #8FDC3E;
     --color-highlight-2: #F2C12E;
     --color-highlight-2: #8FDC3E;
-
-    --color-bg-accent: #011F34;
+    --color-transparent: rgba(0, 0, 0, 0);
 
     --corner-radius: 0px;
-    
+
     --title-font: "Bebas Neue", serif;
     --subtitle-font: "Roboto Condensed", serif;
     --body-font: "Source Sans 3", serif;
@@ -27,18 +24,50 @@
 
 }
 
-.staff-card-grid {
-    background-color: var(--color-highlight-2);
-    display: flex;
-    gap: 30px;
+#people-grid-section .mycard-content {
+    align-items: center;
+}
 
+.staff-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
 
 .staff-card {
-    background-color: var(--color-dark);
+    background-color: var(--color-light-a-bit-transparent);
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
     padding: 20px 30px;
 }
 
-#people-grid-section .mycard-content {
-    align-items: center;
+.staff-card .name {
+    font-family: var(--title-font);
+    font-size: 3rem;
+}
+
+.staff-card .roles {
+    font-size: 1.5rem;
+}
+
+.staff-card .discord-username {
+    color: #7785cc;
+}
+
+.staff-card .location {
+
+}
+
+.staff-card ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.staff-card .person-details .fa-icon {
+    min-width: 2rem;
+    text-align: center;
 }
