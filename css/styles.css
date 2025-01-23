@@ -386,6 +386,10 @@ hr {
     padding: 0px 0;
 }
 
+.section p {
+    font-size: 1.5rem;
+}
+
 .section-title {
     color: var(--color-light);
     font-family: var(--subtitle-font);
