@@ -359,6 +359,10 @@ hr {
     padding: 120px 0;
 }
 
+#services-section .mycard {
+    margin-bottom: 50px;
+}
+
 #testimonials-section {
     padding: 120px 0;
 }
