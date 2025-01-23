@@ -387,6 +387,7 @@ hr {
 }
 
 .section p {
+    font-family: var(--body-font);
     font-size: 1.5rem;
 }
 
