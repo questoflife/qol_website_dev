@@ -635,7 +635,7 @@ hr {
 
 .benefit-quote {
     align-items: center;
-    background-color: var(--color-light-a-bit-transparent);
+    background-color: var(--color-light);
     box-sizing: border-box;
     color: var(--color-dark);
     display: flex;
