@@ -158,7 +158,6 @@ hr {
 .footer-button {
     display: flex;
     align-items: center;
-    border-radius: 0;
     font-size: 2.5rem;
     justify-content: center;
     width: 100%;
@@ -820,6 +819,32 @@ hr {
     color: var(--color-highlight);
 }
 
+.page-footer .cta-button {
+    background-color: var(--color-highlight);
+    margin: 0;
+    width: 512px;
+}
+
+.page-footer .cta-button:hover {
+    background-color: var(--color-gecko);
+}
+
+.footer-cta-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.page-footer hr {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    border-style: none;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /******************************************************************************************/
@@ -856,6 +881,10 @@ hr {
 
     #hideable-cta-button-text {
         display: none;
+    }
+
+    .footer-cta-buttons {
+        gap: 30px;
     }
 }
 
