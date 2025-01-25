@@ -52,7 +52,11 @@ body::before {
 
 a {
     text-decoration: none;
-    color: var(--color-dark);
+    color: var(--color-highlight);
+}
+
+a:hover {
+    color: var(--color-gecko);
 }
 
 img {
@@ -235,6 +239,7 @@ hr {
 }
 
 #header-company-name {
+    color: var(--color-dark);
     font-family: var(--title-font);
     font-size: 6rem;
     font-style: normal;
