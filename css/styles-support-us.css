@@ -1,0 +1,96 @@
+:root {
+    --color-dark: rgb(30, 58, 95);
+    --color-dark-transparent: rgba(30, 58, 95, 0.3);
+    --color-dark-a-bit-transparent: rgba(30, 58, 95, 0.6);
+    --color-gecko: rgb(62, 195, 220);
+    --color-gecko-a-bit-transparent: rgba(62, 195, 220, 0.8);
+    --color-gecko-transparent: rgba(62, 195, 220, 0.3);
+    --color-gray: #6B6B6B;
+    --color-light: rgba(240, 248, 255, 1);
+    --color-light-a-bit-transparent: rgba(240, 248, 255, 0.9);
+    --color-light-transparent: rgba(240, 248, 255, 0.3);
+    --color-neutral: rgba(79, 79, 79, 0.1);
+    --color-highlight: #8FDC3E;
+    --color-highlight-transparent: rgba(143, 220, 62, 0.3);
+
+    --color-highlight-2: #F2C12E;
+    --color-highlight-2: #8FDC3E;
+    --color-transparent: rgba(0, 0, 0, 0);
+
+    --corner-radius: 0px;
+
+    --title-font: "Bebas Neue", serif;
+    --subtitle-font: "Roboto Condensed", serif;
+    --body-font: "Source Sans 3", serif;
+    --cta-font: "Source Sans 3", serif;
+
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs label {
+    background: var(--color-dark);
+    color: var(--color-light);
+    cursor: pointer;
+    display: block;
+    font-family: var(--title-font);
+    font-size: 3rem;
+    order: initial;
+    padding: 1rem 2rem;
+    transition: background ease 0.3s;
+    width: 100%;
+}
+
+.tabs label:hover {
+    background-color: var(--color-light-transparent);
+}
+
+.tabs .tab-content {
+    background: var(--color-light);
+    color: var(--color-dark);
+    display: none;
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.tabs input[type="radio"] {
+    display: none;
+}
+
+.tabs input[type="radio"]:checked+label {
+    background: var(--color-light);
+    color: var(--color-dark)
+}
+
+.tabs input[type="radio"]:checked+label+.tab-content {
+    display: block;
+}
+
+.tabs .tab-content {
+    order: 99
+}
+
+.tabs label {
+    order: 1;
+}
+
+.tabs label {
+    margin-right: 0.3rem;
+    margin-top: 0;
+    width: auto;
+}
+
+.support-item {
+    background-color: transparent;
+    border-color: var(--color-gecko);
+    border-style: solid;
+    color: var(--color-dark);
+}
+
+.support-role-description {
+    background-color: var(--color-gecko-transparent);
+}

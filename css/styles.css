@@ -96,11 +96,40 @@ hr {
 /******************************************************************************************/
 /* BUTTONS */
 /******************************************************************************************/
+.tab-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+}
+
+.tab-bar .cta-button {
+    border-radius: 0;
+    width: 50%;
+}
+
+.tab-bar-button-left {
+    border-radius: 5px 0 0 0;
+}
+
+.tab-bar-button-right {
+    border-radius: 0 5px 0 0;
+}
+
+.tab-bar .cta-button:focus {
+    background-color: var(--color-gecko);
+}
+
+.tab-content {
+    background-color: var(--color-gecko);
+    padding: 30px;
+}
+
 .cta-button {
     display: flex;
     align-items: center;
     background-color: var(--color-highlight);
     border-radius: 5px;
+    border-style: none;
     color: var(--color-dark);
     font-family: var(--cta-font);
     font-size: 1.5rem;
@@ -209,6 +238,17 @@ hr {
     width: 100%;
     margin: auto
 }
+
+.col-2-even {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 600px;
+    max-width: 1024px;
+    width: 100%;
+    margin: auto
+}
+
 
 
 
@@ -903,6 +943,17 @@ hr {
 
     .col-2 {
         flex-direction: row;
+    }
+
+    .col-2-even {
+        flex-direction: row;
+    }
+
+    .col-2-even .c1,
+    .col-2-even .c2 {
+        min-width: 0;
+        max-width: 10000px;
+        width: 50%;
     }
 
     .c2 {
