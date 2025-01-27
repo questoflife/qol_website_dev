@@ -26,6 +26,12 @@
 
 }
 
+.support-options-section .mycard-content-block {
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--color-light-transparent);
+}
+
 .tabs {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +68,7 @@
 }
 
 .tabs input[type="radio"]:checked+label {
-    background: var(--color-light);
+    background: var(--color-light-a-bit-transparent);
     color: var(--color-dark)
 }
 
@@ -75,13 +81,14 @@
 }
 
 .tabs label {
+    align-items: center;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin: 0;
     order: 1;
-}
-
-.tabs label {
-    margin-right: 0.3rem;
-    margin-top: 0;
-    width: auto;
+    text-align: center;
+    width: 50%;
 }
 
 .support-item {
