@@ -110,3 +110,48 @@
 .support-role-description {
     background-color: var(--color-gecko-transparent);
 }
+
+.benefit-item:hover {
+    cursor: pointer;
+}
+
+.benefit-item:active .support-role-description {
+    background-color: var(--color-gecko);
+}
+
+/* Popup */
+.popup {
+    /* display: none; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-light);
+    border-style: solid;
+    border-width: 15px;
+    border-color: var(--color-gecko);
+    z-index: 2048;
+    padding: 1rem;
+    width: 80%;
+    text-align: left;
+    max-height: 80%;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-style: solid;
+    border-width: 5px;
+}
+
+.popup-title {
+    font-family: var(--title-font);
+    font-size: 4rem;
+    margin-right: 10rem;
+}
+
+.popup-body {
+}
