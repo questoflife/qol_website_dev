@@ -72,6 +72,23 @@ hr {
     width: 100%;
 }
 
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: var(--color-light);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d; 
+}
+
 /* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
 .page-content {
     display: flex;
