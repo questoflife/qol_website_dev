@@ -26,10 +26,19 @@
 
 }
 
+#support-us-title-section {
+    padding-bottom: 5rem;
+}
+
 .support-options-section .mycard-content-block {
     border-style: solid;
     border-width: 1px;
     border-color: var(--color-light-transparent);
+}
+
+#support-intro {
+    text-align: center;
+    margin: 0 50px;
 }
 
 .tabs {
