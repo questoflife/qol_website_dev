@@ -336,15 +336,17 @@ hr {
 
 /* Hamburger Menu */
 .mynavbar-hamburger {
+    color: var(--color-dark);
     display: flex;
     align-items: center;
     font-size: 6rem;
-    padding: 0px 10px 0 10px;
+    padding: 0px 2rem;
     margin-right: 20px;
 }
 
 .mynavbar-hamburger:hover {
     background-color: var(--color-neutral);
+    color: var(--color-dark);
 }
 
 #mynavbar-hamburger-open {
