@@ -153,7 +153,8 @@
 }
 
 .close-button:hover {
-    background-color: var(--color-gecko-transparent);
+    background-color: var(--color-dark);
+    color: var(--color-light);
 }
 
 .close-button:active {

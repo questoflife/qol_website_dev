@@ -86,7 +86,7 @@ hr {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #6d6d6d; 
+    background: var(--color-dark); 
 }
 
 /* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
