@@ -126,6 +126,13 @@
     border-color: var(--color-gecko);
     border-style: solid;
     color: var(--color-dark);
+
+    transition: 0.3s;
+    box-shadow: 10px 10px 0px 0px var(--color-dark-transparent);
+}
+
+.support-item:hover {
+    box-shadow: 0 0 var(--color-dark-transparent);
 }
 
 .support-role-description {
