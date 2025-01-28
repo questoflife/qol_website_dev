@@ -198,6 +198,10 @@
     margin-right: 10rem;
 }
 
+.popup-body .cta-button {
+    margin-top: 80px;
+}
+
 
 @media (min-width:992px) {
     .tabs label .fa-icon {
