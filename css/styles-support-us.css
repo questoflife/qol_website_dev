@@ -100,8 +100,8 @@
     width: 50%;
 }
 
-.tab-content {
-    text-align: center;
+.tabs label .fa-icon {
+    display: none;
 }
 
 .support-item {
@@ -179,4 +179,12 @@
     font-family: var(--title-font);
     font-size: 4rem;
     margin-right: 10rem;
+}
+
+
+@media (min-width:992px) {
+    .tabs label .fa-icon {
+        display: block;
+    }
+    
 }
