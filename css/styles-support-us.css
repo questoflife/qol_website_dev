@@ -41,6 +41,23 @@
     margin: 0 50px;
 }
 
+.main-grid-card-container {
+    align-items: stretch;
+    display: grid;
+    gap: 30px;
+    padding: 10px 40px;
+    justify-items: center;
+}
+
+.main-grid-card>* {
+    padding: 3rem;
+}
+
+.main-grid-card-container .support-item {
+    border-color: var(--color-highlight);
+}
+
+
 .tabs {
     display: flex;
     flex-wrap: wrap;
