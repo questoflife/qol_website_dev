@@ -152,6 +152,14 @@
     z-index: 2049;
 }
 
+.close-button:hover {
+    background-color: var(--color-gecko-transparent);
+}
+
+.close-button:active {
+    background-color: var(--color-gecko);
+}
+
 .popup-content {
     height: 100%;
     left: 0;
