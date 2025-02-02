@@ -32,6 +32,7 @@ body {
     font-family: var(--body-font);
     font-optical-sizing: auto;
     font-size: 1.2rem;
+    visibility: hidden;
 }
 
 body::before {
