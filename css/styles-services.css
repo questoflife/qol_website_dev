@@ -1,0 +1,10 @@
+.equal-cols {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.equal-cols .mycard-content-block {
+    width: 40%;
+}
