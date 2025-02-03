@@ -49,6 +49,14 @@ strong {
     text-align: left;
 }
 
+.skills-grid {
+    align-items: stretch;
+    display: grid;
+    gap: 30px;
+    padding: 10px 40px;
+    justify-items: center;
+}
+
 .values-grid {
     align-items: stretch;
     display: grid;
@@ -58,23 +66,21 @@ strong {
 }
 
 .values-item {
-    border-color: var(--color-gecko);
-    border-style: solid;
-}
-
-.values-item {
-    position: relative;
     align-items: center;
     background-color: var(--color-dark);
+    border-color: var(--color-gecko);
+    border-style: solid;
+    color: var(--color-light);
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 330px;
     justify-content: center;
+    overflow: hidden;
     padding: 30px;
+    position: relative;
     text-align: center;
     width: 100%;
-    overflow: hidden;
 
 }
 
@@ -90,7 +96,7 @@ strong {
 
 .values-quote {
     box-sizing: border-box;
-    color: var(--color-dark);
+    color: var(--color-dark-a-bit-transparent);
     font-size: 1.5rem;
     font-style: italic;
     justify-content: center;
@@ -218,6 +224,13 @@ strong {
 
 @media (min-width:1200px) {
     /* Switch to 3 column grid */
+    .skills-grid {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Switch to 2 column grid */
     .values-grid {
         display: grid;
         grid-auto-rows: 1fr;
@@ -229,7 +242,6 @@ strong {
         position: relative;
         /* To allow child elements to be positioned relative to this container */
         align-items: center;
-        background-color: var(--color-dark-a-bit-transparent);
         display: flex;
         flex-direction: column;
         gap: 30px;
