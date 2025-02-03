@@ -31,7 +31,7 @@ body {
     padding: 0;
     font-family: var(--body-font);
     font-optical-sizing: auto;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     visibility: hidden;
 }
 
@@ -430,6 +430,7 @@ hr {
     padding: 120px 0;
 }
 
+.page-content hr,
 .page-title-section hr {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
     border-style: none;
@@ -456,7 +457,18 @@ hr {
 
 .section p {
     font-family: var(--body-font);
+}
+
+.small-mycard-text {
     font-size: 1.5rem;
+}
+
+.medium-mycard-text {
+    font-size: 3rem;
+}
+
+.large-mycard-text {
+    font-size: 5rem;
 }
 
 .section-title {
@@ -673,10 +685,6 @@ hr {
     justify-items: center;
 }
 
-.benefit-grid>* {
-    padding: 1rem;
-}
-
 .benefit-item {
     position: relative;
     /* To allow child elements to be positioned relative to this container */
@@ -750,18 +758,6 @@ hr {
 
 .benefit-item:hover .benefit-label {
     color: var(--color-transparent)
-}
-
-.small-mycard-text {
-    font-size: 1.5rem;
-}
-
-.medium-mycard-text {
-    font-size: 3rem;
-}
-
-.large-mycard-text {
-    font-size: 5rem;
 }
 
 #challenges-text {

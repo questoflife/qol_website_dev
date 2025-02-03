@@ -4,6 +4,11 @@ $(document).on('click', '.support-item', function () {
     popup.show();
 });
 
+$(document).on('click', '.more-info-button', function () {
+    const popup = $(this).closest('.values-hover-content').siblings('.popup');
+    popup.show();
+});
+
 // Hide popup when close button is clicked
 $(document).on('click', '.close-button', function (event) {
     // Prevent the click event from propagating to the body

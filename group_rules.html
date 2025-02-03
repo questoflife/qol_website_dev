@@ -25,10 +25,17 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-group-rules.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/popup.js"></script>
 
     <!-- Prevent FOUT -->
     <script src="js/fout_fix.js"></script>
-    
+
 </head>
 
 <body>
@@ -83,68 +90,470 @@
         <!-- PAGE BODY -->
         <!------------------------------------------------------------------------------------------------->
         <div class="page-body">
-            <div class="section page-title-section">
+            <div class="section">
                 <div class="section-content-column">
+                    <div class="section-title">Group Values</div>
+                    <hr>
+                    <div class="mycard clear-mycard">
+                        <div class="mycard-content">
+                            <div class="mycard-content-block">
+                                <div class="values-grid">
+                                    <div id="values-card-authenticity" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-masks-theater fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Authenticity
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                Say what you mean and mean what you say.
+                                            </div>
+                                            <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
 
-                    <div class="mycard clear-mycard centred-mycard">
-                        <div id="tagline-title">Group Values, Rules, Boundaries and Expectations</div>
-                        <hr>
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Authenticity
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">We want to be kind to one another, but we don’t necessarily always want to be ‘nice’. Authenticity essentially <strong>means saying what you mean and meaning what you say</strong>. We want to be able to build enough trust so that we can be honest with each other. Sometimes in order to grow, we need to hear feedback that’s not going to be fun to hear. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="values-card-compassion" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-heart fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Compassion
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                Temper your authenticity with compassion.
+                                            </div>
+                                            <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Compassion
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Temper your authenticity with compassion. What we say to another person should come from a place of trying to help and support them.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="values-card-presence" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-arrows-to-circle fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Presence
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                Do your best to stay present with the group and focused on the
+                                                conversaion. No alt-tabbing etc.
+                                            </div>
+                                            <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Presence
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        We ask for a commitment to <strong>show up to sessions consistently and to join the call a few minutes early</strong> so that we can start at the scheduled time. If you can’t make it occasionally that’s fine, but please let us know in advance.
+                                                    </p>
+                                                    
+                                                    <p>
+                                                        During sessions <strong>please do your best to be present and engaged with the conversation</strong>. So no alt-tabbing, no gaming in the background… Try to pay enough attention to what others are saying so that you’d be comfortable reflecting back what they said at any point. At the same time, we also want to highlight that people need different things to be able to focus. If you need to fidget, go ahead and fidget! If you need to take notes, take notes… Do whatever works best for you
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="values-card-autonomy" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-compass fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Autonomy
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                Everyone gets to make their own choices, and to decide how they want to be supported.
+                                            </div>
+                                                <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Autonomy
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        When a member shares a personal experience, our top priority is going to be to <strong>support them in whatever way they think will be most helpful</strong>. We’ll need to check in with them about this. Maybe they just want to share their story and be heard, maybe they want to hear other people’s experiences with similar issues, maybe they want to understand their emotions better…
+                                                    </p>
+                                                        
+                                                    <p>
+                                                        A lot of the time, a natural impulse people have is to want to jump straight into offering solutions or advice. In our experience this is often not very helpful. Instead, we want to <strong>ASK people what kind of support they want.</strong> If you find yourself wanting to give advice anyway, let us know and we can help you find other ways to approach this. “I’m noticing myself wanting to give advice. What do I say instead?”
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="section">
                 <div class="section-content-column">
-                    <div class="mycard clear-mycard centred-mycard">
+                    <div class="section-title">Communication Skills</div>
+                    <hr>
+                    <div class="mycard clear-mycard">
                         <div class="mycard-content">
                             <div class="mycard-content-block">
-                                <div class="centred-mycard small-mycard-text">
-                                    Our main priority is running facilitated peer support groups with the goal to
-                                    support as many people who otherwise can't access or afford coaching or therapy.
-                                    Groups operate on a pay-what-you-want model.
+                                <div class="values-grid">
+                                    <div id="values-card-authenticity" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-circle-question fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Open-Ended Questions
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                Any question that prompts a paragraph answer, i.e. not a Yes/No or a multiple choice question.
+                                            </div>
+                                            <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Open-Ended Questions
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="medium-mycard-text">What?</p>
+                                                    <p class="small-mycard-text">Any questions that provoke thought, inviting a paragraph answer rather than a single word. Basically, not yes/no or multiple choice questions.</p>
+
+                                                    <p class="medium-mycard-text">Why?</p>
+                                                    <p class="small-mycard-text">
+                                                        <ul>
+                                                            <li>Encourage further reflection</li>
+                                                            <li>Gain more information</li>
+                                                            <li>Move the conversation forward</li>
+                                                        </ul>
+                                                    </p>
+
+                                                    <p class="medium-mycard-text">How?</p>
+                                                    <p class="small-mycard-text">
+                                                        <ul>
+                                                            <li>Be curious - what would you like to know more about?</li>
+                                                            <li>Clarify statements - is there anything ambiguous or confusing? Ask about it! Chances are, someone else in the group is confused too. Sometimes even the person sharing won't be aware of something inconsistent. Asking for clarification is what often leads to great insights.</li>
+                                                            <li>Are you making assumptions about anything? Ask a question to find out what's actually going on!</li>
+                                                        </ul>
+                                                    </p>
+
+                                                    <p class="medium-mycard-text">Examples</p>
+                                                    <p class="small-mycard-text">
+                                                        <ul>
+                                                            <li><em>What do you think about that?</em></li>
+                                                            <li><em>How did you learn that...?</em></li>
+                                                            <li><em>How do you feel about that?</em></li>
+                                                        </ul>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="values-card-compassion" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-arrows-rotate fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Reflective Listening
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                What did you hear the other person say?
+                                            </div>
+                                            <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Reflective Listening
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        <p class="medium-mycard-text">What?</p>
+                                                        <p class="small-mycard-text">
+                                                            Reflective listening is basically any answer to <strong>'What are you hearing the other person say?'</strong>. Could be a summary, a direct quote, some key highlights, or even sharing how you got a bit lost in thought and only caught the last sentence of what someone was saying... 
+                                                        </p>
+
+                                                        <p class="medium-mycard-text">Why?</p>
+                                                        <p class="small-mycard-text">
+                                                            <ul>
+                                                                <li>Check if you're understanding what the other person is sharing</li>
+                                                                <li>Give them an easy way to clarify misunderstandings</li>
+                                                                <li>Help someone feel heard and understood</li>
+                                                                <li></li>
+                                                            </ul>
+                                                        </p>
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="values-card-presence" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-hand-holding-heart fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Relating Your Experience
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                Share how you relate to another group member's experience
+                                            </div>
+                                            <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Relating Your Experience
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Details
+                                                    </p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="values-card-autonomy" class="values-item">
+                                        <div class="values-icon">
+                                            <i class="fa-solid fa-thumbs-up fa-2xl"></i>
+                                        </div>
+                                        <div class="values-label">
+                                            Asking For Permission
+                                        </div>
+                                        <div class="values-hover-content">
+                                            <div class="values-quote">
+                                                If you're unsure whether something is okay to say or do, ask...
+                                            </div>
+                                                <div class="cta-button more-info-button">
+                                                More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Autonomy
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Details
+                                                    </p>
+                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <br>
                             </div>
                         </div>
                     </div>
-                    <div class="mycard bg-mycard">
-                        <div class="mycard-content">
-                            <div class="mycard-content-block">
-                                <div class="mycard-title-group">
-                                    <div class="mycard-title"><span class="service-icon"><i
-                                                class="fa-solid fa-users"></i></span> Group Coaching</div>
-                                    <div class="mycard-title highlight-text-green">PWYW</div>
-                                </div>
-                                <div class="bubble-group">
-                                    <div class="bubble">Up to 7 Members</div>
-                                    <div class="bubble">1-2 Facilitators</div>
-                                    <div class="bubble">90 Mins Every Week</div>
-                                    <div class="bubble">4 Week Trial Groups</div>
-                                    <div class="bubble">16+ Week Groups</div>
-                                </div>
-                                <p>
-                                    Hello There!
-                                </p>
-
-                                <div class="service-buttons">
-                                    <a class="cta-button info-button" href="https://discord.gg/m9hVVajQU3"
-                                        target="_blank">
-                                        More Info
-                                    </a>
-                                    <a class="cta-button" href="https://forms.gle/Jxkh56WbbLVXzqGj8" target="_blank">
-                                        Sign Up
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                 </div>
             </div>
 
 
+            <div id="expectations-title-section" class="section page-title-section">
+                <div class="section-content-column">
+                    <div class="section-title">Expectations and Structure</div>
+                    <hr>
+                    <div class="mycard clear-mycard centred-mycard">
+                        <p>Your group will be a place to understand yourself and to learn how to find answers within yourself. You will also learn how to support others in the group to do the same.
+                        </p>
+
+                        <p>
+                            <ul>
+                                <li>
+                                    You’re going to meet once a week for 90 minutes in the same time slot, and your group will run for either 4 or 16 weeks.
+                                </li>
+                                <li>
+                                    Normally it takes at least 8-12 weeks before people start noticing changes in their lives.
+                                </li>
+                                <li>
+                                    If you can’t make it to a session or are running late please let your group know.
+                                </li>
+                                <li>
+                                    Facilitators will generally not share much about their personal lives or participate in the group as members. Instead, they will assist you in supporting each other and guide the conversation as necessary. You are free to ask them questions though.
+                                </li>
+                                <li>
+                                    The only thing we ask for as ‘payment’ for participating in group is that you fill in a weekly post-session feedback form and an outcome survey once a month to track your progress. This helps us understand how groups help people and identify areas for improvement. We may also use anonymised, aggregated data for marketing purposes in the future. <strong>Filling in these surveys is a requirement for participating in group.</strong>
+                                </li>
+                                <li>
+                                    For some groups, cameras are a requirement. There are several reasons for this:
+                                    <ul>
+                                        <li>
+                                            We find that groups with video have an easier time relating to one another, and feel more connected and engaged with the conversation. Ultimately, this also leads to more growth and quicker progress
+                                        </li>
+                                        <li>
+                                            It’s easier to notice when someone wants to speak and to give them space
+                                        </li>
+                                        <li>
+                                            If we notice that someone is feeling uncomfortable or upset, we’ll be able to check in with them to see how they’re doing and if there’s anything we can do to help
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="boundaries-title-section" class="section page-title-section">
+                <div class="section-content-column">
+                    <div class="section-title">Boundaries</div>
+                    <hr>
+                    <div class="mycard clear-mycard centred-mycard">
+                        <div class="mycard-title">Entitlement to Privacy</div>
+                        <p>
+                            Everyone in the group has an entitlement to privacy, which basically means that <strong>what’s said in the group stays in the group.</strong> If another member shares a personal experience during a session, that is not your information to share outside of group.
+                        </p>
+                        <p>
+                            Facilitators will be taking notes so that they can keep track of what’s been talked about in each group, but these won’t be shown to anyone and once group is over they will be destroyed.
+                        </p>
+                        <p>
+                            Facilitators may bring questions or problems to their supervisor or colleagues during case reviews. If they do so, they will ensure to talk in the most general terms possible and avoid disclosing any identifiable information.
+                        </p>
+
+                        <div class="mycard-title">Personal Boundaries</div>
+                        <p>
+                            <strong>You don’t have to discuss anything you don’t want to.</strong> It is always okay to put the brakes on a conversation or to refuse to answer a question. If the conversation isn’t going in a direction you like, if you’re feeling too pressured or too uncomfortable, please let us know! If you’re ever worried about how another group member is doing, please check in with them or let us know! Anyone can put the brakes on at any time.
+                        </p>
+                        <p>
+                            It is also <strong>okay to disconnect from the call at any point</strong>, no explanation needed. If this happens, your facilitator will message you after the session to check in with you. If you’re feeling up to it, we can talk about what happened and how it affected you and what we can adapt or do differently in the future.
+                        </p>
+
+                        <p>
+                            If you feel you need to turn off your camera at particular points during a session that’s okay, but we ask that you make an effort to keep it on whenever you can (if you're in a cameras-on group).
+                        </p>
+
+                        <div class="mycard-title">Complaints</div>
+                        <p>
+                            If you have any concerns about how sessions are going, there are a few things you can do:
+                        </p>
+                        <p>
+                            <ol>
+                                <li>
+                                    If you feel comfortable, <strong>bring it up in sessions with your group</strong>. If you don’t like how something is going, chances are you won’t be the only one. If you tell us what’s going wrong, we’ll be able to talk about it and find a solution together 
+                                </li>
+                                <li>
+                                    At the end of each session we’ll ask you to fill in a brief <strong>feedback form</strong>. These are anonymous (as long as you don’t write down any identifying information). We do read these every week and we take feedback very seriously. If you raise an issue, we will do our best to address it.
+                                </li>
+                                <li>
+                                    If you need to raise an issue that you don’t feel comfortable discussing with your group or facilitators you can open a support ticket in <strong>#support-desk in the main (green) server</strong>.
+                                </li>
+                            </ol>
+                        </p>
+
+                        <div class="mycard-title">Safety</div>
+                        <p>
+                            We ask everyone to <strong>take responsibility for everyone else in the group</strong>. If you notice that someone else is unusually quiet or if you feel like they’re not okay or unhappy about something, please check in with them.
+                        </p>
+                        <p>
+                            <ul>
+                                <li>
+                                    <em>“Hey, I’ve noticed you’ve gone quiet all of a sudden. How are you feeling?”</em>
+                                </li>
+                                <li>
+                                    <em>“How’s the session going for you?”</em>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="disclaimers-title-section" class="section page-title-section">
+                <div class="section-content-column">
+                    <div class="section-title">Disclaimers</div>
+                    <hr>
+                    <div class="mycard clear-mycard centred-mycard">
+                        <p>
+                            We operate on a peer support model and our facilitators are NOT medical
+                                professionals. They therefore <strong>can’t diagnose, provide any kind of therapy or
+                            treatment, and none of what’s said in group should be interpreted as medical advice.</strong>
+                        </p>
+
+                        <p>
+                            This also means that sometimes topics might come up that you won't be able to discuss in
+                            full detail. Your group's main focus will be on the present, helping you move towards
+                            your goals, and figuring out where you want to be in life. We might occasionally touch upon
+                            how past experiences affect you now, but you won’t be delving into the past or trauma.
+                        </p>
+
+                        <p>
+                            To keep the group safe for everyone, <strong>certain topics such as abuse or suicide are completely off-limits.</strong> Should such topics come up, your facilitator will interrupt the conversation and offer to talk about how you could get access to professional support instead. 
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
         <!------------------------------------------------------------------------------------------------->
         <!-- PAGE FOOTER -->
