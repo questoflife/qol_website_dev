@@ -26,6 +26,10 @@
 
 }
 
+#stripe-table {
+    background-color: transparent;
+}
+
 #support-us-title-section {
     padding-bottom: 5rem;
 }
