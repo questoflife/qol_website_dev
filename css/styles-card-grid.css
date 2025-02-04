@@ -43,6 +43,54 @@
     justify-items: center;
 }
 
+.grid-item {
+    position: relative;
+    /* To allow child elements to be positioned relative to this container */
+    align-items: center;
+    background-color: var(--color-dark-a-bit-transparent);
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    gap: 30px;
+    justify-content: left;
+    padding: 40px 50px 30px 30px;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    /* To prevent overflow issues */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.grid-item:hover .grid-icon,
+.grid-item:hover .grid-label {
+    opacity: 0;
+    /* Fade out icon and label */
+}
+
+.grid-item:hover .grid-quote {
+    opacity: 1;
+    /* Fade in the quote */
+}
+
+.grid-item:hover .grid-label {
+    color: var(--color-transparent)
+}
+
+.grid-icon {
+    width: 5rem;
+}
+
+.grid-icon,
+.grid-label {
+    transition: opacity 0.3s;
+    /* Smooth transition for fading out */
+}
+
+.grid-label > br {
+    display: none;
+}
+
+
 .grid-item-button {
     background-color: var(--color-light-a-bit-transparent);
     border-color: var(--color-gecko);
@@ -62,5 +110,11 @@
     .grid-of-cards {
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .grid-item {
+        font-size: 2rem;
+        gap: 30px;
+        padding: 50px 10px 40px 10px;
     }
 }

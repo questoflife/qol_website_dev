@@ -686,31 +686,6 @@ hr {
     justify-items: center;
 }
 
-.benefit-item {
-    position: relative;
-    /* To allow child elements to be positioned relative to this container */
-    align-items: center;
-    background-color: var(--color-dark);
-    display: flex;
-    flex-direction: column;
-    font-size: 2rem;
-    gap: 10px;
-    /* Adjust spacing if needed */
-    justify-content: center;
-    padding: 30px;
-    text-align: center;
-    width: 100%;
-    overflow: hidden;
-    /* To prevent overflow issues */
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.benefit-icon,
-.benefit-label {
-    transition: opacity 0.3s;
-    /* Smooth transition for fading out */
-}
-
 .benefit-quote {
     align-items: center;
     background-color: var(--color-light);
@@ -742,19 +717,6 @@ hr {
 .benefit-item:hover .benefit-quote {
     opacity: 1;
     /* Fade in the quote */
-}
-
-
-.benefit-item-even {
-    color: var(--color-gecko);
-}
-
-.benefit-item-odd {
-    color: var(--color-highlight);
-}
-
-.benefit-label>br {
-    display: none;
 }
 
 .benefit-item:hover .benefit-label {
@@ -794,26 +756,6 @@ hr {
         display: grid;
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .benefit-item {
-        position: relative;
-        /* To allow child elements to be positioned relative to this container */
-        align-items: center;
-        background-color: var(--color-dark-a-bit-transparent);
-        display: flex;
-        flex-direction: column;
-        font-size: 2rem;
-        gap: 30px;
-        justify-content: center;
-        padding: 30px;
-        text-align: center;
-        width: 100%;
-        overflow: hidden;
-        /* To prevent overflow issues */
-        transition: background-color 0.3s, color 0.3s;
-
-        padding: 50px 10px 40px 10px;
     }
 
     .benefit-label>br {
