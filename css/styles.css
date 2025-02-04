@@ -198,6 +198,7 @@ hr {
     color: var(--color-dark);
     font-family: var(--title-font);
     font-size: 1.8rem;
+    font-weight: 500;
     height: auto;
     padding: 0px 10px 0px 10px;
     text-decoration: none;
