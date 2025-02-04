@@ -31,7 +31,7 @@
     justify-items: center;
 }
 
-.button-grid-container .support-item {
+.button-grid-container .grid-item-button {
     border-color: var(--color-highlight);
 }
 
@@ -47,10 +47,11 @@
     background-color: var(--color-light-a-bit-transparent);
     border-color: var(--color-gecko);
     border-style: solid;
+    border-width: 4px;
     color: var(--color-dark);
 
     transition: 0.3s;
-    box-shadow: 10px 10px 0px 0px var(--color-dark-transparent);
+    box-shadow: 10px 10px 0px 0px var(--color-dark-a-bit-transparent);
 }
 
 .grid-item-button:hover {
