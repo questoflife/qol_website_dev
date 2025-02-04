@@ -35,7 +35,7 @@
     border-color: var(--color-highlight);
 }
 
-.grid-of-buttons {
+.grid-of-cards {
     align-items: stretch;
     display: grid;
     gap: 30px;
@@ -59,7 +59,7 @@
 
 @media (min-width:1200px) {
     /* Switch to 3 column grid */
-    .grid-of-buttons {
+    .grid-of-cards {
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
