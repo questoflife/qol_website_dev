@@ -54,7 +54,7 @@
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
-    background-color: var(--color-dark-transparent);
+    background-color: var(--color-gecko-transparent);
     border-radius: 0 0 15px 15px;
     color: var(--color-light);
     display: block;
