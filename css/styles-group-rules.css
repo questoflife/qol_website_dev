@@ -2,9 +2,9 @@
     --color-dark: rgb(30, 58, 95);
     --color-dark-transparent: rgba(30, 58, 95, 0.3);
     --color-dark-a-bit-transparent: rgba(30, 58, 95, 0.6);
-    --color-gecko: rgb(62, 195, 220);
-    --color-gecko-a-bit-transparent: rgba(62, 195, 220, 0.8);
-    --color-gecko-transparent: rgba(62, 195, 220, 0.3);
+    --color-blue: rgb(62, 195, 220);
+    --color-blue-a-bit-transparent: rgba(62, 195, 220, 0.8);
+    --color-blue-transparent: rgba(62, 195, 220, 0.3);
     --color-gray: #6B6B6B;
     --color-light: rgba(240, 248, 255, 1);
     --color-light-a-bit-transparent: rgba(240, 248, 255, 0.9);
@@ -68,7 +68,7 @@ strong {
 .values-item {
     align-items: center;
     background-color: var(--color-dark);
-    border-color: var(--color-gecko);
+    border-color: var(--color-blue);
     border-style: solid;
     color: var(--color-light);
     display: flex;
@@ -134,7 +134,7 @@ strong {
 .popup {
     display: none;
     background-color: var(--color-dark);
-    border-color: var(--color-gecko);
+    border-color: var(--color-blue);
     border-style: solid;
     border-width: 15px;
     cursor: default;
@@ -169,7 +169,7 @@ strong {
 }
 
 .close-button:active {
-    background-color: var(--color-gecko);
+    background-color: var(--color-blue);
 }
 
 .more-info-button {
@@ -185,11 +185,11 @@ strong {
 
 .more-info-button:hover {
     box-shadow: 0 0 var(--color-dark-transparent);
-    background-color: var(--color-gecko-transparent);
+    background-color: var(--color-blue-transparent);
 }
 
 .more-info-button:active {
-    background-color: var(--color-gecko);
+    background-color: var(--color-blue);
     border-color: var(--color-dark);
     color: var(--color-dark);
 }
