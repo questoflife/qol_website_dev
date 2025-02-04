@@ -475,6 +475,7 @@ hr {
     border-style: solid;
     border-width: 3px;
     padding: 20px;
+
     width: 100%;
 }
 
@@ -533,8 +534,7 @@ hr {
     align-items: center;
 }
 
-.mycard-content-block>p {
-    /* background-color: var(--color-dark-transparent); */
+.mycard-content-block > p {
     padding: 6px;
 }
 
