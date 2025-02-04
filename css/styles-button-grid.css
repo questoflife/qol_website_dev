@@ -35,7 +35,7 @@
     border-color: var(--color-highlight);
 }
 
-.button-grid {
+.grid-of-buttons {
     align-items: stretch;
     display: grid;
     gap: 30px;
@@ -43,9 +43,23 @@
     justify-items: center;
 }
 
+.grid-item-button {
+    background-color: var(--color-light-a-bit-transparent);
+    border-color: var(--color-gecko);
+    border-style: solid;
+    color: var(--color-dark);
+
+    transition: 0.3s;
+    box-shadow: 10px 10px 0px 0px var(--color-dark-transparent);
+}
+
+.grid-item-button:hover {
+    box-shadow: 0 0 var(--color-dark-transparent);
+}
+
 @media (min-width:1200px) {
     /* Switch to 3 column grid */
-    .button-grid {
+    .grid-of-buttons {
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     }
