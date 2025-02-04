@@ -11,14 +11,16 @@
     --color-light-transparent: rgba(240, 248, 255, 0.3);
     --color-neutral: rgba(79, 79, 79, 0.1);
     --color-highlight: #8FDC3E;
+    --color-highlight-2: #8FDC3E;
     --color-transparent: rgba(0, 0, 0, 0);
 
-    --corner-radius: 0px;
+    --corner-radius-small: 5px;
+    --corner-radius-medium: 10px;
+    --corner-radius-big: 15px;
 
     --title-font: "Bebas Neue", serif;
     --body-font: "Source Sans 3", serif;
     --cta-font: "Source Sans 3", serif;
-
 }
 
 body {
@@ -78,13 +80,13 @@ hr {
  
 ::-webkit-scrollbar-track {
     background-color: var(--color-light);
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: var(--corner-radius-medium);
+    border-radius: var(--corner-radius-medium);
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -webkit-border-radius: var(--corner-radius-medium);
+    border-radius: var(--corner-radius-medium);
     background: var(--color-dark-transparent); 
 }
 
@@ -124,11 +126,11 @@ hr {
 }
 
 .tab-bar-button-left {
-    border-radius: 5px 0 0 0;
+    border-radius: var(--corner-radius-small) 0 0 0;
 }
 
 .tab-bar-button-right {
-    border-radius: 0 5px 0 0;
+    border-radius: 0 var(--corner-radius-small) 0 0;
 }
 
 .tab-bar .cta-button:focus {
@@ -144,7 +146,7 @@ hr {
     display: flex;
     align-items: center;
     background-color: var(--color-highlight);
-    border-radius: 5px;
+    border-radius: var(--corner-radius-small);
     border-style: none;
     color: var(--color-dark);
     font-family: var(--cta-font);
