@@ -23,6 +23,9 @@
     --cta-font: "Source Sans 3", serif;
 }
 
+/********************************************************************************/
+/* General Grid                                                                 */
+/********************************************************************************/
 .button-grid-container {
     align-items: stretch;
     display: grid;
@@ -48,6 +51,7 @@
     /* To allow child elements to be positioned relative to this container */
     align-items: center;
     background-color: var(--color-dark-a-bit-transparent);
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     font-size: 2rem;
@@ -90,7 +94,31 @@
     display: none;
 }
 
+.grid-quote {
+    align-items: center;
+    background-color: var(--color-light);
+    box-sizing: border-box;
+    color: var(--color-dark);
+    display: flex;
+    font-size: 1.5rem;
+    font-style: italic;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    opacity: 0;
+    /* Hidden by default */
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: opacity 0.3s;
+    /* Smooth fade-in */
+    width: 100%;
+}
 
+/********************************************************************************/
+/* Button Grid                                                                  */
+/********************************************************************************/
 .grid-item-button {
     background-color: var(--color-light-a-bit-transparent);
     border-color: var(--color-gecko);

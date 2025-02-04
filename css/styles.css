@@ -686,43 +686,6 @@ hr {
     justify-items: center;
 }
 
-.benefit-quote {
-    align-items: center;
-    background-color: var(--color-light);
-    box-sizing: border-box;
-    color: var(--color-dark);
-    display: flex;
-    font-size: 1.5rem;
-    font-style: italic;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    opacity: 0;
-    /* Hidden by default */
-    padding: 20px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    transition: opacity 0.3s;
-    /* Smooth fade-in */
-    width: 100%;
-}
-
-.benefit-item:hover .benefit-icon,
-.benefit-item:hover .benefit-label {
-    opacity: 0;
-    /* Fade out icon and label */
-}
-
-.benefit-item:hover .benefit-quote {
-    opacity: 1;
-    /* Fade in the quote */
-}
-
-.benefit-item:hover .benefit-label {
-    color: var(--color-transparent)
-}
-
 #challenges-text {
     margin-top: 70px;
 }
@@ -756,10 +719,6 @@ hr {
         display: grid;
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .benefit-label>br {
-        display: block;
     }
 
     .best-for-group {
