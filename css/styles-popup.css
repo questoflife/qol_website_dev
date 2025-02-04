@@ -26,44 +26,63 @@
 
 }
 
-#support-us-title-section {
-    padding-bottom: 5rem;
-}
-
-.support-options-section .mycard-content-block {
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--color-light-transparent);
-}
-
-#support-intro {
-    text-align: center;
-    margin: 0 50px;
-}
-
-.grid-button {
-    background-color: transparent;
+.popup {
+    display: none;
+    background-color: var(--color-light);
     border-color: var(--color-gecko);
     border-style: solid;
-    color: var(--color-dark);
-
-    transition: 0.3s;
-    box-shadow: 10px 10px 0px 0px var(--color-dark-transparent);
+    border-width: 15px;
+    cursor: default;
+    height: 80%;
+    left: 50%;
+    padding: 1rem;
+    position: fixed;
+    text-align: left;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 2048;
 }
 
-.support-item:hover {
-    box-shadow: 0 0 var(--color-dark-transparent);
-}
-
-.support-role-description {
-    background-color: var(--color-gecko-transparent);
-}
-
-.benefit-item:hover {
+.close-button {
+    background-color: var(--color-light);
+    border-style: solid;
+    border-width: 5px;
     cursor: pointer;
+    margin: 0.8rem 1rem 0 0;
+    padding: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: fit-content;
+    z-index: 2049;
 }
 
-.benefit-item:active .support-role-description {
+.close-button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.close-button:active {
     background-color: var(--color-gecko);
 }
 
+.popup-content {
+    height: 100%;
+    left: 0;
+    overflow-y: scroll;
+    padding: 2rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.popup-title {
+    font-family: var(--title-font);
+    font-size: 4rem;
+    margin-right: 10rem;
+}
+
+.popup-body .cta-button {
+    margin-top: 80px;
+}

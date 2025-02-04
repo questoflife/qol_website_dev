@@ -14,10 +14,39 @@
     --color-highlight-2: #8FDC3E;
     --color-transparent: rgba(0, 0, 0, 0);
 
-    --corner-radius-big: 15px;
     --corner-radius-small: 5px;
-    
+    --corner-radius-medium: 10px;
+    --corner-radius-big: 15px;
+
     --title-font: "Bebas Neue", serif;
     --body-font: "Source Sans 3", serif;
     --cta-font: "Source Sans 3", serif;
+}
+
+.button-grid-container {
+    align-items: stretch;
+    display: grid;
+    gap: 30px;
+    padding: 0px 40px 30px 40px;
+    justify-items: center;
+}
+
+.button-grid-container .support-item {
+    border-color: var(--color-highlight);
+}
+
+.button-grid {
+    align-items: stretch;
+    display: grid;
+    gap: 30px;
+    padding: 10px 40px;
+    justify-items: center;
+}
+
+@media (min-width:1200px) {
+    /* Switch to 3 column grid */
+    .button-grid {
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
