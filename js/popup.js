@@ -1,5 +1,5 @@
 // Show popup when a support-item is clicked
-$(document).on('click', '.grid-button', function () {
+$(document).on('click', '.grid-item-button', function () {
     const popup = $(this).find('.popup');
     popup.show();
 });
