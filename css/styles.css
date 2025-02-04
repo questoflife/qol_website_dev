@@ -1,5 +1,6 @@
 :root {
-    --color-bg-light: rgb(62, 195, 220);
+    --color-bg-light: rgb(62, 195, 220, 0.8);
+    --color-bg-dark: rgb(30, 58, 95);
     --color-dark: rgb(30, 58, 95);
     --color-dark-transparent: rgba(30, 58, 95, 0.3);
     --color-dark-a-bit-transparent: rgba(30, 58, 95, 0.6);
@@ -12,7 +13,6 @@
     --color-light-transparent: rgba(240, 248, 255, 0.3);
     --color-neutral: rgba(79, 79, 79, 0.1);
     --color-highlight: #8FDC3E;
-    --color-highlight-2: #8FDC3E;
     --color-transparent: rgba(0, 0, 0, 0);
 
     --corner-radius-small: 5px;
@@ -25,14 +25,17 @@
 }
 
 body {
-    background-color: var(--color-dark);
+    /* background-image: url("../images/backgrounds/jellyfish2.jpg"); */
+
     box-sizing: border-box;
+    color: var(--color-light);
     height: auto;
     margin: 0;
     padding: 0;
     font-family: var(--body-font);
     font-optical-sizing: auto;
     font-size: 1.5rem;
+    font-weight: 400;
     visibility: hidden;
 }
 
@@ -43,16 +46,16 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle farthest-corner at top left, rgb(15, 29, 48), rgba(8, 22, 40, 0) 50%),
-        radial-gradient(ellipse at center, rgba(30, 58, 95, 1) 0%, rgba(30, 58, 95, 0) 60%),
-        radial-gradient(circle at bottom left, var(--color-bg-light) 0%, rgba(143, 220, 62, 0) 60%),
-        radial-gradient(circle at bottom center, var(--color-bg-light) 0%, rgba(143, 220, 62, 0) 60%),
-        radial-gradient(circle at bottom right, var(--color-bg-light) 0%, rgba(143, 220, 62, 0) 60%);
+    /* background-color: var(--color-blue-transparent); */
+    background:
+    radial-gradient(ellipse at center, var(--color-bg-light) 20%, var(--color-bg-dark) 100%),
+    linear-gradient(var(--color-bg-light), var(--color-dark));
     z-index: -1;
     pointer-events: none;
 }
 
 a {
+    font-weight: 800;
     text-decoration: none;
     color: var(--color-highlight);
 }
@@ -232,7 +235,7 @@ hr {
 .page-body {
     flex-grow: 1;
     /* Fill available space between header and footer */
-    padding: 70px 0;
+    padding: 0;
 }
 
 .page-footer {
@@ -404,31 +407,8 @@ hr {
 /******************************************************************************************/
 
 .page-title-section {
-    color: var(--color-light);
     font-family: var(--body-font);
     padding: 60px 0;
-}
-
-#what-we-do-section {
-    background: linear-gradient(45deg, var(--color-dark-transparent), var(--color-blue-transparent));
-    padding: 50px 0;
-}
-
-#benefits-section {
-    padding: 120px 0;
-}
-
-#services-section {
-    background: linear-gradient(45deg, var(--color-dark-transparent), var(--color-blue-transparent));
-    padding: 120px 0;
-}
-
-#services-section .mycard {
-    margin-bottom: 50px;
-}
-
-#testimonials-section {
-    padding: 120px 0;
 }
 
 .page-content hr,
@@ -452,8 +432,16 @@ hr {
 }
 
 .section {
+    /* background: */
+    /* radial-gradient(ellipse at center, var(--color-bg-light) 20%, var(--color-bg-dark) 100%), */
+    /* linear-gradient(var(--color-bg-light), var(--color-dark)); */
     font-family: var(--body-font);
-    padding: 0px 0;
+    padding: 80px 0;
+}
+
+.section-bg {
+    /* background-color: var(--color-light-transparent); */
+    color: var(--color-dark);
 }
 
 .section p {
@@ -473,7 +461,6 @@ hr {
 }
 
 .section-title {
-    color: var(--color-light);
     font-family: var(--body-font);
     font-size: 6rem;
     padding: 0;
@@ -504,7 +491,6 @@ hr {
 }
 
 .mycard-content {
-    color: var(--color-light);
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -520,7 +506,6 @@ hr {
 }
 
 .mycard-title {
-    /* background-color: var(--color-dark-transparent); */
     font-family: var(--title-font);
     font-size: 3.25rem;
     padding: 4px 12px 0 12px;
