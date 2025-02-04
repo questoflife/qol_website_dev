@@ -13,6 +13,7 @@
     --color-light-transparent: rgba(240, 248, 255, 0.3);
     --color-neutral: rgba(79, 79, 79, 0.1);
     --color-highlight: #8FDC3E;
+    --color-gold: #F2C12E;
     --color-transparent: rgba(0, 0, 0, 0);
 
     --corner-radius-small: 5px;
@@ -57,11 +58,11 @@ body::before {
 a {
     font-weight: 800;
     text-decoration: none;
-    color: var(--color-highlight);
+    color: var(--color-gold);
 }
 
 a:hover {
-    color: var(--color-blue);
+    color: var(--color-highlight);
 }
 
 img {
