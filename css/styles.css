@@ -11,8 +11,6 @@
     --color-light-transparent: rgba(240, 248, 255, 0.3);
     --color-neutral: rgba(79, 79, 79, 0.1);
     --color-highlight: #8FDC3E;
-    --color-highlight-2: #F2C12E;
-    --color-highlight-2: #8FDC3E;
     --color-transparent: rgba(0, 0, 0, 0);
 
     --corner-radius: 0px;
@@ -162,7 +160,7 @@ hr {
 
 .info-button {
     background-color: var(--color-dark);
-    color: var(--color-highlight-2);
+    color: var(--color-highlight);
 }
 
 .cta-button:hover {
@@ -574,7 +572,7 @@ hr {
 }
 
 #group-coaching-service-mycard {
-    border-color: var(--color-highlight-2);
+    border-color: var(--color-highlight);
     border-style: solid;
     border-width: 8px;
 }
