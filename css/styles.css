@@ -480,10 +480,6 @@ hr {
     width: 100%;
 }
 
-.c1 {
-    min-width: 600px;
-}
-
 .spaced-content {
     display: flex;
     align-items: stretch;
@@ -496,12 +492,17 @@ hr {
 .mycard-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 45px;
     height: 100%;
 }
 
-.mycard-title.dark-bg {
-    background-color: var(--color-dark-transparent);
+.mycard-title {
+    margin-bottom: 10px;
+}
+
+.mycard-title.background {
+    background-color: var(--color-light-a-bit-transparent);
+    color: var(--color-dark);
 }
 
 .mycard-content-block.dark-bg {
@@ -536,7 +537,7 @@ hr {
 }
 
 .mycard-content-block > p {
-    padding: 6px;
+    padding: 6px 20px;
 }
 
 .border-mycard {
@@ -610,10 +611,8 @@ hr {
 }
 
 .best-for-card {
-    background-color: var(--color-light);
-    border-style: solid;
-    border-color: var(--color-light);
-    color: var(--color-dark);
+    background-color: var(--color-dark-transparent);
+    color: var(--color-light);
     font-size: 2rem;
     font-weight: 700;
     padding: 15px;
@@ -657,14 +656,6 @@ hr {
     padding-right: 80px;
 }
 
-.carousel-control-prev {
-    justify-content: left;
-}
-
-.carousel-control-next {
-    justify-content: right;
-}
-
 /* mycard Grid */
 .benefit-grid {
     align-items: stretch;
@@ -679,7 +670,8 @@ hr {
 }
 
 .mycard-title-group {
-    background-color: var(--color-dark-transparent);
+    background-color: var(--color-light);
+    color: var(--color-dark);
     display: flex;
     justify-content: space-between;
 }
@@ -845,25 +837,6 @@ hr {
 @media only screen and (min-width: 1200px) {
     .spaced-content {
         height: 100%;
-    }
-
-    .col-2 {
-        flex-direction: row;
-    }
-
-    .col-2-even {
-        flex-direction: row;
-    }
-
-    .col-2-even .c1,
-    .col-2-even .c2 {
-        min-width: 0;
-        max-width: 10000px;
-        width: 50%;
-    }
-
-    .c2 {
-        max-width: 300px;
     }
 
     .mycard-stat-box br {

@@ -85,10 +85,27 @@
     gap: 100px;
 }
 
+/*****************************************************************************************/
+/* Testimonials                                                                          */
+/*****************************************************************************************/
 #testimonials-section {
     background-color: var(--color-light-a-bit-transparent);
     color: var(--color-dark);
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 150px, 100% 100%, 0% 100%);
     padding: 250px 0 50px 0;
+}
+
+.carousel-control-prev {
+    justify-content: left;
+}
+
+.carousel-control-next {
+    justify-content: right;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: red;
+    background-color: red;
 }
