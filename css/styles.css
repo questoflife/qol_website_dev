@@ -499,12 +499,11 @@ hr {
 .mycard-title {
     font-family: var(--title-font);
     font-size: 3.25rem;
-    margin-bottom: 10px;
     padding: 4px 20px 0 20px;
 }
 
 .mycard-title.background {
-    background: linear-gradient(to right, var(--color-light-a-bit-transparent) 40%, var(--color-light-transparent));
+    background: linear-gradient(to right, var(--color-light) 60%, var(--color-light-a-bit-transparent));
     color: var(--color-dark);
 }
 
@@ -654,8 +653,8 @@ hr {
 }
 
 .mycard-title-group {
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    background: linear-gradient(to right, var(--color-light) 60%, var(--color-light-a-bit-transparent));
+    color:var(--color-dark);
     display: flex;
     justify-content: space-between;
 }
