@@ -55,15 +55,40 @@
 }
 
 #main-title-diagonal-strip {
-    background-color: var(--color-light-a-bit-transparent); /* Change to your desired color */
+    background-color: var(--color-light-a-bit-transparent);
+    /* Change to your desired color */
     color: #000;
-    height: 200px; /* Adjust height as needed */
+    height: 200px;
+    /* Adjust height as needed */
     z-index: 2;
 
     /* Create a diagonal top edge that mirrors the first div */
     clip-path: polygon(0% 150px, 100% 0%, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(0% 150px, 100% 0%, 100% 10px, 0% 100%);
 
-    margin-top: -150px; /* Pulls it up to align */
+    margin-top: -150px;
+    /* Pulls it up to align */
 
+}
+
+#why-join-section {
+    background-color: var(--color-light-a-bit-transparent);
+    color: var(--color-dark);
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 150px, 100% calc(100% - 150px), 0% 100%);
+    padding: 150px 0 250px 0;
+}
+
+#services-section .section-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+#testimonials-section {
+    background-color: var(--color-light-a-bit-transparent);
+    color: var(--color-dark);
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 150px, 100% 100%, 0% 100%);
+    padding: 250px 0 50px 0;
 }
