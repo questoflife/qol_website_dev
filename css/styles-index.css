@@ -46,7 +46,6 @@
 
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
-
 }
 
 #tagline-title {
@@ -56,19 +55,46 @@
 
 #main-title-diagonal-strip {
     background-color: var(--color-light-a-bit-transparent);
-    /* Change to your desired color */
-    color: #000;
     height: 200px;
-    /* Adjust height as needed */
     z-index: 2;
 
     /* Create a diagonal top edge that mirrors the first div */
-    clip-path: polygon(0% 150px, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 150px, 100% 0%, 100% 10px, 0% 100%);
     -webkit-clip-path: polygon(0% 150px, 100% 0%, 100% 10px, 0% 100%);
 
     margin-top: -150px;
     /* Pulls it up to align */
+}
 
+#info-section {
+    margin-bottom: 80px;
+}
+
+.stat-strip {
+    background-color: var(--color-dark-a-bit-transparent);
+    font-family: var(--title-font);
+    font-size: calc(2rem + 2vw);
+    height: calc(50px + 3vw);
+    align-content: center;
+    padding: 4px 10% 0 10%;
+}
+
+#groups-completed-stat-strip {
+    transform: skewY(-5deg);
+    text-align: right;
+    margin-bottom: -3vw;
+}
+
+#members-supported-stat-strip {
+    transform: skewY(5deg);
+    text-align: right;
+    margin-top: -3vw;
+}
+
+#hours-volunteered-stat-strip {
+    transform: skewY(-5deg);
+    text-align: right;
+    margin-bottom: -3vw;
 }
 
 #stats-block {
@@ -78,9 +104,15 @@
 #why-join-section {
     background-color: var(--color-light-a-bit-transparent);
     color: var(--color-dark);
-    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
-    -webkit-clip-path: polygon(0% 0%, 100% 150px, 100% calc(100% - 150px), 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 10vw), 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
     padding: 150px 0 250px 0;
+    z-index: 10;
+    position: relative;
+}
+
+#services-section {
+    margin: 80px 0 100px 0 ;
 }
 
 #services-section .section-content-column {

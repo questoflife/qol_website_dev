@@ -512,19 +512,6 @@ hr {
     background-color: var(--color-dark-transparent);
 }
 
-.mycard-stat-box {
-    align-content: center;
-    background-color: var(--color-dark-transparent);
-    flex-grow: 1;
-    font-family: var(--title-font);
-    font-size: 3rem;
-    padding: 4px 12px 0 12px;
-}
-
-.mycard-stat-box br {
-    display: none;
-}
-
 .title-group {
     display: flex;
     flex-direction: row;
@@ -834,10 +821,6 @@ hr {
 @media only screen and (min-width: 1200px) {
     .spaced-content {
         height: 100%;
-    }
-
-    .mycard-stat-box br {
-        display: block;
     }
 
     #hideable-cta-button-text {
