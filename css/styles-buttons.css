@@ -137,6 +137,9 @@
     justify-content: center;
 }
 
+/* Grid buttons */
+
+
 @media only screen and (min-width: 992px) {
     #mynavbar-join-button {
         display: flex;
