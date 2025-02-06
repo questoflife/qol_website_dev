@@ -117,6 +117,19 @@
 }
 
 
+/* Footer Buttons */
+.page-footer .cta-button {
+    margin: 0;
+    width: 512px;
+}
+
+.footer-cta-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
 @media only screen and (min-width: 992px) {
     #mynavbar-join-button {

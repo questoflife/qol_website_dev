@@ -595,24 +595,6 @@ hr {
     color: var(--color-highlight);
 }
 
-.page-footer .cta-button {
-    background-color: var(--color-highlight);
-    margin: 0;
-    width: 512px;
-}
-
-.page-footer .cta-button:hover {
-    background-color: var(--color-blue);
-}
-
-.footer-cta-buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
 .page-footer hr {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
     border-style: none;
