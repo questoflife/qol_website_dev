@@ -340,10 +340,10 @@ hr {
 
 .section-title {
     font-family: var(--body-font);
-    font-size: 6rem;
-    font-weight: 600;
+    font-size: calc(6rem + 3vw);
+    font-weight: 800;
     padding: 0;
-    padding-bottom: 80px;
+    padding-bottom: calc(30px + 2vw);
     text-align: center;
 }
 
@@ -499,7 +499,7 @@ hr {
     align-items: stretch;
     display: grid;
     gap: 30px;
-    padding: 40px 40px;
+    padding: 40px 0;
     justify-items: center;
 }
 
@@ -532,6 +532,7 @@ hr {
         display: grid;
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 40px 40px;
     }
 
     .best-for-group {
