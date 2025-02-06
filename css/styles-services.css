@@ -1,10 +1,37 @@
+:root {
+    --color-dark: rgb(30, 58, 95);
+    --color-dark-transparent: rgba(30, 58, 95, 0.3);
+    --color-dark-a-bit-transparent: rgba(30, 58, 95, 0.6);
+    --color-blue: rgb(62, 195, 220);
+    --color-blue-a-bit-transparent: rgba(62, 195, 220, 0.8);
+    --color-blue-transparent: rgba(62, 195, 220, 0.3);
+    --color-gray: #6B6B6B;
+    --color-light: rgba(240, 248, 255, 1);
+    --color-light-a-bit-transparent: rgba(240, 248, 255, 0.9);
+    --color-light-transparent: rgba(240, 248, 255, 0.3);
+    --color-neutral: rgba(79, 79, 79, 0.1);
+    --color-highlight: #8FDC3E;
+    --color-highlight-transparent: rgba(143, 220, 62, 0.3);
+
+    --color-highlight-2: #F2C12E;
+    --color-highlight-2: #8FDC3E;
+    --color-transparent: rgba(0, 0, 0, 0);
+
+    --corner-radius: 0px;
+
+    --title-font: "Bebas Neue", serif;
+    --subtitle-font: "Roboto Condensed", serif;
+    --body-font: "Source Sans 3", serif;
+    --cta-font: "Source Sans 3", serif;
+
+}
 
 #services-title-section {
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
 
-    background-color: var(--color-blue);
+    background-color: var(--color-blue-a-bit-transparent);
 
     /* background-image: url("../images/backgrounds/support.avif");
     background-position-y: calc(50% + 100px); */

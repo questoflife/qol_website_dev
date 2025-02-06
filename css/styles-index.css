@@ -29,7 +29,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* background-color: var(--color-blue); */
+    background-color: var(--color-blue-transparent);
 
     /* background-image: url("../images/backgrounds/support.avif");
     background-position-y: calc(50% + 100px); */
