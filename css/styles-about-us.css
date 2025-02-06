@@ -58,6 +58,16 @@
     /* Pulls it up to align */
 }
 
+#not-for-profit-section {
+    background-color: var(--color-light-a-bit-transparent);
+    color: var(--color-dark);
+    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 10vw), 0% 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
+    padding: 200px 0 240px 0;
+    z-index: 10;
+    position: relative;
+}
+
 #people-grid-section .mycard-content {
     align-items: center;
 }
