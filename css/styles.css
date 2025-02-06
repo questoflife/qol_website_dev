@@ -117,37 +117,6 @@ hr {
 }
 
 /******************************************************************************************/
-/* BUTTONS */
-/******************************************************************************************/
-.tab-bar {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-}
-
-.tab-bar .cta-button {
-    border-radius: 0;
-    width: 50%;
-}
-
-.tab-bar-button-left {
-    border-radius: var(--corner-radius-small) 0 0 0;
-}
-
-.tab-bar-button-right {
-    border-radius: 0 var(--corner-radius-small) 0 0;
-}
-
-.tab-bar .cta-button:focus {
-    background-color: var(--color-blue);
-}
-
-.tab-content {
-    background-color: var(--color-blue);
-    padding: 30px;
-}
-
-/******************************************************************************************/
 /* PAGE STRUCTURE */
 /******************************************************************************************/
 .page-header {
