@@ -382,7 +382,7 @@ hr {
 }
 
 .mycard-title.background {
-    background: linear-gradient(to right, var(--color-light) 60%, var(--color-light-a-bit-transparent));
+    background-color: var(--color-light-a-bit-transparent);
     color: var(--color-dark);
 }
 
@@ -508,7 +508,7 @@ hr {
 }
 
 .mycard-title-group {
-    background: linear-gradient(to right, var(--color-light) 60%, var(--color-light-a-bit-transparent));
+    background-color: var(--color-light-a-bit-transparent);
     color:var(--color-dark);
     display: flex;
     justify-content: space-between;
