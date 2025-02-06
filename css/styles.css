@@ -302,7 +302,7 @@ hr {
 }
 
 #tagline-title {
-    font-size: 8rem;
+    font-size: calc(2rem + 5vw);
     font-weight: 600;
     margin-bottom: 30px;
 }
