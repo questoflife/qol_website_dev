@@ -1,5 +1,5 @@
 :root {
-    --color-bg-light: rgb(62, 195, 220, 0.8);
+    --color-bg-light: rgb(0, 170, 202, 0.8);
     --color-bg-dark: rgb(30, 58, 95);
     --color-dark: rgb(30, 58, 95);
     --color-dark-transparent: rgba(30, 58, 95, 0.3);
@@ -13,6 +13,7 @@
     --color-light-transparent: rgba(240, 248, 255, 0.3);
     --color-neutral: rgba(79, 79, 79, 0.1);
     --color-highlight: #8FDC3E;
+    --color-gold: #F2C12E;
     --color-transparent: rgba(0, 0, 0, 0);
 
     --corner-radius-small: 5px;
@@ -23,7 +24,6 @@
     --body-font: "Source Sans 3", serif;
     --cta-font: "Source Sans 3", serif;
 }
-
 .cta-button {
     display: flex;
     align-items: center;
