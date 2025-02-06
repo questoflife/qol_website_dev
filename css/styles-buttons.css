@@ -60,7 +60,7 @@
 
 .info-button {
     background-color: var(--color-dark);
-    color: var(--color-highlight);
+    color: var(--color-light-a-bit-transparent);
 }
 
 #hideable-cta-button-text {
