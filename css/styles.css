@@ -346,6 +346,7 @@ hr {
     font-size: 6rem;
     font-weight: 600;
     padding: 0;
+    padding-bottom: 80px;
     text-align: center;
 }
 
@@ -499,7 +500,7 @@ hr {
     align-items: stretch;
     display: grid;
     gap: 30px;
-    padding: 10px 40px;
+    padding: 40px 40px;
     justify-items: center;
 }
 

@@ -109,9 +109,13 @@
     color: var(--color-dark);
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 10vw), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
-    padding: 150px 0 250px 0;
+    padding: 250px 0 300px 0;
     z-index: 10;
     position: relative;
+}
+
+#why-join-section .cta-button {
+    margin-top: 80px;
 }
 
 #services-section {
