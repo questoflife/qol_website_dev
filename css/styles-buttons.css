@@ -47,7 +47,7 @@
 }
 
 .cta-button:hover {
-    background-color: var(--color-highlight);
+    border-color: var(--color-highlight);
     box-shadow: 0 0 var(--color-dark-transparent);
     color: var(--color-dark);
 }
@@ -57,9 +57,12 @@
     color: var(--color-highlight);
 }
 
-
 .info-button {
     background-color: var(--color-dark);
+    color: var(--color-light-a-bit-transparent);
+}
+
+.info-button:hover {
     color: var(--color-light-a-bit-transparent);
 }
 
@@ -88,11 +91,14 @@
 
 .menu-button:hover {
     background-color: var(--color-neutral);
+    border-radius: var(--corner-radius-small);
+    color: var(--color-blue);
 }
 
 .footer-button {
-    display: flex;
     align-items: center;
+    box-shadow: 10px 10px 0px 0px var(--color-light-transparent);
+    display: flex;
     font-size: 2.5rem;
     justify-content: center;
     width: 100%;

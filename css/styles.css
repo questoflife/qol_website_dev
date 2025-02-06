@@ -576,6 +576,7 @@ hr {
 .copyright-notice {
     color: var(--color-light);
     text-align: center;
+    font-size: 1.2rem;
 }
 
 #admin-links {
@@ -602,6 +603,8 @@ hr {
     margin: 0 auto;
     margin-top: 40px;
 }
+
+
 
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */
