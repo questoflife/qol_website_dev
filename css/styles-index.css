@@ -45,11 +45,15 @@
 
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
+
+    padding-left: 5vw;
+    padding-right: 5vw;
 }
 
 #tagline-title {
     padding-top: 5%;
     padding-bottom: 15%;
+    font-size: calc(2rem + 5vw);
 }
 
 #main-title-diagonal-strip {
