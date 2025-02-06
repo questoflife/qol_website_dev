@@ -21,7 +21,6 @@
     --subtitle-font: "Roboto Condensed", serif;
     --body-font: "Source Sans 3", serif;
     --cta-font: "Source Sans 3", serif;
-
 }
 
 #people-grid-section .mycard-content {
@@ -62,10 +61,6 @@
 
 .staff-card .roles {
     font-size: 1.5rem;
-}
-
-.staff-card .location {
-
 }
 
 .staff-card .person-details {

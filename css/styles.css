@@ -147,78 +147,6 @@ hr {
     padding: 30px;
 }
 
-.cta-button {
-    display: flex;
-    align-items: center;
-    background-color: var(--color-highlight);
-    border-radius: var(--corner-radius-small);
-    border-style: none;
-    color: var(--color-dark);
-    font-family: var(--cta-font);
-    font-size: 1.5rem;
-    font-weight: bold;
-    gap: 10px;
-    justify-content: center;
-    margin: auto;
-    text-decoration: none;
-    text-wrap: nowrap;
-    width: fit-content;
-}
-
-.info-button {
-    background-color: var(--color-dark);
-    color: var(--color-highlight);
-}
-
-.cta-button:hover {
-    background-color: var(--color-blue);
-    color: var(--color-dark);
-}
-
-.cta-button:active {
-    background-color: var(--color-dark);
-    color: var(--color-highlight);
-}
-
-#hideable-cta-button-text {
-    display: block;
-}
-
-.mycard .cta-button {
-    font-size: 2.5rem;
-    padding: 10px 30px;
-}
-
-.header-button {
-    padding: 10px 20px;
-    align-self: center;
-}
-
-.menu-button {
-    align-self: center;
-    color: var(--color-dark);
-    font-family: var(--title-font);
-    font-size: 1.8rem;
-    font-weight: 500;
-    height: auto;
-    padding: 0px 10px 0px 10px;
-    text-decoration: none;
-    text-wrap: nowrap;
-    padding: 2px 5px;
-}
-
-.menu-button:hover {
-    background-color: var(--color-neutral);
-}
-
-.footer-button {
-    display: flex;
-    align-items: center;
-    font-size: 2.5rem;
-    justify-content: center;
-    width: 100%;
-}
-
 /******************************************************************************************/
 /* PAGE STRUCTURE */
 /******************************************************************************************/
@@ -317,28 +245,10 @@ hr {
     justify-content: space-between;
 }
 
-/* Menu Buttons */
-#header-menu-buttons {
-    display: none;
-    flex-wrap: nowrap;
-}
-
-#mynavbar-button-text-group {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 5px;
-}
-
 /* Space Filler */
 #header-space-filler {
     display: none;
     flex-grow: 1;
-}
-
-/* Join Button */
-#mynavbar-join-button {
-    display: none;
-    margin-right: 20px;
 }
 
 /* Hamburger Menu */
@@ -644,11 +554,6 @@ hr {
         width: 4rem;
         height: 4rem;
     }
-
-    #mynavbar-join-button {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
 }
 
 @media (min-width:1200px) {
@@ -761,32 +666,8 @@ hr {
 /* Large devices (laptops/desktops, 992px and up) */
 /******************************************************************************************/
 @media only screen and (min-width: 992px) {
-    .mynavbar-hamburger {
-        display: none;
-    }
-
-    #header-menu-buttons {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        margin-left: 2%;
-        margin-top: 15px;
-    }
-
     #header-space-filler {
         display: block;
-    }
-
-    #mynavbar-join-button {
-        display: flex;
-    }
-
-    #hideable-cta-button-text {
-        display: none;
-    }
-
-    .footer-cta-buttons {
-        gap: 30px;
     }
 }
 
@@ -798,7 +679,4 @@ hr {
         height: 100%;
     }
 
-    #hideable-cta-button-text {
-        display: block;
-    }
 }
