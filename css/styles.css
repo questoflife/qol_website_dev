@@ -403,8 +403,9 @@ hr {
 }
 
 .bg-mycard {
-    background-color: var(--color-light-transparent);
+    background-color: var(--color-light-a-bit-transparent);
     border-color: transparent;
+    color: var(--color-dark);
 }
 
 .clear-mycard {
