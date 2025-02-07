@@ -33,6 +33,13 @@
     /* Pulls it up to align */
 }
 
+#services-summary-section .section-content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+
 #motivation-section {
     background-color: var(--color-light-a-bit-transparent);
     color: var(--color-dark);

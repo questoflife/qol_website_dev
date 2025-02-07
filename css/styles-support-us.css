@@ -78,3 +78,7 @@
     background-color: var(--color-blue);
 }
 
+.fa-icon {
+    width: 6rem;
+    text-align: center;
+}
