@@ -34,16 +34,16 @@
     transition: height 0.3s ease-out, padding 0.3s ease-out;
 }
 
-.collapsible.active + .content {
+.collapsible.active+.content {
     height: auto;
-    padding: 15px 45px;
+    padding: 0px;
 }
 
-.collapsible.active + .content > ul {
+.collapsible.active+.content>ul {
     margin-bottom: 75px;
 }
 
-.collapsible.active + .content > .title {
+.collapsible.active+.content>.title {
     margin-bottom: 30px;
 }
 
@@ -59,4 +59,10 @@
 
 .collapsible.active:after {
     content: "-";
+}
+
+@media only screen and (min-width: 992px) {
+    .collapsible.active+.content {
+        padding: 15px 45px;
+    }
 }
