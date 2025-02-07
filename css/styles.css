@@ -372,9 +372,14 @@ hr {
 }
 
 .mycard-title {
+    
     font-family: var(--title-font);
     font-size: calc(min(max(2.5rem, 1rem + 4vw), 3.5rem));
     padding: 4px 20px 0 20px;
+}
+
+.no-border {
+    border-style: none;
 }
 
 .mycard-title.background {
@@ -387,6 +392,9 @@ hr {
 }
 
 .title-group {
+    border-color: var(--color-dark);
+    border-style: solid;
+    border-width: 4px;
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -510,11 +518,11 @@ hr {
 }
 
 .mycard-title-group {
+    border-color: var(--color-dark);
+    border-style: solid;
+    border-width: 4px;
     background-color: var(--color-light-a-bit-transparent);
     color:var(--color-dark);
-    border-style: solid;
-    border-color: var(--color-dark);
-    border-width: 4px;
     display: flex;
     justify-content: space-between;
 }
