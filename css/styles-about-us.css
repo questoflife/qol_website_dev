@@ -174,22 +174,5 @@
 }
 
 .more-info-button {
-    background-color: var(--color-light);
-    border-radius: 0;
-    border-style: solid;
-    border-width: 3px;
-    box-shadow: 10px 10px 0px 0px var(--color-dark-transparent);
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.more-info-button:hover {
-    box-shadow: 0 0 var(--color-dark-transparent);
-    background-color: var(--color-blue-transparent);
-}
-
-.more-info-button:active {
-    background-color: var(--color-blue);
-    border-color: var(--color-dark);
-    color: var(--color-dark);
+    font-size: 2rem;
 }
