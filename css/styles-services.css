@@ -39,6 +39,10 @@
     gap: 100px;
 }
 
+.service-meta-dropdown-group {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
 
 #motivation-section {
     background-color: var(--color-light-a-bit-transparent);
