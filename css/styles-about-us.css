@@ -12,9 +12,9 @@
     /* background-position-y: calc(50% + 20px); */
 
     background-image: url("../images/backgrounds/jellyfish.jpg");
-    background-position-y: calc(50% - 50px );
+    background-position-y: calc(50% - 50px);
 
-    padding: 150px 0;
+    padding: 80px 5vw 200px 5vw;
 
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
@@ -67,44 +67,7 @@
     gap: 30px;
     justify-content: center;
     max-width: 1800px;
-}
-
-.staff-card .name {
-    font-family: var(--title-font);
-    font-size: 3rem;
-}
-
-.staff-card .profile-pic {
-    max-height: 286px;
-    max-width: 286px;
-}
-
-.staff-card img {
-    width: 286px;
-    height: 286px;
-}
-
-.staff-card .roles {
-    margin-top: -10px;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.staff-card .person-details {
-    padding: 0 20px;
-    width: 100%;
-}
-
-.staff-card ul {
-    font-size: 1.2rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 5px 0 0 0;
-}
-
-.staff-card .person-details .fa-icon {
-    min-width: 2rem;
-    text-align: center;
+    margin-top: 20px;
 }
 
 .staff-card {
@@ -118,12 +81,48 @@
     gap: 10px;
     /* Adjust spacing if needed */
     justify-content: flex-start;
-    padding: 0 0 20px 0 ;
+    padding: 0 0 20px 0;
     text-align: left;
-    width: fit-content;
+    max-width: 400px;
     overflow: hidden;
     /* To prevent overflow issues */
     transition: background-color 0.3s, color 0.3s;
+}
+
+.staff-card .profile-pic {
+    max-height: 400px;
+    max-width: 400px;
+}
+
+.staff-card img {
+    width: 400px;
+    height: 400px;
+}
+
+.staff-card .roles {
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.staff-card .person-details {
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.staff-card ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+}
+
+.staff-card .person-details .fa-icon {
+    min-width: 2rem;
+    text-align: center;
+}
+
+.staff-card .cta-button {
+    margin-top: 30px;
 }
 
 .benefit-icon,
@@ -134,22 +133,17 @@
 
 .staff-card .staff-card-hover-content {
     align-items: center;
-    background-color: var(--color-light-a-bit-transparent);
+    background-color: transparent;
     box-sizing: border-box;
     color: var(--color-dark);
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
-    font-style: italic;
     height: 100%;
     justify-content: center;
-    left: 0;
-    opacity: 0;
+    opacity: 1;
     /* Hidden by default */
     padding: 20px;
-    position: absolute;
     text-align: center;
-    top: 0;
     transition: opacity 0.3s;
     /* Smooth fade-in */
     width: 100%;
@@ -170,5 +164,64 @@
     align-items: center;
     display: flex;
     flex-grow: 1;
-    font-weight: 800;
+}
+
+/******************************************************************************************/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 600px) {}
+
+/******************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 768px) {
+    .staff-card {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .staff-card .profile-pic {
+        max-height: 286px;
+        max-width: 286px;
+    }
+
+    .staff-card .person-details {
+        text-align: center;
+    }
+
+    .staff-card .staff-card-hover-content {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .staff-card img {
+        width: 286px;
+        height: 286px;
+    }
+
+    .staff-card .staff-card-hover-content {
+        background-color: var(--color-light-a-bit-transparent);
+    }
+
+}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 992px) {
+    #header-space-filler {
+        display: block;
+    }
+}
+
+/******************************************************************************************/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 1200px) {
+    .spaced-content {
+        height: 100%;
+    }
+
 }

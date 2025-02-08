@@ -83,7 +83,30 @@ a {
     font-weight: 700;
 }
 
+/* About Us Page */
+.staff-card .name {
+    font-family: var(--title-font);
+    font-size: 3.5rem;
+}
 
+.staff-card .roles {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.staff-card ul {
+    font-size: 1.2rem;
+}
+
+.staff-card .staff-card-hover-content {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.people-quote {
+    font-weight: 800;
+}
 
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -103,7 +126,7 @@ a {
     #social-media {
         font-size: 2.5rem;
     }
-    
+
     .tagline-title {
         font-size: 5rem;
     }
