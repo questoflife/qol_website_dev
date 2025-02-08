@@ -20,11 +20,11 @@
     /* background-image: url("../images/backgrounds/support4.avif");
     background-position-y: calc(50% - 50px); */
 
-    background-image: url("../images/backgrounds/support5.avif");
-    background-position-y: calc(50% - 130px);
+    /* background-image: url("../images/backgrounds/support5.avif");
+    background-position-y: calc(50% - 130px); */
 
-    /* background-image: url("../images/backgrounds/support6.avif");
-    background-position-y: calc(50% - 0px); */
+    background-image: url("../images/backgrounds/support6.avif");
+    background-position-y: calc(50% - 0px);
 
     /* background-image: url("../images/backgrounds/support7.avif");
     background-position-y: calc(50% - 35px); */
@@ -32,7 +32,7 @@
     /* background-image: url("../images/backgrounds/support8.avif");
     background-position-y: calc(50% + 25px); */
 
-    padding: 150px 0;
+    padding: 120px 5vw 200px 5vw;
 
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
@@ -49,10 +49,6 @@
 
     margin-top: -150px;
     /* Pulls it up to align */
-}
-
-#support-us-title-section {
-    padding-bottom: 5rem;
 }
 
 .support-options-section .mycard-content-block {

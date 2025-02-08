@@ -222,6 +222,9 @@ hr {
     display: none;
 }
 
+#toggle-menu {
+    margin-right: 0;
+}
 
 /* When the hamburger button is clicked, i.e. menu open */
 .page-header.responsive {
