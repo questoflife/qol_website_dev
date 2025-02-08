@@ -37,6 +37,7 @@
 .collapsible.active+.content {
     height: auto;
     padding-top: 15px;
+    padding-bottom: 45px;
 }
 
 .collapsible.active+.content>ul {
