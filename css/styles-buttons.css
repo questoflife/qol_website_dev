@@ -50,6 +50,7 @@
     font-size: 1.5rem;
 }
 
+
 .menu-button {
     align-self: center;
     color: var(--color-dark);
@@ -87,12 +88,13 @@
 #mynavbar-button-text-group {
     display: flex;
     flex-wrap: nowrap;
-    gap: 5px;
+    gap: 10px;
 }
 
 /* Join Button */
 #mynavbar-join-button {
     display: none;
+    font-size: 2.5rem;
     margin-right: 20px;
 }
 
@@ -138,9 +140,12 @@
 
     #mynavbar-join-button {
         display: flex;
+        font-size: 1.5rem;
         padding-top: 7px;
         padding-bottom: 7px;
+        margin-left: 20px;
     }
+
 
     #hideable-cta-button-text {
         display: none;
