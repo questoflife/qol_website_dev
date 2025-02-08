@@ -430,12 +430,6 @@ hr {
     text-align: center;
 }
 
-#group-coaching-service-mycard {
-    /* border-color: var(--color-highlight);
-    border-style: solid;
-    border-width: 8px; */
-}
-
 #personal-coaching-service-mycard {
     border-color: transparent;
     border-style: solid;
@@ -502,6 +496,10 @@ hr {
 
 .service-buttons>.cta-button {
     width: 50%;
+}
+
+.price {
+    background-color: var(--color-dark);
 }
 
 

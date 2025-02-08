@@ -113,10 +113,6 @@
     margin-right: 5px;
 }
 
-.price {
-    background-color: var(--color-dark);
-}
-
 #services-section .section-content-column {
     display: flex;
     flex-direction: column;
