@@ -80,6 +80,7 @@
     font-size: 1.5rem;
     font-family: inherit;
     padding: 5px 35px;
+    text-align: center;
 }
 
 .service-meta-dropdown .collapsible::after {
