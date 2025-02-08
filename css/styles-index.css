@@ -108,9 +108,12 @@
     margin: 80px 0 100px 0 ;
 }
 
-.fa {
+.services-icon {
+    display: none;
+}
+
+#menu-icon {
     font-size: 2.8rem;
-    margin-right: 5px;
 }
 
 #services-section .section-content-column {
@@ -160,5 +163,45 @@
 .carousel-control-next-icon {
   height: 50px;
   width: 50px;
+
+}
+
+
+/******************************************************************************************/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 600px) {
+
+}
+
+/******************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 768px) {
+    body {
+        font-size: calc(1.5rem);
+    }
+
+    #social-media {
+        font-size: 2.5rem;
+    }
+
+    .services-icon {
+        display: inline-block;
+    }
+}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 992px) {
+
+}
+
+/******************************************************************************************/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 1200px) {
+
 
 }

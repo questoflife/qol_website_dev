@@ -426,6 +426,7 @@ hr {
     color: var(--color-dark);
     padding: 15px;
     text-align: center;
+    align-content: center;
 }
 
 .service-buttons {
@@ -443,6 +444,8 @@ hr {
 
 .price {
     background-color: var(--color-dark);
+    text-align: center;
+    align-content: center;
 }
 
 
@@ -466,8 +469,10 @@ hr {
     background-color: var(--color-light-a-bit-transparent);
     color:var(--color-dark);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 @media (min-width:992px) {
@@ -498,7 +503,18 @@ hr {
         gap: 10px;
         margin: 30px 0 30px 0;
     }
-    
+
+    .mycard-title-group {
+        border-color: var(--color-dark);
+        border-style: solid;
+        border-width: 4px;
+        background-color: var(--color-light-a-bit-transparent);
+        color:var(--color-dark);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
 }
 
 /******************************************************************************************/
