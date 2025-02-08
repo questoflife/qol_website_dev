@@ -67,19 +67,19 @@
 #groups-completed-stat-strip {
     transform: skewY(-5deg);
     text-align: right;
-    margin-bottom: -3vw;
+    margin-bottom: 0;
 }
 
 #members-supported-stat-strip {
     transform: skewY(5deg);
     text-align: right;
-    margin-top: -3vw;
+    margin-top: 1vw;
 }
 
 #hours-volunteered-stat-strip {
     transform: skewY(-5deg);
     text-align: right;
-    margin-bottom: -3vw;
+    margin-bottom: -2vw;
 }
 
 #stats-block {
@@ -195,7 +195,23 @@
 /* Large devices (laptops/desktops, 992px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 992px) {
-
+    #groups-completed-stat-strip {
+        transform: skewY(-5deg);
+        text-align: right;
+        margin-bottom: -3vw;
+    }
+    
+    #members-supported-stat-strip {
+        transform: skewY(5deg);
+        text-align: right;
+        margin-top: -3vw;
+    }
+    
+    #hours-volunteered-stat-strip {
+        transform: skewY(-5deg);
+        text-align: right;
+        margin-bottom: -3vw;
+    }    
 }
 
 /******************************************************************************************/
