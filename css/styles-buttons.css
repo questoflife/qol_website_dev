@@ -96,6 +96,7 @@
     display: none;
     font-size: 2.5rem;
     margin-right: 20px;
+    box-shadow: none;
 }
 
 
@@ -119,12 +120,6 @@
 }
 
 @media only screen and (min-width: 992px) {
-    #mynavbar-join-button {
-        display: flex;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-
     .mynavbar-hamburger {
         display: none;
 
@@ -139,6 +134,7 @@
     }
 
     #mynavbar-join-button {
+        box-shadow: 10px 10px 0px 0px var(--color-dark-a-bit-transparent);
         display: flex;
         font-size: 1.5rem;
         padding-top: 7px;
