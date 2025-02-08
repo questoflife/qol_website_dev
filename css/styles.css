@@ -187,8 +187,8 @@ hr {
 
 #header-company-logo {
     box-sizing: content-box;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     padding-left: 20px;
     justify-content: space-between;
 }
