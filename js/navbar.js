@@ -1,19 +1,16 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function handleResponsiveNavbar() {
-  var x = document.getElementById("header-mynavbar");
-  if (x.className === "mynavbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "mynavbar";
-  }
+  const icon = document.getElementById("menu-icon");
+  // For example:
+  const menuOpen = icon.classList.contains("fa-bars"); // or track this with a separate variable
 
-  var x = document.getElementById("page-header");
-  if (x.className === "page-header") {
-    x.className += " responsive";
+  if (menuOpen) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-times");
   } else {
-    x.className = "page-header";
+    icon.classList.remove("fa-times");
+    icon.classList.add("fa-bars");
   }
-  
 }
 
 /*
@@ -29,19 +26,19 @@ function isMobileUserAgent() {
     isMobileUA = /Mobi|Android/i.test(navigator.userAgent);
   }
   catch (e) {
-    // Handle error if needed
+    console.log(e)
   }
   try {
     isTouchDevice = 'maxTouchPoints' in navigator && navigator.maxTouchPoints > 0;
   }
   catch (e) {
-    // Handle error if needed
+    console.log(e)
   }
   try {
     isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
   }
   catch (e) {
-    // Handle error if needed
+    console.log(e)
   }
   return (isMobileUA || isTouchDevice || isCoarsePointer);
 }
