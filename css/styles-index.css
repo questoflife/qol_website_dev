@@ -21,8 +21,8 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
 
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding: 80px 5vw 200px 5vw;
+
 }
 
 #tagline-title {
