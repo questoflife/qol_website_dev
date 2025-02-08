@@ -491,6 +491,7 @@ hr {
     flex-direction: row;
     gap: 40px;
     justify-content: center;
+    margin-top: 45px;
     width: 100%;
 }
 
@@ -524,6 +525,7 @@ hr {
     color:var(--color-dark);
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 @media (min-width:992px) {
@@ -549,7 +551,7 @@ hr {
     .best-for-group {
         flex-direction: row;
         gap: 10px;
-        margin: 20px 0 30px 0;
+        margin: 30px 0 30px 0;
     }
     
 }
