@@ -1,9 +1,16 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function handleResponsiveNavbar() {
-  const icon = document.getElementById("menu-icon");
-  // For example:
-  const menuOpen = icon.classList.contains("fa-bars"); // or track this with a separate variable
+  const navbar = document.getElementById("header-mynavbar");
+  // Toggle the 'responsive' class on or off
+  if (navbar.className === "mynavbar") {
+    navbar.className += " responsive";
+  } else {
+    navbar.className = "mynavbar";
+  }
 
+  // Then toggle the icon
+  const icon = document.getElementById("menu-icon");
+  const menuOpen = icon.classList.contains("fa-bars");
   if (menuOpen) {
     icon.classList.remove("fa-bars");
     icon.classList.add("fa-times");
@@ -12,6 +19,7 @@ function handleResponsiveNavbar() {
     icon.classList.add("fa-bars");
   }
 }
+
 
 /*
     * Check if the user agent is a mobile user agent.
