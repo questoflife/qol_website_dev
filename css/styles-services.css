@@ -10,7 +10,6 @@
 
     background-image: url("../images/backgrounds/support2.avif");
     background-position-y: calc(50% + 20px);
-
     /* background-image: url("../images/backgrounds/jellyfish.jpg");
     background-position-y: calc(50% - 50px ); */
 
@@ -39,6 +38,40 @@
     gap: 100px;
 }
 
+.bubble-group {
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+
+.bubble {
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.1s;
+}
+
+.bubble:hover {
+    background-color: var(--color-blue-a-bit-transparent);
+}
+
+.bubble.active {
+    background: var(--color-light);
+}
+
+.bubble-details {
+    background-color: var(--color-light);
+    border-style: solid;
+    padding: 5px 20px;
+    margin-bottom: 30px;
+}
+
+.bubble-details > p {
+    margin: 0;
+}
+
+.service-meta-dropdown-group {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
 
 #motivation-section {
     background-color: var(--color-light-a-bit-transparent);
@@ -57,6 +90,10 @@
 
 #services-details-section {
     margin-bottom: 80px;
+}
+
+#services-details-section .cta-button {
+    margin-bottom: 20px;
 }
 
 .equal-cols {

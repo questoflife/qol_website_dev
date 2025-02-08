@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+
     <title>Quest of Life</title>
     <link rel="icon" href="images/gecko_small.png">
 
@@ -26,16 +28,18 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-backgrounds.css">
-    <link rel="stylesheet" href="css/styles-services.css">
+    <link rel="stylesheet" href="css/styles-fonts.css">
     <link rel="stylesheet" href="css/styles-coaching.css">
     <link rel="stylesheet" href="css/styles-collapsible.css">
     <link rel="stylesheet" href="css/styles-buttons.css">
+    <link rel="stylesheet" href="css/styles-services.css">
 
     <!-- Prevent FOUT -->
     <script src="js/fout_fix.js"></script>
 
     <!-- Javascript -->
     <script src="js/collapsible.js"></script>
+    <script src="js/radio-bubbles.js"></script>
 </head>
 
 <body>
@@ -95,7 +99,7 @@
             <div id="services-title-section" class="section page-title-section">
                 <div class="section-content-column">
                     <div class="mycard clear-mycard centred-mycard">
-                        <div id="tagline-title">Our Services</div>
+                        <div class="tagline-title">Our Services</div>
                     </div>
                 </div>
             </div>
@@ -112,13 +116,57 @@
                                     </div>
                                     <div class="mycard-title price"><span class="highlight-text">PWYW</span></div>
                                 </div>
-                                <div class="bubble-group">
+                                <!-- <div class="bubble-group">
                                     <div class="bubble">Up to 7 Members</div>
                                     <div class="bubble">1-2 Facilitators</div>
                                     <div class="bubble">90 Mins Every Week</div>
                                     <div class="bubble">4 Week Trial Groups</div>
                                     <div class="bubble">16+ Week Groups</div>
+                                </div> -->
+                                <div class="service-meta-dropdown-group">
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            Up to 7 Members
+                                        </button>
+                                        <div class="content">
+                                            <p>Each group consists of up to 7 members. Spaces are given out on a first come first serve basis.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            1-2 Facilitators
+                                        </button>
+                                        <div class="content">
+                                            <p>Most of our groups are run by 2 facilitators who'll be there every week to help you support each other more effectively and ensure sessions run smoothly.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            90 mins every week
+                                        </button>
+                                        <div class="content">
+                                            <p>Groups meet in the same time slot every week and each session lasts 90 minutes.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            4 Week Trial Groups
+                                        </button>
+                                        <div class="content">
+                                            <p>First we ask that you join a 4 week trial group to give you a chance to see what our groups are like and to figure out whether the kind of support we offer is right for you, before making a bigger commitment to attending one of our 16 week groups.</p>
+                                            <p>You can also use these groups to figure out which facilitators' styles you prefer.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            16+ Week Groups
+                                        </button>
+                                        <div class="content">
+                                            <p>Most of our groups run for 16 weeks. Sometimes if attendance is consistent and group members want to continue we offer extensions, but this depends on the facilitators' availability.</p>
+                                        </div>
+                                    </div>
                                 </div>
+
                                 <div class="small-mycard-text">Our groups are great for</div>
                                 <div class="best-for-group">
                                     <div class="best-for-card">
@@ -142,7 +190,7 @@
                                     <a class="cta-button info-button" href="#services-details-section">
                                         More Info
                                     </a>
-                                    <a class="cta-button" href="https://forms.gle/Jxkh56WbbLVXzqGj8" target="_blank">
+                                    <a class="cta-button" href="https://discord.gg/m9hVVajQU3" target="_blank">
                                         Sign Up
                                     </a>
                                 </div>
@@ -158,13 +206,44 @@
                                     </div>
                                     <div class="mycard-title price"><span class="highlight-text">£50</span></div>
                                 </div>
-                                <div class="bubble-group">
-                                    <div class="bubble">50mins</div>
-                                    <div class="bubble">1-on-1</div>
-                                    <div class="bubble">Weekly</div>
-                                    <div class="bubble">4 Week Trial Groups</div>
-                                    <div class="bubble">16+ Week Groups</div>
+                                <!-- <div class="bubble-group">
+                                    <div class="bubble active" data-text="The standard 1-1 session lasts for 50 minutes. Other durations may be available on request.">50mins</div>
+                                    <div class="bubble" data-text="You can request to work with a specific coach, or we can match you with one based on your needs and goals for coaching.">1-on-1</div>
+                                    <div class="bubble" data-text="Generally we recommend meeting once a week, but a different frequency of sessions might be available on request.">Weekly</div>
                                 </div>
+
+                                <div class="bubble-details">
+                                    <p>Select an option above to see details.</p>
+                                </div> -->
+
+                                <div class="service-meta-dropdown-group">
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            50 mins
+                                        </button>
+                                        <div class="content">
+                                            <p>The standard 1-1 session lasts for 50 minutes. Other durations may be available on request.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            1-on-1
+                                        </button>
+                                        <div class="content">
+                                            <p>You can request to work with a specific coach, or we can match you with one based on your needs and goals for coaching.</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-meta-dropdown">
+                                        <button type="button" class="collapsible heavy-text">
+                                            Weekly
+                                        </button>
+                                        <div class="content">
+                                            <p>Generally we recommend meeting once a week, but a different frequency of sessions might be available on request.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
 
                                 <div class="small-mycard-text">1-on-1 sessions are great for</div>
 
@@ -193,7 +272,7 @@
                                     <a class="cta-button info-button" href="#services-details-section">
                                         More Info
                                     </a>
-                                    <a class="cta-button" href="https://forms.gle/Jxkh56WbbLVXzqGj8" target="_blank">
+                                    <a class="cta-button" href="https://discord.gg/m9hVVajQU3" target="_blank">
                                         Sign Up
                                     </a>
                                 </div>
@@ -246,7 +325,7 @@
                     <div class="mycard clear-mycard">
 
                         <div class="mycard-content-block">
-                            <button type="button" class="collapsible">Facilitated Peer Support Groups (PWYW)</button>
+                            <button type="button" class="collapsible">Facilitated Peer Support Groups</button>
                             <div class="content">
                                 <br>
                                 <p class="title medium-mycard-text centred-mycard">Why join?</p>
@@ -296,14 +375,29 @@
                                         therapy
                                         or any kind of medical treatment. Certain topics might also be off-limits.</li>
                                 </ul>
+
+                                <a class="cta-button" href="https://discord.gg/m9hVVajQU3" target="_blank">
+                                    Sign Up On Discord
+                                </a>
+                                <p class="centred-mycard">(Pay What You Want)</p>
                             </div>
                             <br>
                             <button type="button" class="collapsible">1-on-1 Coaching (£50)</button>
                             <div class="content">
                                 <br>
-                                <p>For those wanting more focused 1-on-1 supprort, some of our volunteers offer
-                                    individual
-                                    coaching sessions.</p>
+                                <p>For those wanting more focused 1-on-1 support, some of our volunteers offer
+                                    individual coaching sessions. This is also a way for us to fundraise towards running costs for the organization, further support and training for facilitators, and more subsidized or free services for the community.
+                                </p>
+                                <p class="title medium-mycard-text centred-mycard">Why 1-on-1?</p>
+                                <ul>
+                                    <li>You like our mission and want to support us</li>
+                                    <li>You like what our facilitators do in group and want more individual attention</li>
+                                    <li>You're looking to do more focused and structured work</li>
+                                    <li>You feel like group doesn't move quickly enough for you or there isn't enough time to talk about your topics every week</li>
+                                </ul>
+                                <a class="cta-button" href="https://discord.gg/m9hVVajQU3" target="_blank">
+                                    Sign Up On Discord 
+                                </a>
                             </div>
                         </div>
                     </div>
