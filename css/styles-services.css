@@ -13,8 +13,8 @@
     /* background-image: url("../images/backgrounds/jellyfish.jpg");
     background-position-y: calc(50% - 50px ); */
 
-    padding: 120px 0 200px 0;
-
+    padding: 70px 0 150px 0;
+    
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
 }
