@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Quest of Life</title>
     <link rel="icon" href="images/gecko_small.png">
 
@@ -26,11 +29,12 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/styles-backgrounds.css">
-    <link rel="stylesheet" href="css/styles-support-us.css">
+    <link rel="stylesheet" href="css/styles-fonts.css">
     <link rel="stylesheet" href="css/styles-collapsible.css">
     <link rel="stylesheet" href="css/styles-card-grid.css">
     <link rel="stylesheet" href="css/styles-popup.css">
     <link rel="stylesheet" href="css/styles-buttons.css">
+    <link rel="stylesheet" href="css/styles-support-us.css">
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -58,14 +62,16 @@
                 <div id="header-company-branding-and-hamburger">
                     <a id="header-company-branding-block" href="index.html">
                         <img id="header-company-logo" src="images/gecko_big_circle.png"
-                            alt="Quest of Life logo - a blue crawling around a crescent moon">
+                             alt="Quest of Life logo - a blue crawling around a crescent moon">
                         <div id="header-company-name">QUEST OF LIFE</div>
                     </a>
                     <!-- Menu Hamburger Button -->
-                    <a id="mynavbar-hamburger-open" href="javascript:void(0);" class="mynavbar-hamburger"
-                        onclick="handleResponsiveNavbar()">
-                        <i class="fa fa-bars"></i>
+                    <a id="toggle-menu"
+                       class="mynavbar-hamburger"
+                       href="javascript:void(0);" onclick="handleResponsiveNavbar()">
+                        <i id="menu-icon" class="fa fa-bars"></i>
                     </a>
+
                 </div>
 
                 <!-- Menu Buttons -->
@@ -80,18 +86,18 @@
 
                 <!-- Join Button -->
                 <a id="mynavbar-join-button" class="cta-button header-button" href="https://discord.gg/m9hVVajQU3"
-                    target="_blank">
+                   target="_blank">
                     <i class="fa-brands fa-discord"></i>
                     <div id="mynavbar-button-text-group">
                         Join <span id="hideable-cta-button-text">the Community</span>
                     </div>
                 </a>
 
-                <!-- Menu Hamburger Button -->
+                <!-- old Menu Hamburger Button
                 <a id="mynavbar-hamburger-closed" href="javascript:void(0);" class="mynavbar-hamburger"
                     onclick="handleResponsiveNavbar()">
                     <i class="fa fa-bars"></i>
-                </a>
+                </a> -->
             </div>
         </div>
 
@@ -102,7 +108,7 @@
             <div id="support-us-title-section" class="section page-title-section">
                 <div class="section-content-column">
                     <div class="mycard clear-mycard centred-mycard">
-                        <div id="tagline-title">Support Us</div>
+                        <div class="tagline-title">Support Us</div>
                     </div>
                 </div>
             </div>
@@ -130,14 +136,8 @@
                             enabling us to build confidence and connection.
                         </p>
                     </div>
-
-                    <div class="medium-mycard-text centred-mycard">You can support us by donating or volunteering</div>
-
-                </div>
-            </div>
-
-            <div class="section">
-                <div class="section-content-column">
+                    <br>
+                    <br>
                     <div class="mycard clear-mycard centred-mycard">
                         <div class="mycard-content-block">
                             <button type="button" class="collapsible">
@@ -175,7 +175,6 @@
                                 Volunteer
                             </button>
                             <div class="content">
-                                <br>
                                 <br>
                                 <p class="small-mycard-text centred-mycard">We're currently looking for
                                     volunteers with
@@ -278,7 +277,7 @@
                                                             direction of the organisation</li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
+                                                    <a class="cta-button" href="application_facilitator_training.html"
                                                         target="_blank">
                                                         Apply Now
                                                     </a>
@@ -362,7 +361,7 @@
                                                             Life volunteers</li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/9YcS2dh6wpeTSo9Q6"
+                                                    <a class="cta-button" href="application_various_roles.html"
                                                         target="_blank">
                                                         Apply Now
                                                     </a>
@@ -434,7 +433,7 @@
                                                         </li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
+                                                    <a class="cta-button" href="application_various_roles.html"
                                                         target="_blank">
                                                         Apply Now
                                                     </a>
@@ -496,7 +495,7 @@
                                                         </li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="" target="_blank">
+                                                    <a class="cta-button" href="application_various_roles.html" target="_blank">
                                                         Apply Now
                                                     </a>
                                                 </div>
@@ -551,7 +550,7 @@
                                                         <li></li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
+                                                    <a class="cta-button" href="application_qualified_applicant.html"
                                                         target="_blank">
                                                         Apply Now
                                                     </a>
@@ -606,8 +605,7 @@
                                                         <li></li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
-                                                        target="_blank">
+                                                    <a class="cta-button" href="application_qualified_applicant.html" target="_blank">
                                                         Apply Now
                                                     </a>
                                                 </div>
@@ -661,8 +659,7 @@
                                                         <li></li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
-                                                        target="_blank">
+                                                    <a class="cta-button" href="application_various_roles.html" target="_blank">
                                                         Apply Now
                                                     </a>
                                                 </div>
@@ -716,7 +713,7 @@
                                                         <li></li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
+                                                    <a class="cta-button" href="application_various_roles.html"
                                                         target="_blank">
                                                         Apply Now
                                                     </a>
@@ -771,7 +768,7 @@
                                                         <li></li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
+                                                    <a class="cta-button" href="application_various_roles.html"
                                                         target="_blank">
                                                         Apply Now
                                                     </a>
@@ -827,7 +824,7 @@
                                                         <li></li>
                                                     </ul>
 
-                                                    <a class="cta-button" href="https://forms.gle/JupTL7WEQcFDeTJv9"
+                                                    <a class="cta-button" href="application_custom_role.html"
                                                         target="_blank">
                                                         Apply Now
                                                     </a>

@@ -21,8 +21,8 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
 
-    padding-left: 5vw;
-    padding-right: 5vw;
+    padding: 80px 0 200px 0;
+
 }
 
 #tagline-title {
@@ -67,19 +67,19 @@
 #groups-completed-stat-strip {
     transform: skewY(-5deg);
     text-align: right;
-    margin-bottom: -3vw;
+    margin-bottom: 0;
 }
 
 #members-supported-stat-strip {
     transform: skewY(5deg);
     text-align: right;
-    margin-top: -3vw;
+    margin-top: 1vw;
 }
 
 #hours-volunteered-stat-strip {
     transform: skewY(-5deg);
     text-align: right;
-    margin-bottom: -3vw;
+    margin-bottom: -2vw;
 }
 
 #stats-block {
@@ -108,13 +108,12 @@
     margin: 80px 0 100px 0 ;
 }
 
-.fa {
-    font-size: 2.8rem;
-    margin-right: 5px;
+.services-icon {
+    display: none;
 }
 
-.price {
-    background-color: var(--color-dark);
+#menu-icon {
+    font-size: 2.8rem;
 }
 
 #services-section .section-content-column {
@@ -164,5 +163,61 @@
 .carousel-control-next-icon {
   height: 50px;
   width: 50px;
+
+}
+
+
+/******************************************************************************************/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 600px) {
+
+}
+
+/******************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 768px) {
+    body {
+        font-size: calc(1.5rem);
+    }
+
+    #social-media {
+        font-size: 2.5rem;
+    }
+
+    .services-icon {
+        display: inline-block;
+    }
+}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 992px) {
+    #groups-completed-stat-strip {
+        transform: skewY(-5deg);
+        text-align: right;
+        margin-bottom: -3vw;
+    }
+    
+    #members-supported-stat-strip {
+        transform: skewY(5deg);
+        text-align: right;
+        margin-top: -3vw;
+    }
+    
+    #hours-volunteered-stat-strip {
+        transform: skewY(-5deg);
+        text-align: right;
+        margin-bottom: -3vw;
+    }    
+}
+
+/******************************************************************************************/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 1200px) {
+
 
 }
