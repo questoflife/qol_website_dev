@@ -164,7 +164,7 @@ hr {
 #header-mynavbar {
     background-color: var(--color-light);
     border-color: var(--color-dark);
-    border-style: solid;
+    border-bottom-style: solid;
     border-width: 4px;
     display: flex;
     gap: 5px;
