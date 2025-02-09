@@ -31,29 +31,14 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
     justify-content: flex-start;
-    padding: 30px 50px 30px 30px;
+    padding: 12px 15px;
     text-align: left;
     width: 100%;
     overflow: hidden;
     /* To prevent overflow issues */
     transition: background-color 0.3s, color 0.3s;
-}
-
-.grid-item:hover .grid-icon,
-.grid-item:hover .grid-label {
-    opacity: 0;
-    /* Fade out icon and label */
-}
-
-.grid-item:hover .grid-quote {
-    opacity: 1;
-    /* Fade in the quote */
-}
-
-.grid-item:hover .grid-label {
-    color: var(--color-transparent)
 }
 
 .grid-icon {
@@ -69,7 +54,7 @@
 }
 
 .grid-label {
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -112,11 +97,23 @@
     box-shadow: 10px 10px 0px 0px var(--color-dark-a-bit-transparent);
 }
 
-.grid-item-button:hover {
-    box-shadow: 0 0 var(--color-dark-transparent);
-}
 
-@media (min-width:992px) {
+
+
+/******************************************************************************************/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 600px) {}
+
+/******************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 768px) {}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 992px) {
     /* Switch to 3 column grid */
     .grid-of-cards {
         grid-auto-rows: 1fr;
@@ -134,4 +131,33 @@
     .grid-label > br {
         display: block;
     }
+    
+    .grid-item:hover .grid-icon,
+    .grid-item:hover .grid-label {
+        opacity: 0;
+        /* Fade out icon and label */
+    }
+    
+    .grid-item:hover .grid-quote {
+        opacity: 1;
+        /* Fade in the quote */
+    }
+    
+    .grid-item:hover .grid-label {
+        color: var(--color-transparent)
+    }
+
+    .grid-item-button:hover {
+        box-shadow: 0 0 var(--color-dark-transparent);
+    }
+}
+
+/******************************************************************************************/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 1200px) {
+    .spaced-content {
+        height: 100%;
+    }
+
 }
