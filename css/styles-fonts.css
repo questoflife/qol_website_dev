@@ -90,6 +90,10 @@ a {
 
 
 /* Index Page */
+#main-home-title {
+    font-size: 45px;
+}
+
 .best-for-card {
     font-size: 22px;
     font-weight: 700;
