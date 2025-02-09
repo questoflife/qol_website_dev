@@ -102,21 +102,19 @@ a {
 /* About Us Page */
 .staff-card .name {
     font-family: var(--title-font);
-    font-size: 3.5rem;
+    font-size: 50px;
 }
 
 .staff-card .roles {
-    margin-top: -10px;
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+    font-size: 25px;
 }
 
 .staff-card ul {
-    font-size: 1.2rem;
+    font-size: 20px;
 }
 
 .staff-card .staff-card-hover-content {
-    font-size: 1.5rem;
+    font-size: 20px;
     font-style: italic;
 }
 
