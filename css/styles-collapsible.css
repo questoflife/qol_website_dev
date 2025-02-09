@@ -13,7 +13,7 @@
     font-family: var(--title-font);
     font-size: 40px;
     outline: none;
-    padding: 15px 30px 15px 30px;
+    padding: 15px 30px 10px 30px;
     text-align: left;
     width: 100%;
 }
@@ -46,12 +46,8 @@
     padding-top: 15px 0;
 }
 
-.collapsible.active+.content>ul {
-    margin-bottom: 75px;
-}
-
 .collapsible.active+.content>.title {
-    margin-bottom: 30px;
+    margin: 35px 0 15px 0;
 }
 
 .collapsible:after {
