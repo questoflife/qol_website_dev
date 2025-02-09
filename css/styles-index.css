@@ -21,7 +21,7 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
 
-    padding: 80px 0 200px 0;
+    padding: 80px 0 180px 0;
 
 }
 
@@ -52,7 +52,7 @@
 }
 
 #info-section .cta-button {
-    margin-top: 75px;
+    margin-top: 20px;
 }
 
 .stat-strip {
@@ -88,9 +88,9 @@
 #why-join-section {
     background-color: var(--color-light-a-bit-transparent);
     color: var(--color-dark);
-    clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 10vw), 0% 100%);
+    clip-path: polygon(0% 0%, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
-    padding: 250px 0 300px 0;
+    padding: 100px 0 120px 0;
     z-index: 10;
     position: relative;
 }
@@ -124,8 +124,8 @@
     background-color: var(--color-light-a-bit-transparent);
     color: var(--color-dark);
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
-    -webkit-clip-path: polygon(0% 0%, 100% 150px, 100% 100%, 0% 100%);
-    padding: 250px 0 150px 0;
+    -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
+    padding: 180px 0 150px 0;
 }
 
 #testimonials-section .mycard {

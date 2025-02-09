@@ -132,7 +132,7 @@ hr {
 }
 
 .section-content-column {
-    width: 98%;
+    width: 100%;
     margin: auto
 }
 
@@ -290,7 +290,7 @@ hr {
 }
 
 .section {
-    padding: 80px 0;
+    padding: 20px 0;
 }
 
 .section-bg {
@@ -458,7 +458,6 @@ hr {
     align-items: stretch;
     display: grid;
     gap: 30px;
-    padding: 40px 0;
     justify-items: center;
 }
 
