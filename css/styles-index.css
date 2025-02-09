@@ -125,7 +125,7 @@
     color: var(--color-dark);
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% 100%, 0% 100%);
-    padding: 180px 0 150px 0;
+    padding: 100px 0 100px 0;
 }
 
 #testimonials-section .mycard {
