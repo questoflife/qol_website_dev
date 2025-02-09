@@ -110,8 +110,9 @@ hr {
     border-bottom-style: solid;
     border-width: 4px;
     display: flex;
-    height: 125px;
+    height: 80px;
     justify-content: center;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -131,7 +132,6 @@ hr {
 }
 
 .section-content-column {
-    min-width: 600px;
     width: 98%;
     margin: auto
 }
@@ -140,7 +140,6 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    min-width: 600px;
     max-width: 1024px;
     width: 100%;
     margin: auto
@@ -150,7 +149,6 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    min-width: 600px;
     max-width: 1024px;
     width: 100%;
     margin: auto
@@ -558,7 +556,8 @@ hr {
 
 #admin-links {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
     text-align: center;
     text-wrap: nowrap;

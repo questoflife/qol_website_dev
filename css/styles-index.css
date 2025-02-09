@@ -58,7 +58,6 @@
 .stat-strip {
     background-color: var(--color-dark-a-bit-transparent);
     font-family: var(--title-font);
-    font-size: calc(2rem + 2vw);
     height: calc(50px + 3vw);
     align-content: center;
     padding: 4px 10% 0 10%;
@@ -141,7 +140,7 @@
     font-size: 1.5rem;
     font-style: italic;
     text-align: left;
-    padding: 0 120px;
+    padding: 0 55px;
     min-height: 512px;
 }
 
@@ -165,7 +164,6 @@
   width: 50px;
 
 }
-
 
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */

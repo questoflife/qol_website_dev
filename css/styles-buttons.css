@@ -8,7 +8,7 @@
     box-shadow: 10px 10px 0px 0px var(--color-dark-a-bit-transparent);
     color: var(--color-dark);
     font-family: var(--cta-font);
-    font-size: 2.5rem;
+    font-size: 22px;
     font-weight: bold;
     gap: 10px;
     justify-content: center;
@@ -73,7 +73,7 @@
     align-items: center;
     box-shadow: 10px 10px 0px 0px var(--color-light-transparent);
     display: flex;
-    font-size: 2.5rem;
+    font-size: 22px;
     justify-content: center;
     width: 100%;
 }

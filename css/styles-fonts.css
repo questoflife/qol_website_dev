@@ -1,5 +1,5 @@
 body {
-    font-size: 2.1rem;
+    font-size: 20px;
     font-family: var(--body-font);
     font-optical-sizing: auto;
     font-weight: 400;
@@ -17,7 +17,7 @@ a {
 /* Header */
 #header-company-name {
     font-family: var(--title-font);
-    font-size: 5rem;
+    font-size: 40px;
     font-style: normal;
     font-weight: 400;
 }
@@ -57,19 +57,19 @@ a {
 }
 
 .tagline-title {
-    font-size: 8rem;
+    font-size: 40px;
     font-weight: 600;
 }
 
 .section-title {
     font-family: var(--body-font);
-    font-size: 5.5rem;
+    font-size: 40px;
     font-weight: 800;
 }
 
 .mycard-title {
     font-family: var(--title-font);
-    font-size: 4rem;
+    font-size: 40px;
 }
 
 .price {
@@ -81,6 +81,10 @@ a {
 .best-for-card {
     font-size: 2.1rem;
     font-weight: 700;
+}
+
+.stat-strip {
+    font-size: 30px;
 }
 
 /* About Us Page */
