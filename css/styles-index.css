@@ -111,10 +111,6 @@
     display: none;
 }
 
-#menu-icon {
-    font-size: 2.8rem;
-}
-
 #services-section .section-content-column {
     display: flex;
     flex-direction: column;

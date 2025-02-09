@@ -22,17 +22,29 @@ a {
     font-weight: 400;
 }
 
-.mynavbar-hamburger {
-    font-size: 5rem;
+.mynavbar.responsive #header-menu-buttons>.menu-button {
+    font-size: 30px;
 }
 
-.mynavbar.responsive #header-menu-buttons>.menu-button {
-    font-size: 5rem;
+.header-button {
+    font-size: 20px;
+}
+
+.mynavbar.responsive #mynavbar-join-button {
+    font-size: 20px;
+}
+
+#mynavbar-join-button {
+    font-size: 20px;
+}
+
+#menu-icon {
+    font-size: 30px;
 }
 
 /* Footer */
 #social-media {
-    font-size: 4rem;
+    font-size: 40px;
 }
 
 #admin-links {
@@ -79,7 +91,7 @@ a {
 
 /* Index Page */
 .best-for-card {
-    font-size: 2.1rem;
+    font-size: 22px;
     font-weight: 700;
 }
 

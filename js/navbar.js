@@ -1,11 +1,14 @@
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 function handleResponsiveNavbar() {
   const navbar = document.getElementById("header-mynavbar");
+  const pageHeader = document.getElementById("page-header");
   // Toggle the 'responsive' class on or off
   if (navbar.className === "mynavbar") {
     navbar.className += " responsive";
+    pageHeader.className += " responsive";
   } else {
     navbar.className = "mynavbar";
+    pageHeader.className = "page-header";
   }
 
   // Then toggle the icon
