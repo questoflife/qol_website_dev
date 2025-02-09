@@ -122,6 +122,11 @@ a {
     font-weight: 800;
 }
 
+/* Services Page */
+.service-meta-dropdown .collapsible {
+    font-size: 20px;
+    font-family: inherit;
+}
 /* Support Us Page */
 .grid-icon {
     font-size: 15px;

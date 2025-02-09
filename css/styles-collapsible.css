@@ -43,8 +43,7 @@
 
 .collapsible.active+.content {
     height: auto;
-    padding-top: 15px;
-    padding-bottom: 45px;
+    padding-top: 15px 0;
 }
 
 .collapsible.active+.content>ul {
@@ -76,7 +75,7 @@
 }
 
 .service-meta-dropdown {
-    margin: 0 5% 20px 5%;
+    margin: 0 5% 12px 5%;
 }
 
 .service-meta-dropdown .collapsible {
@@ -85,8 +84,6 @@
     border-color: var(--color-dark);
     border-radius: var(--corner-radius-big);
     border-width: 3px;
-    font-size: 1.5rem;
-    font-family: inherit;
     padding: 5px 35px;
     text-align: center;
 }
