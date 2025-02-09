@@ -33,7 +33,7 @@
     flex-direction: row;
     gap: 30px;
     justify-content: flex-start;
-    padding: calc(5rem - 4vw) 50px calc(5rem - 4vw) 30px;
+    padding: 30px 50px 30px 30px;
     text-align: left;
     width: 100%;
     overflow: hidden;
@@ -57,7 +57,8 @@
 }
 
 .grid-icon {
-    width: 6rem;
+    min-width: 50px;
+    width: 50px;
     text-align: center;
 }
 
@@ -68,7 +69,7 @@
 }
 
 .grid-label {
-    font-size: calc(min(1rem + 2vw, 2rem));
+    font-size: 2rem;
     font-weight: 600;
 }
 
@@ -115,7 +116,7 @@
     box-shadow: 0 0 var(--color-dark-transparent);
 }
 
-@media (min-width:1200px) {
+@media (min-width:992px) {
     /* Switch to 3 column grid */
     .grid-of-cards {
         grid-auto-rows: 1fr;
