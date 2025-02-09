@@ -90,13 +90,13 @@
 }
 
 .staff-card .profile-pic {
-    max-height: 400px;
-    max-width: 400px;
+    max-height: min(100vw, 400px);
+    max-width: min(100vw, 400px);
 }
 
 .staff-card img {
-    width: 400px;
-    height: 400px;
+    width: min(100vw, 400px);
+    height: min(100vw, 400px);
 }
 
 .staff-card .roles {
@@ -147,17 +147,6 @@
     transition: opacity 0.3s;
     /* Smooth fade-in */
     width: 100%;
-}
-
-.staff-card:hover .profile-pic,
-.staff-card:hover .person-details {
-    opacity: 0;
-    /* Fade out icon and label */
-}
-
-.staff-card:hover .staff-card-hover-content {
-    opacity: 1;
-    /* Fade in the quote */
 }
 
 .people-quote {
@@ -213,6 +202,17 @@
 @media only screen and (min-width: 992px) {
     #header-space-filler {
         display: block;
+    }
+
+    .staff-card:hover .profile-pic,
+    .staff-card:hover .person-details {
+        opacity: 0;
+        /* Fade out icon and label */
+    }
+
+    .staff-card:hover .staff-card-hover-content {
+        opacity: 1;
+        /* Fade in the quote */
     }
 }
 

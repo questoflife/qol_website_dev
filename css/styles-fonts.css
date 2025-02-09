@@ -57,15 +57,15 @@ a {
 
 /* Page */
 .small-mycard-text {
-    font-size: 1.5rem;
+    font-size: 20px;
 }
 
 .medium-mycard-text {
-    font-size: 3rem;
+    font-size: 30px;
 }
 
 .large-mycard-text {
-    font-size: 5rem;
+    font-size: 40px;
 }
 
 .tagline-title {
