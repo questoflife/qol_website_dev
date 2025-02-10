@@ -109,32 +109,20 @@
     .grid-of-cards {
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 0px;
     }
-
+    
     .grid-item {
         flex-direction: column;
         gap: 30px;
-        padding: 20px 10px 10px 10px;
+        padding: 40px 10px 30px 10px;
         text-align: center;
         justify-content: center;
     }
+
 }
 
-/******************************************************************************************/
-/* Large devices (laptops/desktops, 992px and up) */
-/******************************************************************************************/
-@media only screen and (min-width: 992px) {
-    /* Switch to 3 column grid */
-
-    .grid-item {
-        padding: 50px 10px 40px 10px;
-    }
-
-
-    .grid-label > br {
-        display: block;
-    }
-    
+@media only screen and (min-width: 768px) and (hover: hover) {
     .grid-item:hover .grid-icon,
     .grid-item:hover .grid-label {
         opacity: 0;
@@ -153,6 +141,23 @@
     .grid-item-button:hover {
         box-shadow: 0 0 var(--color-dark-transparent);
     }
+}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media only screen and (min-width: 992px) {
+    /* Switch to 3 column grid */
+
+    .grid-item {
+        padding: 50px 10px 40px 10px;
+    }
+
+    .grid-label > br {
+        display: block;
+    }
+    
+
 }
 
 /******************************************************************************************/

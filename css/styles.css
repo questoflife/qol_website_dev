@@ -595,13 +595,6 @@ hr {
         margin: auto
     }
 
-    /* Switch to 3 column grid */
-    .benefit-grid {
-        display: grid;
-        grid-auto-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 40px 40px;
-    }
 
     .best-for-group {
         flex-direction: row;

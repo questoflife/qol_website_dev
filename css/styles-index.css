@@ -191,11 +191,6 @@
 /******************************************************************************************/
 /* Large devices (laptops/desktops, 992px and up) */
 /******************************************************************************************/
-/* Touch Screens */
-@media only screen and (min-width: 992px) and (hover:none) {
-    
-}
-
 @media screen and (min-width: 992px) {
     #why-join-section {
         padding: 200px 0;
@@ -222,6 +217,11 @@
         text-align: right;
         margin-bottom: -3vw;
     }    
+}
+
+/* Touch Screens */
+@media only screen and (min-width: 992px) and (hover:hover) {
+    
 }
 
 /******************************************************************************************/
