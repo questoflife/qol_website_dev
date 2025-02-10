@@ -16,6 +16,10 @@
     z-index: 2048;
 }
 
+.popup-small {
+    height: 45%;
+}
+
 .close-button {
     background-color: var(--color-light);
     border-style: solid;

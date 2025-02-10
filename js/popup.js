@@ -17,3 +17,15 @@ $(document).on('click', '.close-button', function (event) {
     const popup = $(this).closest('.popup');
     popup.hide();
 });
+
+// show popup when more info button is clicked
+$(document).on('click', '.more-info-popup-button', function () {
+    console.log("click");
+    const popup = $(this).closest('.staff-card').find('.popup');
+    popup.show();
+});
+
+
+
+
+

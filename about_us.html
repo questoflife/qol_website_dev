@@ -31,7 +31,14 @@
     <link rel="stylesheet" href="css/styles-backgrounds.css">
     <link rel="stylesheet" href="css/styles-fonts.css">
     <link rel="stylesheet" href="css/styles-buttons.css">
+    <link rel="stylesheet" href="css/styles-popup.css">
     <link rel="stylesheet" href="css/styles-about-us.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/popup.js"></script>
 
     <!-- Prevent FOUT -->
     <script src="js/fout_fix.js"></script>
@@ -52,9 +59,8 @@
                         <div id="header-company-name">QUEST OF LIFE</div>
                     </a>
                     <!-- Menu Hamburger Button -->
-                    <a id="toggle-menu"
-                       class="mynavbar-hamburger"
-                       href="javascript:void(0);" onclick="handleResponsiveNavbar()">
+                    <a id="toggle-menu" class="mynavbar-hamburger" href="javascript:void(0);"
+                        onclick="handleResponsiveNavbar()">
                         <i id="menu-icon" class="fa fa-bars"></i>
                     </a>
 
@@ -110,7 +116,8 @@
                             you might feel, it's not just you. And life gets a hell of a lot easier if you have a team
                             rooting for you. Maybe we can help you find yours.</p>
 
-                        <p>We're a passionate team of volunteers here to help people like us as best as we can. Several of us
+                        <p>We're a passionate team of volunteers here to help people like us as best as we can. Several
+                            of us
                             started out as members in one of our groups, and, after seeing our lives change for the
                             better, decided we wanted to give back to the community and become facilitators.</p>
                     </div>
@@ -122,12 +129,19 @@
                     <div class="section-title">Not-For-Profit</div>
                     <div class="mycard clear-mycard centred-mycard">
                         <p>
-                            Quest of Life is a Community Interest Company limited by guarantee registered in the United Kingdom,
+                            Quest of Life is a Community Interest Company limited by guarantee registered in the United
+                            Kingdom,
                             meaning that we operate to benefit our community rather than for private profit.</p>
                         <p>
-                            We have an asset lock that cannot be removed, and it ensures that any assets (including profits) of the company are used to further benefit the community. We have nominated the <a href="https://www.healthygamerfoundation.org/">Healthy Gamer Foundation</a> as our asset-locked body. If Quest of Life CIC were to be disolved, any assets will be transferred to the HG Foundation.
+                            We have an asset lock that cannot be removed, and it ensures that any assets (including
+                            profits) of the company are used to further benefit the community. We have nominated the <a
+                                href="https://www.healthygamerfoundation.org/">Healthy Gamer Foundation</a> as our
+                            asset-locked body. If Quest of Life CIC were to be disolved, any assets will be transferred
+                            to the HG Foundation.
                         </p>
-                        <p>More information on how CICs operate can be found <a href="https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters">here</a>.</p>
+                        <p>More information on how CICs operate can be found <a
+                                href="https://www.gov.uk/government/publications/community-interest-companies-how-to-form-a-cic/community-interest-companies-guidance-chapters">here</a>.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -167,8 +181,36 @@
                                                 "I want to live in a world where nobody has to feel as
                                                 alone as I once did. That's why I do this work."
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Tom Wood
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">Tom (he/him) has been running peer
+                                                        support groups since July 2023 and has dedicated most of his
+                                                        waking hours to improving his coaching & facilitating
+                                                        skills — which became the foundation Quest Of Life is built on
+                                                        today. Outside of coaching, he's a game developer and
+                                                        pursuing his education in psychology.
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        Tom's groups focus on deep personal exploration. If you're
+                                                        ready to uncover blind spots, tackle challenges, and grow in
+                                                        a structured, supportive environment, you'll fit right in.
+                                                        He creates a space where you can safely explore emotions,
+                                                        build self-awareness, and work toward meaningful change — all
+                                                        at your own pace.
+                                                    </p>
+
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -199,8 +241,26 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Anh
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Anh (she/they) is passionate about using her expertise in online business systems to make peer coaching accessible to anyone in need. With a flexible yet goal-focused approach, her groups are a space for building trust, practicing effective communication, and experiencing what it's like to feel heard and supported. Wherever you're at on your journey, Anh is, what her friends like to call, a "support animal" XD
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        Outside of work, she loves performing arts and helping small business owners build fulfilling, sustainable careers—driven by freedom and desires to better the world, not just profit.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -232,8 +292,26 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Fisher
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Fisher (he/him) has been with the community since its inception in 2023, bringing curiosity and a love for deep conversations. When not coaching, you'll find Fisher working on SolidWorks, Sec+, hanging out with friends, playing guitar and writing fiction.                                                    
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        In his groups, the focus is on shared perspectives. You'll explore how you think and approach life compared to others, gaining insight through open discussions. If you enjoy asking thought-provoking questions, listening with curiosity, and expanding your understanding of different ways of thinking, you'll love Fisher's groups!
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -264,8 +342,23 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Marce
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Coming Soon...
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -294,8 +387,26 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Song
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Song (she/they) is a lifelong learner who loves friends, creative projects, books, and video games. As a perfectionist who has struggled with self-doubt and social anxiety, she understands firsthand how difficult it can be to seek support — but also how transformative it is to grow within a supportive community.
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        "Growth is challenging, often involving setbacks, failures, and self-doubt. But through these experiences, I've come to realize the strength that comes from being part of a supportive community, where empathy and connection empower us to move forward." Song fosters safe spaces where you can show up as you are—no perfection required.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -324,8 +435,29 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Silver
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Silver (he/him) believes stories are how we understand the world. For him, coaching is a medium to unearth those hidden stories, allowing people to be seen and receive the attention they deserve.
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        He's passionate about bringing people from different backgrounds, ethnicities, ages together for the common goal of building a campfire, because <em>"in a world that can be so cold and alienating, a place of warmth to return to is vital."</em>
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        Beyond coaching/facilitation, he's a computer science student with scattered interests ranging from science and non linear note taking, music composition, cybersecurity, game dev, writing and DnD.    
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -354,8 +486,26 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Daniel
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Daniel (he/him) started coaching thanks to his brother, Tom, but quickly found his own passion for it. It's helped him overcome social anxiety, break out of distant politeness, and embrace his extroverted side. As a Deep Learning Scientist with a love for music, crafting, and even shoemaking, he's always exploring something new.
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        Daniel's groups are all about emotional exploration and self-discovery. If you're looking for a space to break past limiting beliefs, reflect on your experiences, and engage in thoughtful conversations, his groups are the perfect place to start.    
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -384,8 +534,26 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Archie
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Archie (he/him) went from landing his dream job in concept art to burning out and starting over — building a business, moving across the world, and diving into coaching. He thrives on uncertainty, adventure, and deep self-reflection.
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        To counter today's busy world full of cheap dopamine, addictive algorithms, and well-meaning friends and family who fuel our negative self-talk and limiting beliefs, and because "Life gets a lot easier once you have teammates", he strives to help internet strangers become a powerful team equipped to help each other through anything from common everyday obstacles to achieving their wildest dreams.
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -414,8 +582,26 @@
                                             <div class="people-quote">
                                                 ""
                                             </div>
-                                            <div class="cta-button more-info-button">
+                                            <div class="cta-button more-info-button more-info-popup-button">
                                                 More Info
+                                            </div>
+                                        </div>
+                                        <div class="popup popup-small">
+                                            <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i>
+                                            </div>
+
+                                            <div class="popup-content">
+                                                <div class="popup-title">
+                                                    Light
+                                                </div>
+                                                <div class="popup-body">
+                                                    <p class="small-mycard-text">
+                                                        Light (he/him) is from India and was drawn to coaching as a way to work through procrastination and find purpose. This community has helped him tremendously, and now he's here to give back and grow alongside others.
+                                                    </p>
+                                                    <p class="small-mycard-text">
+                                                        In his groups, the focus is on learning, unlearning, and supporting one another. If you're looking for a space to navigate life's challenges without feeling alone, Light welcomes you with open arms. Namaste! 🙏
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -475,10 +661,12 @@
             </div>
             <!-- Copyright -->
             <div class="copyright-notice">
-                Icons provided by <a href="https://fontawesome.com">Font Awesome</a> under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+                Icons provided by <a href="https://fontawesome.com">Font Awesome</a> under <a
+                    href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
             </div>
             <div class="copyright-notice">
-                Photo by <a href="https://unsplash.com/@jerrografie">James Jeremy Beckers</a> on <a href="https://unsplash.com/">Unsplash</a>
+                Photo by <a href="https://unsplash.com/@jerrografie">James Jeremy Beckers</a> on <a
+                    href="https://unsplash.com/">Unsplash</a>
             </div>
 
         </div>
