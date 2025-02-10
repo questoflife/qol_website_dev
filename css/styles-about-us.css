@@ -232,6 +232,11 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /******************************************************************************************/
 @media only screen and (min-width: 1200px) {
+    #people-grid-section .section-content-column {
+        max-width: 1400px;
+        width: 100%;
+    }
+
     .spaced-content {
         height: 100%;
     }
