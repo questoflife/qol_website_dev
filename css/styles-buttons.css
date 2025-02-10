@@ -105,6 +105,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    max-width: 1400px;
 }
 
 /* People Card Buttons */
@@ -152,24 +153,24 @@
         margin-left: 5px;
     }
 
-    .footer-cta-buttons {
-        gap: 0;
-    }
-
+    
     .footer-button {
-        width: 40%;
+        width: 50;
     }
-
+    
     #hideable-cta-button-text {
         display: none;
     }
-
+    
 }
 
 /******************************************************************************************/
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 1200px) {
+    .footer-cta-buttons {
+        gap: 0px;
+    }
     #hideable-cta-button-text {
         display: block;
     }

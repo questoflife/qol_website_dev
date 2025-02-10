@@ -99,6 +99,10 @@
 /* Medium devices (landscape tablets, 768px and up) */
 /******************************************************************************************/
 @media only screen and (min-width: 768px) {
+    #volunteer-content {
+        padding: 0 35px;
+    }
+
     .button-grid-container {
         padding: 0px 0px 30px 0px;
     }

@@ -502,6 +502,7 @@ hr {
 /* FOOTER */
 /******************************************************************************************/
 #footer-columns {
+    align-items: center;
     box-sizing: border-box;
     display: flex;
     gap: 10px;
