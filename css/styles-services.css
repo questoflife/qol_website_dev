@@ -123,6 +123,10 @@
 /* Medium devices (landscape tablets, 768px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 768px) {
+    #motivation-section {
+        padding: 150px 0 200px 0;
+    }
+
     .content {
         padding: 0 35px 0 35px;
     }

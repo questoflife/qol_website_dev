@@ -168,6 +168,10 @@
 /* Medium devices (landscape tablets, 768px and up) */
 /******************************************************************************************/
 @media only screen and (min-width: 768px) {
+    #not-for-profit-section {
+        padding: 200px 0;
+    }
+    
     #people-grid-section .section-content-column {
         max-width: 100%;
         width: 100%;
@@ -222,9 +226,6 @@
         display: block;
     }
 
-    #not-for-profit-section {
-        padding: 200px 0;
-    }
 }
 
 /******************************************************************************************/
