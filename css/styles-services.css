@@ -96,10 +96,6 @@
     margin: 80px 0;
 }
 
-#services-details-section .cta-button {
-    margin-bottom: 20px;
-}
-
 .equal-cols {
     display: flex;
     flex-wrap: wrap;
@@ -109,4 +105,46 @@
 
 .equal-cols .mycard-content-block {
     width: 40%;
+}
+
+#services-details-section .cta-button {
+    margin-bottom: 20px;
+}
+
+/******************************************************************************************/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 600px) {
+
+    
+}
+
+/******************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 768px) {
+    .content {
+        padding: 0 35px 0 35px;
+    }
+
+    #services-details-section .cta-button {
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 992px) {
+
+      
+}
+
+/******************************************************************************************/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 1200px) {
+
+
 }

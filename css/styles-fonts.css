@@ -143,6 +143,15 @@ a {
     font-size: 20px;
     font-family: inherit;
 }
+
+.service-meta-dropdown .collapsible::after {
+    font-size: 20px;
+}
+
+.service-meta-dropdown .collapsible.active::after {
+    font-size: 20px;
+}
+
 /* Support Us Page */
 .grid-icon {
     font-size: 15px;

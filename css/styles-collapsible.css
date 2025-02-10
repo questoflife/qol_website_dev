@@ -36,7 +36,7 @@
     color: var(--color-dark);
     height: 0;
     overflow: hidden;
-    padding: 0 5px;
+    padding: 0 5px 5px 5px;
     text-align: left;
     transition: height 0.3s ease-out, padding 0.3s ease-out;
 }
@@ -83,14 +83,6 @@
     text-align: center;
 }
 
-.service-meta-dropdown .collapsible::after {
-    font-size: 1.5rem;
-}
-
-.service-meta-dropdown .collapsible.active::after {
-    font-size: 1.5rem;
-}
-
 .service-meta-dropdown .collapsible.active {
     border-radius: var(--corner-radius-big) var(--corner-radius-big) 0 0;
     border-bottom-style: none;
@@ -122,10 +114,8 @@
 /******************************************************************************************/
 @media screen and (min-width: 768px) {
     .content {
-        padding: 0 35px;
+        padding: 0 35px 0 35px;
     }
-
-    
 }
 
 /******************************************************************************************/
