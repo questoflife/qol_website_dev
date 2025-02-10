@@ -79,6 +79,12 @@
     margin-bottom: 100px;
 }
 
+.currency-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */

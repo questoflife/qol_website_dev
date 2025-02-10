@@ -7,10 +7,16 @@
     gap: 30px;
     padding: 0px 15px 20px 15px;
     justify-items: center;
+    max-width: 800px;
 }
 
 .button-grid-container .grid-item-button {
     border-color: var(--color-highlight);
+}
+
+.card-grid-container {
+    display: flex;
+    justify-content: center;
 }
 
 .grid-of-cards {
@@ -111,6 +117,7 @@
         grid-auto-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr;
         padding: 0px;
+        width: 800px;
     }
     
     .grid-item {

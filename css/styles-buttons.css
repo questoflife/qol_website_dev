@@ -96,7 +96,6 @@
 /* Footer Buttons */
 .footer-button {
     margin: 0 20px;
-    width: 512px;
 }
 
 .footer-cta-buttons {
@@ -112,6 +111,9 @@
 .more-info-button {
     font-size: 2rem;
 }
+
+/* Donations */
+
 
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -153,7 +155,6 @@
         margin-left: 5px;
     }
 
-    
     .footer-button {
         width: 50;
     }
@@ -161,6 +162,8 @@
     #hideable-cta-button-text {
         display: none;
     }
+
+
     
 }
 
@@ -170,6 +173,9 @@
 @media screen and (min-width: 1200px) {
     .footer-cta-buttons {
         gap: 0px;
+    }
+    .footer-button {
+        width: 512px;
     }
     #hideable-cta-button-text {
         display: block;

@@ -123,7 +123,7 @@ a {
 /* About Us Page */
 .staff-card .name {
     font-family: var(--title-font);
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .staff-card .roles {
