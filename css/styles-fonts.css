@@ -103,6 +103,10 @@ a {
     font-size: 30px;
 }
 
+.testimonial {
+    font-size: 20px;
+}
+
 /* About Us Page */
 .staff-card .name {
     font-family: var(--title-font);
