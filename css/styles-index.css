@@ -125,7 +125,7 @@
     color: var(--color-dark);
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% 100%, 0% 100%);
-    padding: 100px 0 100px 0;
+    padding: 100px 5px 100px 5px;
 }
 
 #testimonials-section .mycard {
@@ -164,7 +164,11 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 600px) {
-
+    .testimonial {
+        min-height: 400px;
+        padding: 0 75px;
+        align-content: center;
+    }
 }
 
 /******************************************************************************************/
