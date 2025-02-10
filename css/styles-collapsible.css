@@ -36,14 +36,13 @@
     color: var(--color-dark);
     height: 0;
     overflow: hidden;
-    padding: 0 35px;
+    padding: 0 5px;
     text-align: left;
     transition: height 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .collapsible.active+.content {
     height: auto;
-    padding-top: 15px 0;
 }
 
 .collapsible.active+.content>.title {
@@ -107,4 +106,40 @@
     border-top-style: none;
     border-color: var(--color-dark);
     border-width: 3px;
+}
+
+
+/******************************************************************************************/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 600px) {
+
+    
+}
+
+/******************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 768px) {
+    .content {
+        padding: 0 35px;
+    }
+
+    
+}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 992px) {
+
+      
+}
+
+/******************************************************************************************/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 1200px) {
+
+
 }

@@ -7,9 +7,6 @@
     border-width: 8px;
     box-shadow: 10px 10px 0px 0px var(--color-dark-a-bit-transparent);
     color: var(--color-dark);
-    font-family: var(--cta-font);
-    font-size: 22px;
-    font-weight: bold;
     gap: 10px;
     justify-content: center;
     margin: auto;
@@ -72,7 +69,6 @@
     align-items: center;
     box-shadow: 10px 10px 0px 0px var(--color-light-transparent);
     display: flex;
-    font-size: 22px;
     justify-content: center;
     width: 100%;
 }
@@ -116,10 +112,29 @@
     font-size: 2rem;
 }
 
-@media only screen and (min-width: 992px) {
+/******************************************************************************************/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 600px) {
+
+}
+
+/******************************************************************************************/
+/* Medium devices (landscape tablets, 768px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 768px) {
+    #hideable-cta-button-text {
+        display: block;
+    }
+
+}
+
+/******************************************************************************************/
+/* Large devices (laptops/desktops, 992px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 992px) {
     .mynavbar-hamburger {
         display: none;
-
     }
 
     #header-menu-buttons {
@@ -144,9 +159,10 @@
     }
 }
 
+/******************************************************************************************/
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/******************************************************************************************/
+@media screen and (min-width: 1200px) {
 
-@media only screen and (min-width: 1200px) {
-    #hideable-cta-button-text {
-        display: block;
-    }
+
 }

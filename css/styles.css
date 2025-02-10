@@ -303,6 +303,12 @@ hr {
     text-align: center;
 }
 
+.cta-button {
+    font-family: var(--cta-font);
+    font-size: 22px;
+    font-weight: bold;
+}
+
 /* mycards */
 .mycard {
     box-sizing: border-box;
@@ -594,7 +600,13 @@ hr {
 /******************************************************************************************/
 /* Medium devices (landscape tablets, 768px and up) */
 /******************************************************************************************/
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .section-content-column {
+        width: 90%;
+        margin: auto
+    }
+
+}
 
 /******************************************************************************************/
 /* Large devices (laptops/desktops, 992px and up) */
