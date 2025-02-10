@@ -8,6 +8,7 @@
     padding: 0px 15px 20px 15px;
     justify-items: center;
     max-width: 800px;
+    width: 100%;
 }
 
 .button-grid-container .grid-item-button {
