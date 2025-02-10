@@ -79,11 +79,41 @@
     margin-bottom: 100px;
 }
 
-.currency-group {
+.currency-buttons {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 4px;
+    justify-content: stretch;
+    width: 100%;
 }
+
+.one-off-donations .cta-button,
+.monthly-donations .cta-button {
+    margin-left: 0;
+    width: 100%;
+    text-wrap: wrap;
+}
+
+#monthly-donation-group .donate-button {
+    width: 100%;
+}
+
+.monthly-donations {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 25px;
+}
+
+.currency-title {
+    margin-bottom: 20px;
+}
+
+.monthly-donations,
+.one-off-donations {
+    margin-top: 20px;
+}
+
 
 
 /******************************************************************************************/

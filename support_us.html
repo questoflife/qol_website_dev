@@ -41,6 +41,7 @@
 
     <!-- JavaScript -->
     <script src="js/popup.js"></script>
+    <script src="js/currency-radio.js"></script>
 
     <!-- Prevent FOUT -->
     <script src="js/fout_fix.js"></script>
@@ -147,33 +148,64 @@
                             <div class="content">
                                 <!-- Stripe Donations -->
                                 <br>
+                                <div class="currency-title medium-mycard-text">
+                                    Currency:
+                                </div>
+                                <div class="currency-buttons">
+                                    <label class="cta-button">
+                                        <input type="radio" name="currency" value="£ GBP" checked>
+                                        £ GBP
+                                    </label>
+                                    <label class="cta-button">
+                                        <input type="radio" name="currency" value="€ EUR">
+                                        € EUR
+                                    </label>
+                                    <label class="cta-button">
+                                        <input type="radio" name="currency" value="$ USD">
+                                        $ USD
+                                    </label>
+                                </div>
+                                <br>
+                                <br>
                                 <div class="medium-mycard-text">One-Off Donations via Credit / Debit Card</div>
-                                <div class="small-mycard-text">
-                                    <div class="currency-group">
-                                        <div class="medium-mycard-text">
-                                            Currency:
-                                        </div>
-                                        <div class="cta-button">
-                                            GBP
-                                        </div>
-                                        <div class="cta-button">
-                                            EUR
-                                        </div>
-                                        <div class="cta-button">
-                                            USD
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="cta-button">
-                                        Donate - Custom Amount
-                                    </div>
+                                <div class="one-off-donations">
+                                    <a id="donate-once-button" class="cta-button donate-button" href="" target="_blank">
+                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
+                                        <div>Custom Amount</div><div class="currency-label"> GBP</div>
+                                    </a>
                                 </div>
                                 <br>
                                 <br>
                                 <div class="medium-mycard-text">Monthly Donations via Credit / Debit Card</div>
-                                <div class="small-mycard-text">
-                                    Hello
+                                <div id="monthly-donation-group" class="monthly-donations">
+                                    <a id="donate-monthly-5-button" class="cta-button donate-button" href="" target="_blank">
+                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
+                                        <span class="currency-label"> GBP</span>
+                                    </a>
+                                    <a id="donate-monthly-15-button" class="cta-button donate-button" href="" target="_blank">
+                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
+                                        <span class="currency-label"> GBP</span>
+                                    </a>
+                                    <a id="donate-monthly-30-button" class="cta-button donate-button" href="" target="_blank">
+                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
+                                        <span class="currency-label"> GBP</span>
+                                    </a>
+                                    <a id="donate-monthly-50-button" class="cta-button donate-button" href="" target="_blank">
+                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
+                                        <span class="currency-label"> GBP</span>
+                                    </a>
+                                    <a id="donate-monthly-100-button" class="cta-button donate-button" href="" target="_blank">
+                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
+                                        <span class="currency-label"> GBP</span>
+                                    </a>
                                 </div>
+                                <br>
+                                <p class="small-mycard-text">
+                                    If you'd like to set up a different recurring payment, please email us at
+                                    <a href="mailto:admin@questoflife.org">admin@questoflife.org</a> stating the
+                                    <b>amount</b> and your preferred <b>currency</b>. We will then set up a custom donation link for you. 
+                                </p>
+                                <br>
                                 <br>
                                 <!-- Bank Transfer Donations -->
                                 <div class="medium-mycard-text">Donate via Bank Transfer</div>
@@ -181,7 +213,8 @@
                                     <p>
                                         If you would like to donate via bank transfers, please email us at
                                         <a href="mailto:admin@questoflife.org">admin@questoflife.org</a> stating the
-                                        <b>amount</b>, your preferred <b>currency</b> and if this would be a <b>one-time or recurring</b>
+                                        <b>amount</b>, your preferred <b>currency</b> and if this would be a <b>one-time
+                                            or recurring</b>
                                         donation.
 
                                         We will create a payment link for you to pay securely.
@@ -311,7 +344,8 @@
                                                                 direction of the organisation</li>
                                                         </ul>
 
-                                                        <a class="cta-button" href="application_facilitator_training.html"
+                                                        <a class="cta-button"
+                                                            href="application_facilitator_training.html"
                                                             target="_blank">
                                                             Apply Now
                                                         </a>
@@ -587,8 +621,8 @@
                                                             <li></li>
                                                         </ul>
 
-                                                        <a class="cta-button" href="application_qualified_applicant.html"
-                                                            target="_blank">
+                                                        <a class="cta-button"
+                                                            href="application_qualified_applicant.html" target="_blank">
                                                             Apply Now
                                                         </a>
                                                     </div>
@@ -642,8 +676,8 @@
                                                             <li></li>
                                                         </ul>
 
-                                                        <a class="cta-button" href="application_qualified_applicant.html"
-                                                            target="_blank">
+                                                        <a class="cta-button"
+                                                            href="application_qualified_applicant.html" target="_blank">
                                                             Apply Now
                                                         </a>
                                                     </div>
@@ -929,12 +963,12 @@
             </div>
             <!-- Copyright -->
             <div class="copyright-notice">
-                Icons provided by <a href="https://fontawesome.com">Font Awesome</a> under <a
-                    href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+                Icons provided by <a href="https://fontawesome.com" target="_blank">Font Awesome</a> under <a
+                    href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
             </div>
             <div class="copyright-notice">
-                Photo by <a href="https://unsplash.com/@artur_luczka">Artur Łuczka</a> on <a
-                    href="https://unsplash.com/">Unsplash</a>
+                Photo by <a href="https://unsplash.com/@artur_luczka" target="_blank">Artur Łuczka</a> on <a
+                    href="https://unsplash.com/" target="_blank">Unsplash</a>
             </div>
         </div>
     </div>
