@@ -7,6 +7,7 @@
     border-width: 8px;
     box-shadow: 10px 10px 0px 0px var(--color-dark-a-bit-transparent);
     color: var(--color-dark);
+    cursor: pointer;
     gap: 10px;
     justify-content: center;
     margin: auto;
