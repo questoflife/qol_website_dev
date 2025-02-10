@@ -179,6 +179,10 @@
         align-content: center;
     }
 
+    .stat-strip {
+        padding: 4px 10% 0 10%;
+    }
+
 }
 
 /******************************************************************************************/
@@ -203,6 +207,10 @@
 
     #benefit-grid-container .grid-of-cards {
         width: 800px;
+    }
+
+    .stat-strip {
+        padding: 4px 10% 0 10%;
     }
 
 }
@@ -234,6 +242,10 @@
         text-align: right;
         margin-bottom: -3vw;
     }    
+
+    .stat-strip {
+        padding: 4px 10% 0 10%;
+    }
 }
 
 /* Touch Screens */
@@ -245,6 +257,8 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 1200px) {
-
+    .stat-strip {
+        padding: 4px calc(50vw - 600px) 0 0;
+    }
 
 }
