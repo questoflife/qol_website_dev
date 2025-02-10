@@ -196,7 +196,11 @@
 /* Large devices (laptops/desktops, 992px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 992px) {
-
+    .testimonial {
+        min-height: 450px;
+        padding: 0 75px;
+        align-content: center;
+    }
 
     #groups-completed-stat-strip {
         transform: skewY(-5deg);
