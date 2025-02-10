@@ -95,6 +95,15 @@
     position: relative;
 }
 
+#benefit-grid-container {
+    display: flex;
+    justify-content: center;
+}
+
+#benefit-grid-container .grid-of-cards {
+    width: 90%;
+}
+
 #why-join-section .cta-button {
     margin-top: 0px;
 }
@@ -169,6 +178,7 @@
         padding: 0 75px;
         align-content: center;
     }
+
 }
 
 /******************************************************************************************/
@@ -190,6 +200,11 @@
     .services-icon {
         display: inline-block;
     }
+
+    #benefit-grid-container .grid-of-cards {
+        width: 800px;
+    }
+
 }
 
 /******************************************************************************************/
