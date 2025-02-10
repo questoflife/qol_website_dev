@@ -97,6 +97,11 @@ a {
     font-weight: 600;
 }
 
+.grid-quote {
+    font-size: 15px;
+    font-style: italic;
+}
+
 /* Index Page */
 #main-home-title {
     font-size: 45px;

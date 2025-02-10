@@ -63,8 +63,6 @@
     box-sizing: border-box;
     color: var(--color-dark);
     display: flex;
-    font-size: 1.5rem;
-    font-style: italic;
     height: 100%;
     justify-content: center;
     left: 0;

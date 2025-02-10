@@ -46,7 +46,6 @@
     align-self: center;
 }
 
-
 .menu-button {
     align-self: center;
     color: var(--color-dark);
@@ -94,7 +93,7 @@
 
 
 /* Footer Buttons */
-.page-footer .cta-button {
+.footer-button {
     margin: 0 20px;
     width: 512px;
 }
@@ -140,9 +139,7 @@
     #header-menu-buttons {
         display: flex;
         flex-direction: row;
-        gap: 2px;
-        margin-left: 2%;
-        margin-top: 15px;
+        gap: 3px;
     }
 
     #mynavbar-join-button {
@@ -155,8 +152,17 @@
     }
 
     .footer-cta-buttons {
-        gap: 30px;
+        gap: 0;
     }
+
+    .footer-button {
+        width: 40%;
+    }
+
+    #hideable-cta-button-text {
+        display: none;
+    }
+
 }
 
 /******************************************************************************************/

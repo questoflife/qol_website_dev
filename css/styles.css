@@ -71,7 +71,7 @@ hr {
 ::-webkit-scrollbar {
     width: 10px;
 }
- 
+
 ::-webkit-scrollbar-track {
     background-color: var(--color-light);
     -webkit-border-radius: var(--corner-radius-medium);
@@ -81,7 +81,7 @@ hr {
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: var(--corner-radius-medium);
     border-radius: var(--corner-radius-medium);
-    background: var(--color-dark-transparent); 
+    background: var(--color-dark-transparent);
 }
 
 /* Includes header, body and footer - basically the entire page, but to alow separate formatting from body for background overlay */
@@ -362,7 +362,7 @@ hr {
     align-items: center;
 }
 
-.mycard-content-block > p {
+.mycard-content-block>p {
     padding: 6px 20px;
 }
 
@@ -476,7 +476,7 @@ hr {
     border-style: solid;
     border-width: 4px;
     background-color: var(--color-light-a-bit-transparent);
-    color:var(--color-dark);
+    color: var(--color-dark);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -495,34 +495,6 @@ hr {
         max-width: 1100px;
         width: 80%;
         margin: auto
-    }
-}
-
-@media (min-width:1200px) {
-    /* Switch to 3 column grid */
-    .benefit-grid {
-        display: grid;
-        grid-auto-rows: 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 40px 40px;
-    }
-
-    .best-for-group {
-        flex-direction: row;
-        gap: 10px;
-        margin: 30px 0 30px 0;
-    }
-
-    .mycard-title-group {
-        border-color: var(--color-dark);
-        border-style: solid;
-        border-width: 4px;
-        background-color: var(--color-light-a-bit-transparent);
-        color:var(--color-dark);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 30px;
     }
 }
 
@@ -609,12 +581,53 @@ hr {
 }
 
 /******************************************************************************************/
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (tablets/laptops/desktops, 992px and up) */
 /******************************************************************************************/
+
+/* Mouse (hover exists) */
 @media only screen and (min-width: 992px) {
     #header-space-filler {
         display: block;
     }
+
+    .section-content-column {
+        width: 80%;
+        margin: auto
+    }
+
+    /* Switch to 3 column grid */
+    .benefit-grid {
+        display: grid;
+        grid-auto-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 40px 40px;
+    }
+
+    .best-for-group {
+        flex-direction: row;
+        gap: 10px;
+        margin: 30px 0 30px 0;
+    }
+
+    .mycard-title-group {
+        border-color: var(--color-dark);
+        border-style: solid;
+        border-width: 4px;
+        background-color: var(--color-light-a-bit-transparent);
+        color: var(--color-dark);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    /* Touch Screens */
+    @media only screen and (min-width: 992px) and (hover:none) {
+        
+
+    }
+
+
 }
 
 /******************************************************************************************/
