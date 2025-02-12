@@ -98,20 +98,18 @@
     width: 100%;
 }
 
-.monthly-donations {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 25px;
-}
-
 .currency-title {
     margin-bottom: 20px;
 }
 
 .monthly-donations,
 .one-off-donations {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     margin-top: 20px;
+    gap: 25px;
+
 }
 
 /******************************************************************************************/

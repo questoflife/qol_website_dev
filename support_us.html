@@ -41,7 +41,6 @@
 
     <!-- JavaScript -->
     <script src="js/popup.js"></script>
-    <script src="js/currency-radio.js"></script>
 
     <!-- Prevent FOUT -->
     <script src="js/fout_fix.js"></script>
@@ -147,7 +146,7 @@
                             </button>
                             <div class="content">
                                 <!-- Stripe Donations -->
-                                <br>
+                                <!-- <br>
                                 <div class="currency-title medium-mycard-text">
                                     Currency:
                                 </div>
@@ -165,46 +164,89 @@
                                         $ USD
                                     </label>
                                 </div>
+                                <br> -->
+                                <br>
+                                <p class="small-mycard-text">
+                                    Currently we have donation links set up in three currencies - £ GBP, $ USD and € EUR. For any other currency or for custom amounts, please email us at
+                                    <a href="mailto:admin@questoflife.org">admin@questoflife.org</a> stating the
+                                    <b>amount</b>, your preferred <b>currency</b>, and whether you'd like to make a one-off or a recurring donation. We will then set up a custom donation link for you. 
+                                </p>
+                                <br>
+                                <button id="restricted-countries" type="button" class="collapsible">
+                                    <div>
+                                        Restricted Countries
+                                    </div>
+                                </button>
+                                <div id="restricted-countries-content" class="content">
+                                    <br>
+                                    <p>To ensure compliance with international regulations and the policies of our payment processors, we have compiled a list of countries from which we are unable to accept donations or payments for our services. Residents of these countries are kindly requested not to attempt transactions with us. Attempting such transactions may result in funds being frozen or returned, and could potentially lead to account suspension.
+                                    </p>
+                                    <p class="heavy-text">Please DO NOT attempt to donate if you're resident in any of the following countries:
+                                    </p>
+                                    <ul>
+                                        <li>Afghanistan</li>
+                                        <li>Belarus</li>
+                                        <li>Central African Republic</li>
+                                        <li>Cuba</li>
+                                        <li>Democratic Republic of the Congo</li>
+                                        <li>Iran</li>
+                                        <li>Iraq</li>
+                                        <li>Lebanon</li>
+                                        <li>Libya</li>
+                                        <li>North Korea</li>
+                                        <li>Russia</li>
+                                        <li>Somalia</li>
+                                        <li>South Sudan</li>
+                                        <li>Sudan</li>
+                                        <li>Syria</li>
+                                        <li>Venezuela</li>
+                                        <li>Yemen</li>
+                                        <li>Zimbabwe</li>
+                                    </ul>
+                                    <p class="small-mycard-text">
+                                        This list is based on international sanctions and the compliance requirements of our payment processors, including Stripe and Wise. Please note that this list is subject to change, and we recommend consulting the latest information from official sources or contacting us directly for the most up-to-date details.
+                                    </p>
+                                    <p>
+                                        Due to these restrictions, we are currently unable to accept donations or payments from residents of the listed countries. We regret any inconvenience this may cause and appreciate your understanding as we comply with international regulations.
+                                    <p>
+                                        For any further inquiries or assistance, please feel free to contact us at <a href="mailto:info@questoflife.org">info@questoflife.org</a> or <a href="support@questoflife.org">support@questoflife.org</a>.
+                                    </p>
+                                </div>
+                                
                                 <br>
                                 <br>
                                 <div class="medium-mycard-text">One-Off Donations via Credit / Debit Card</div>
                                 <div class="one-off-donations">
-                                    <a id="donate-once-button" class="cta-button donate-button" href="" target="_blank">
-                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
-                                        <div>Custom Amount</div><div class="currency-label"> GBP</div>
+                                    <a id="donate-once-button" class="cta-button donate-button" href="https://donate.stripe.com/9AQg2GalegEwcHm28j" target="_blank">
+                                        <div>Custom Amount £ (GBP)</div>
+                                    </a>
+                                    <a id="donate-once-button" class="cta-button donate-button" href="https://donate.stripe.com/fZe6s650Udsk8r68wF" target="_blank">
+                                        <div>Custom Amount € (EUR)</div>
+                                    </a>
+                                    <a id="donate-once-button" class="cta-button donate-button" href="https://donate.stripe.com/4gw5o20KE1JCePu3cm" target="_blank">
+                                        <div>Custom Amount $ (USD)</div>
                                     </a>
                                 </div>
                                 <br>
                                 <br>
                                 <div class="medium-mycard-text">Monthly Donations via Credit / Debit Card</div>
                                 <div id="monthly-donation-group" class="monthly-donations">
-                                    <a id="donate-monthly-5-button" class="cta-button donate-button" href="" target="_blank">
-                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
-                                        <span class="currency-label"> GBP</span>
+                                    <a id="donate-monthly-5-button" class="cta-button donate-button" href="https://donate.stripe.com/aEU8Aectm73WcHm6oE" target="_blank">
+                                        <span class="currency-label"> £5 (or € / $)</span>
                                     </a>
-                                    <a id="donate-monthly-15-button" class="cta-button donate-button" href="" target="_blank">
-                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
-                                        <span class="currency-label"> GBP</span>
+                                    <a id="donate-monthly-15-button" class="cta-button donate-button" href="https://donate.stripe.com/4gw3fU792gEw7n24gv" target="_blank">
+                                        <span class="currency-label"> £15 (or € / $)</span>
                                     </a>
-                                    <a id="donate-monthly-30-button" class="cta-button donate-button" href="" target="_blank">
-                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
-                                        <span class="currency-label"> GBP</span>
+                                    <a id="donate-monthly-30-button" class="cta-button donate-button" href="https://donate.stripe.com/cN26s6ale88022I8wK" target="_blank">
+                                        <span class="currency-label"> £30 (or € / $)</span>
                                     </a>
-                                    <a id="donate-monthly-50-button" class="cta-button donate-button" href="" target="_blank">
-                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
-                                        <span class="currency-label"> GBP</span>
+                                    <a id="donate-monthly-50-button" class="cta-button donate-button" href="https://donate.stripe.com/8wMaImbpi8804aQcMZ" target="_blank">
+                                        <span class="currency-label"> £50 (or € / $)</span>
                                     </a>
-                                    <a id="donate-monthly-100-button" class="cta-button donate-button" href="" target="_blank">
-                                        <!-- <i class="fa-solid fa-hand-holding-heart"></i> -->
-                                        <span class="currency-label"> GBP</span>
+                                    <a id="donate-monthly-100-button" class="cta-button donate-button" href="https://buy.stripe.com/4gw17M50Uag836M00c" target="_blank">
+                                        <span class="currency-label"> £100 (or € / $)</span>
                                     </a>
                                 </div>
-                                <br>
-                                <p class="small-mycard-text">
-                                    If you'd like to set up a different recurring payment, please email us at
-                                    <a href="mailto:admin@questoflife.org">admin@questoflife.org</a> stating the
-                                    <b>amount</b> and your preferred <b>currency</b>. We will then set up a custom donation link for you. 
-                                </p>
                                 <br>
                                 <br>
                                 <!-- Bank Transfer Donations -->
@@ -221,6 +263,7 @@
                                     </p>
                                 </div>
 
+                                <br>
                                 <!-- In-Kind Donations -->
                                 <div class="medium-mycard-text">In-Kind Donations</div>
                                 <div class="small-mycard-text">

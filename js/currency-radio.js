@@ -11,33 +11,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // Donation buttons with amounts and links
     const donateButtons = {
         "donate-once-button": {
-            "£ GBP": "https://buy.stripe.com/00g2bQdxq3RK6iY5kp",
+            "£ GBP": "",
             "€ EUR": "",
             "$ USD": ""
         },
         "donate-monthly-5-button": {
             "£ GBP": "",
-            "€ EUR": "https://buy.stripe.com/8wMbMqfFy0Fy0YEdQT",
+            "€ EUR": "",
             "$ USD": ""
         },
         "donate-monthly-15-button": {
             "£ GBP": "",
-            "€ EUR": "https://buy.stripe.com/5kA6s6gJCbkcgXC4gk",
+            "€ EUR": "",
             "$ USD": ""
         },
         "donate-monthly-30-button": {
             "£ GBP": "",
-            "€ EUR": "https://buy.stripe.com/aEU3fU2SMfAsgXC5km",
+            "€ EUR": "",
             "$ USD": ""
         },
         "donate-monthly-50-button": {
             "£ GBP": "",
-            "€ EUR": "https://buy.stripe.com/9AQ9Ei1OIgEw7n2aEF",
+            "€ EUR": "",
             "$ USD": ""
         },
         "donate-monthly-100-button": {
             "£ GBP": "",
-            "€ EUR": "https://buy.stripe.com/dR69Ei2SMgEwfTycMM",
+            "€ EUR": "",
             "$ USD": ""
         }
     };
