@@ -50,13 +50,13 @@ a {
     color: var(--color-link);
 }
 
+a:hover {
+    color: var(--color-highlight);
+}
+
 #terms-of-use-page a,
 #privacy-policy-page a {
     color: var(--color-gold);
-}
-
-a:hover {
-    color: var(--color-highlight);
 }
 
 #terms-of-use-page a:hover,
