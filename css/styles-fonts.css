@@ -229,12 +229,15 @@ a {
     #main-home-title {
         font-size: 60px;
     }
+    
+    .grid-quote {
+        font-size: 18px;
+    }
 }
 
 /******************************************************************************************/
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 1200px) {
-
 
 }
