@@ -7,6 +7,7 @@
     cursor: default;
     height: 100%;
     left: 50%;
+    max-width: 1024px;
     padding: 1rem;
     position: fixed;
     text-align: left;
