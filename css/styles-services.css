@@ -83,7 +83,6 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 10vw), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 10vw, 100% calc(100% - 10vw), 0% 100%);
     padding: 100px 0 120px 0;
-    text-align: center;
     z-index: 10;
     position: relative;
 }
@@ -133,7 +132,7 @@
 
     #services-details-section .cta-button {
         margin-top: 20px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 }
 

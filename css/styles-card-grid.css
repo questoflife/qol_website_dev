@@ -77,7 +77,7 @@
     /* Hidden by default */
     padding: 20px;
     position: absolute;
-    text-align: center;
+    text-align: left;
     top: 0;
     transition: opacity 0.3s;
     /* Smooth fade-in */
