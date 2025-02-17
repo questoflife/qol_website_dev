@@ -110,7 +110,7 @@
 
 .staff-card .person-details {
     text-align: center;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
     width: 100%;
 }
 
@@ -118,6 +118,8 @@
     list-style-type: none;
     margin: 0;
     padding: 5px 0 0 0;
+    text-align: center;
+    justify-self: center;
 }
 
 .staff-card .person-details .fa-icon {
@@ -127,6 +129,12 @@
 
 .staff-card .cta-button {
     margin-top: 30px;
+}
+
+.discord {
+    color: #7289DA;
+    padding-bottom: 20px;
+    margin-top: -15px;
 }
 
 .benefit-icon,
