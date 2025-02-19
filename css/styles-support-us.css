@@ -32,7 +32,7 @@
     /* background-image: url("../images/backgrounds/support8.avif");
     background-position-y: calc(50% + 25px); */
 
-    padding: 70px 0 150px 0;
+    padding: 80px 0 180px 5%;
 
     clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
