@@ -104,7 +104,7 @@ a {
 
 /* Index Page */
 #main-home-title {
-    font-size: 45px;
+    font-size: 50px;
 }
 
 .best-for-card {
@@ -220,6 +220,10 @@ a {
     .grid-icon {
         font-size: 22px;
     }
+
+    #main-home-title {
+        font-size: 50px;
+    }
 }
 
 /******************************************************************************************/
@@ -227,9 +231,9 @@ a {
 /******************************************************************************************/
 @media screen and (min-width: 992px) {
     #main-home-title {
-        font-size: 60px;
+        font-size: 55px;
     }
-    
+
     .grid-quote {
         font-size: 18px;
     }
@@ -239,5 +243,6 @@ a {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 1200px) {
+
 
 }

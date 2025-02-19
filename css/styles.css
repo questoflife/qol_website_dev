@@ -105,6 +105,7 @@ hr {
     display: flex;
     flex-direction: column;
     width: 100%;
+    min-width: 400px;
     min-height: 100vh;
     margin: 0;
 }
@@ -297,7 +298,7 @@ hr {
 }
 
 .tagline-title {
-    text-shadow: 5px 5px var(--color-dark);
+    text-shadow: 4px 4px var(--color-dark);
 }
 
 .page-content hr,

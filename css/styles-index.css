@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* background-color: var(--color-blue-transparent); */
+    background-color: rgba(0, 0, 0, 0.2);
 
     /* background-image: url("../images/backgrounds/support.avif");
     background-position-y: calc(50% + 100px); */
@@ -22,7 +22,7 @@
     -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 150px), 0% 100%);
 
     padding: 80px 0 180px 5%;
-
+    min-height: 700px;
 }
 
 #tagline-title {

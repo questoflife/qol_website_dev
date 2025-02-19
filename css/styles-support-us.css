@@ -24,8 +24,6 @@
     background-position-y: calc(50% - 130px); */
 
     background-image: url("../images/backgrounds/support6.avif");
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 60%), 
-    url("../images/backgrounds/support6.avif");
     background-position-y: calc(40%);
 
     /* background-image: url("../images/backgrounds/support7.avif");
