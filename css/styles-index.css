@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    background-color: var(--color-blue-transparent);
+    /* background-color: var(--color-blue-transparent); */
 
     /* background-image: url("../images/backgrounds/support.avif");
     background-position-y: calc(50% + 100px); */
@@ -12,8 +12,8 @@
     /* background-image: url("../images/backgrounds/support2.avif");
     background-position-y: calc(50% + 20px); */
 
-    background-image: url("../images/backgrounds/support3.avif");
-    background-position-y: top center;
+    background-image: url("../images/backgrounds/support3.jpg");
+    background-position-y: calc(60%);
 
     /* background-image: url("../images/backgrounds/jellyfish.jpg");
     background-position-y: calc(50% - 50px ); */

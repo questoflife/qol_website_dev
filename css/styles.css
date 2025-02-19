@@ -296,6 +296,10 @@ hr {
     padding: 60px 0;
 }
 
+.tagline-title {
+    text-shadow: 5px 5px var(--color-dark);
+}
+
 .page-content hr,
 .page-title-section hr {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));

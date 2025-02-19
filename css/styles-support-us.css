@@ -3,7 +3,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    background-color: var(--color-blue-a-bit-transparent);
+    /* background-color: var(--color-blue-a-bit-transparent); */
 
     /* background-image: url("../images/backgrounds/support.avif");
     background-position-y: calc(50% + 100px); */
@@ -24,7 +24,7 @@
     background-position-y: calc(50% - 130px); */
 
     background-image: url("../images/backgrounds/support6.avif");
-    background-position-y: calc(50% - 0px);
+    background-position-y: calc(40%);
 
     /* background-image: url("../images/backgrounds/support7.avif");
     background-position-y: calc(50% - 35px); */
