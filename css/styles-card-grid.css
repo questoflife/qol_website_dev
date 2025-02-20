@@ -18,6 +18,7 @@
 .card-grid-container {
     display: flex;
     justify-content: center;
+    min-height: 140px;
 }
 
 .grid-of-cards {
@@ -26,6 +27,7 @@
     gap: 30px;
     padding: 10px 15px 20px 15px;
     justify-items: center;
+    width: 100%;
 }
 
 .grid-item {
@@ -100,7 +102,11 @@
 /******************************************************************************************/
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /******************************************************************************************/
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+    .grid-of-cards {
+        width: 100%;
+    }
+}
 
 /******************************************************************************************/
 /* Medium devices (landscape tablets, 768px and up) */

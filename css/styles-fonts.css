@@ -78,7 +78,7 @@ a {
 }
 
 .section-title {
-    font-family: var(--body-font);
+    font-family: var(--title-font);
     font-size: 40px;
     font-weight: 800;
 }
