@@ -116,6 +116,7 @@
 .staff-card .roles {
     margin-top: -10px;
     margin-bottom: 10px;
+    height: 70px;
 }
 
 .staff-card .person-details {
@@ -144,7 +145,7 @@
 .discord {
     color: #7289DA;
     padding-bottom: 20px;
-    margin-top: -15px;
+    margin-top: -5px;
 }
 
 .benefit-icon,
