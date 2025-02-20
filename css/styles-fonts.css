@@ -120,6 +120,10 @@ a {
     font-size: 20px;
 }
 
+#info-section .cta-button {
+    font-size: 35px;
+}
+
 /* About Us Page */
 .staff-card .name {
     font-family: var(--title-font);
