@@ -50,6 +50,10 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
+#facilitator-training-button {
+    border-color: var(--color-highlight);
+}
+
 .grid-icon {
     min-width: 50px;
     width: 50px;
