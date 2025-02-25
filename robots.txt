@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /images/
 Allow: /images/green_logo.png
