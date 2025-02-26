@@ -60,6 +60,10 @@ a {
 }
 
 /* Page */
+.tagline-title {
+    font-family: var(--title-font);
+}
+
 .small-mycard-text {
     font-size: 20px;
 }
@@ -143,6 +147,10 @@ a {
     font-style: italic;
 }
 
+.staff-card .staff-card-hover-content .cta-button {
+    font-style: normal;
+}
+
 .people-quote {
     font-weight: 800;
 }
@@ -198,6 +206,7 @@ a {
     }
 
     .cta-button {
+        font-family: var(--body-font);
         font-size: 35px;
         letter-spacing: 1px;
     }
