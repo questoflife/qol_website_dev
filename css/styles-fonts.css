@@ -77,7 +77,7 @@ a {
 }
 
 .tagline-title {
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 600;
 }
 
@@ -89,7 +89,7 @@ a {
 
 .mycard-title {
     font-family: var(--title-font);
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .price {
@@ -104,6 +104,12 @@ a {
 .grid-quote {
     font-size: 15px;
     font-style: italic;
+}
+
+.cta-button {
+    font-family: var(--cta-font);
+    font-size: 28px;
+    letter-spacing: 1px;
 }
 
 /* Index Page */
@@ -182,8 +188,16 @@ a {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /******************************************************************************************/
 @media screen and (min-width: 600px) {
+    .mycard-title {
+        font-size: 40px;
+    }
+    
+    .cta-button {
+        font-size: 35px;
+    }
 
 }
+
 
 /******************************************************************************************/
 /* Medium devices (landscape tablets, 768px and up) */
@@ -205,11 +219,7 @@ a {
         font-size: 30px;
     }
 
-    .cta-button {
-        font-family: var(--body-font);
-        font-size: 35px;
-        letter-spacing: 1px;
-    }
+
 
     .section-title {
         font-size: 80px;

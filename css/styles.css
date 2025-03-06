@@ -324,12 +324,6 @@ hr {
     text-align: center;
 }
 
-.cta-button {
-    font-family: var(--cta-font);
-    font-size: 22px;
-    font-weight: bold;
-}
-
 /* mycards */
 .mycard {
     box-sizing: border-box;
