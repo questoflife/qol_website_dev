@@ -108,7 +108,7 @@ a {
 
 .cta-button {
     font-family: var(--cta-font);
-    font-size: 28px;
+    font-size: 25px;
     letter-spacing: 1px;
 }
 
@@ -136,7 +136,7 @@ a {
 }
 
 #info-section .cta-button {
-    font-size: 35px;
+    font-size: 30px;
 }
 
 /* About Us Page */
