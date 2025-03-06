@@ -103,7 +103,7 @@
 }
 
 #benefit-grid-container .grid-of-cards {
-    width: 90%;
+    width: 100%;
 }
 
 #why-join-section .cta-button {
@@ -184,6 +184,11 @@
     .stat-strip {
         padding: 4px 10% 0 10%;
     }
+
+    #benefit-grid-container .grid-of-cards {
+        width: 90%;
+    }
+    
 
 }
 
