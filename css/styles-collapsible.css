@@ -10,10 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--title-font);
-    font-size: 40px;
     outline: none;
-    padding: 15px 30px 10px 30px;
+    padding: 10px 30px 5px 30px;
     text-align: left;
     width: 100%;
 }

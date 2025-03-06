@@ -112,6 +112,11 @@ a {
     letter-spacing: 1px;
 }
 
+.collapsible {
+    font-family: var(--title-font);
+    font-size: 30px;
+}
+
 /* Index Page */
 #main-home-title {
     /* font-size: 50px; */
