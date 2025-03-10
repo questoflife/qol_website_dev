@@ -54,22 +54,6 @@ a:hover {
     color: var(--color-highlight);
 }
 
-#terms-of-use-page a {
-    color: var(--color-gold);
-}
-
-#privacy-policy-page a {
-    color: var(--color-gold);
-}
-
-#terms-of-use-page a:hover {
-    color: var(--color-highlight);
-}
-
-#privacy-policy-page a:hover {
-    color: var(--color-highlight);
-}
-
 img {
     pointer-events: none;
 }

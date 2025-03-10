@@ -1,0 +1,14 @@
+#values-section {
+    background-color: var(--color-light-a-bit-transparent);
+    color: var(--color-dark);
+
+    padding: 100px 0 120px 0;
+    z-index: 10;
+    position: relative;
+}
+
+#values-section .section-title {
+    text-align: left;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
