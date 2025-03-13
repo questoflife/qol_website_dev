@@ -81,6 +81,12 @@ a {
     font-weight: 600;
 }
 
+.section-subtitle {
+    font-family: var(--title-font);
+    font-size: 60px;
+    font-weight: 800;
+}
+
 .section-title {
     font-family: var(--title-font);
     font-size: 40px;
