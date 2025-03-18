@@ -8,7 +8,7 @@ strong {
     color: var(--color-dark);
 
     padding: 100px 0 120px 0;
-    z-index: 10;
+    /* z-index: 10; */
     position: relative;
 }
 
@@ -113,95 +113,10 @@ strong {
 
 /* Popup */
 .popup {
-    display: none;
-    background-color: var(--color-dark);
-    border-color: var(--color-blue);
-    border-style: solid;
-    border-width: 15px;
-    cursor: default;
     min-height: 60%;
-    left: 50%;
-    padding: 1rem;
-    position: fixed;
-    text-align: left;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    z-index: 2048;
+    height: auto;
 }
 
-.close-button {
-    background-color: var(--color-dark);
-    border-style: solid;
-    border-width: 5px;
-    cursor: pointer;
-    margin: 0.8rem 1rem 0 0;
-    padding: 0.5rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: fit-content;
-    z-index: 2048;
-}
-
-.close-button:hover {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-}
-
-.close-button:active {
-    background-color: var(--color-blue);
-}
-
-.more-info-button {
-    background-color: var(--color-light);
-    border-radius: 0;
-    border-style: solid;
-    border-width: 3px;
-    box-shadow: 10px 10px 0px 0px var(--color-dark-transparent);
-    cursor: pointer;
-    transition: 0.3s;
-    margin: 0;
-}
-
-.more-info-button:hover {
-    box-shadow: 0 0 var(--color-dark-transparent);
-    background-color: var(--color-blue-transparent);
-}
-
-.more-info-button:active {
-    background-color: var(--color-blue);
-    border-color: var(--color-dark);
-    color: var(--color-dark);
-}
-
-.popup-content {
-    height: 100%;
-    left: 0;
-    overflow-y: scroll;
-    padding: 2rem;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.popup-title {
-    font-family: var(--title-font);
-    font-size: 4rem;
-    margin-right: 10rem;
-}
-
-.popup-body .cta-button {
-    margin-top: 80px;
-}
-
-
-@media (min-width:992px) {
-    .tabs label .fa-icon {
-        display: block;
-    }
-
-}
 
 @media (min-width:1200px) {
 
