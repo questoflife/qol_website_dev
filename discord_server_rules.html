@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Quest of Life</title>
+    <link rel="icon" href="images/new_logo_circle.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Germania+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/07f3e10377.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-backgrounds.css">
+    <link rel="stylesheet" href="css/styles-fonts.css">
+    <link rel="stylesheet" href="css/styles-buttons.css">
+    <link rel="stylesheet" href="css/styles-popup.css">
+    <link rel="stylesheet" href="css/styles-group-rules.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="js/popup.js"></script>
+
+    <!-- Prevent FOUT -->
+    <script src="js/fout_fix.js"></script>
+
+</head>
+
+<body>
+    <div class="page-content">
+        <!------------------------------------------------------------------------------------------------->
+        <!-- PAGE HEADER -->
+        <!------------------------------------------------------------------------------------------------->
+        <div id="page-header" class="page-header">
+            <div id="header-mynavbar" class="mynavbar">
+                <!-- LHS / Top Line Block with company branding and menu icon -->
+                <div id="header-company-branding-and-hamburger">
+                    <a id="header-company-branding-block" href="index.html">
+                        <img id="header-company-logo" src="images/new_logo.svg" alt="Quest of Life logo">
+                        <!-- <div id="header-company-name">QUEST OF LIFE</div> -->
+                    </a>
+                    <!-- Menu Hamburger Button -->
+                    <a id="toggle-menu" class="mynavbar-hamburger" href="javascript:void(0);"
+                        onclick="handleResponsiveNavbar()">
+                        <i id="menu-icon" class="fa fa-bars"></i>
+                    </a>
+
+                </div>
+
+                <!-- Menu Buttons -->
+                <div id="header-menu-buttons">
+                    <a class="menu-button" href="about_us.html">About Us</a>
+                    <a class="menu-button" href="services.html">Our Services</a>
+                    <!-- <a class="menu-button" href="training.html">Training</a> -->
+                    <a class="menu-button" href="support_us.html">Support Us</a>
+                </div>
+
+                <div id="header-space-filler"></div>
+
+                <!-- Join Button -->
+                <a id="mynavbar-join-button" class="cta-button header-button" href="https://discord.gg/m9hVVajQU3"
+                    target="_blank">
+                    <i class="fa-brands fa-discord"></i>
+                    <div id="mynavbar-button-text-group">
+                        Join <span id="hideable-cta-button-text">the Community</span>
+                    </div>
+                </a>
+
+                <!-- old Menu Hamburger Button
+                <a id="mynavbar-hamburger-closed" href="javascript:void(0);" class="mynavbar-hamburger"
+                    onclick="handleResponsiveNavbar()">
+                    <i class="fa fa-bars"></i>
+                </a> -->
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------------------------------------->
+        <!-- PAGE BODY -->
+        <!------------------------------------------------------------------------------------------------->
+        <div class="page-body">
+
+            <div class="section page-title-section">
+                <div class="section-content-column">
+                    <div class="section-title">Discord Server Rules</div>
+                    <div class="mycard clear-mycard centred-mycard">
+                        <p>Our top priority is to create a supportive space for everyone in the community. This applies
+                            to both groups and the server as a whole. We will therefore be relatively strict with
+                            enforcing rules and <strong>recommend you read the rules to avoid mutes and/or
+                                bans</strong>. Moderators will do their best to be compassionate and to understand your
+                            intentions when making decisions, but they will have final say in all interpretations.</p>
+                        <p>
+                        <div class="mycard-title">1. Discord ToS & Legal</div>
+                        <p>
+                            Please follow Discord’s <a href="https://discord.com/terms">Terms of Service</a> and <a
+                                href="https://discord.com/guidelines">Community Guidelines</a> at all times. Do not
+                            engage in any illegal activity.
+                        </p>
+
+                        <div class="mycard-title">2. Age Restriction</div>
+                        <p>
+                            You must be at least <strong>21 years old</strong> to participate in this server.
+                        </p>
+
+                        <div class="mycard-title">3. NSFW Content</div>
+                        <p>
+                            All NSFW content is strictly prohibited, including, but not limited to, pornography, gore,
+                            and unsettling content.
+                        </p>
+
+                        <div class="mycard-title">4. Hate</div>
+                        <p>
+                            Absolutely no hate speech or discrimination based on race, sex, gender identity, sexual
+                            orientation, religion, national origin, age, ancestry, disability, or any anything else. We
+                            welcome everyone here.
+                        </p>
+
+                        <div class="mycard-title">5. Abstract Discussions on Politics, Religion, History, Philosophy</div>
+                        <p>
+                            Please refrain from discussing general topics if the aim isn’t to support a specific
+                            individual. It is okay to talk about how a political situation is affecting you personally,
+                            but please avoid abstract discussions about the listed topics
+                        </p>
+
+                        <div class="mycard-title">6. Spam</div>
+                        <p>
+                            Do not spam, spam ping, mass mention, or chat flood in this server. Do not DM other members
+                            without asking for permission within the server first. Do not shout or scream in voice
+                            channels. Do not post excessive or out of context images, GIFs and links. Avoid sending lots
+                            of short messages when they can be condensed into a longer sentence.
+                        </p>
+
+                        <div class="mycard-title">7. Do Not Generalize</div>
+                        <p>
+                            Avoid making generalizations about groups of people.
+                        </p>
+
+                        <div class="mycard-title">8. Profile</div>
+                        <p>
+                            We require all member profiles to be appropriate. No content that would violate other rules
+                            (such as NSFW or hate content) is allowed in your username, nickname, profile picture,
+                            banner, status, and about me.
+                        </p>
+
+                        <div class="mycard-title">9. Hacking/Doxing</div>
+                        <p>
+                            Do not threaten or attempt to hack and/or dox anyone in this server. Violations will be
+                            reported to Discord staff immediately.
+                        </p>
+
+                        <div class="mycard-title">10. Raid Threats</div>
+                        <p>
+                            Do not threaten or attempt to raid the server, even as a joke. Violations will be reported
+                            to Discord staff. If you notice any raid threats or attempts against the server, contact a
+                            @Moderator immediately.
+                        </p>
+
+                        <div class="mycard-title">11. Personal Information</div>
+                        <p>
+                            Do not share your or anyone else’s personal information in this server.
+                        </p>
+
+                        <div class="mycard-title">12. Channel Use</div>
+                        <p>
+                            Keep conversation relevant to channels.
+                        </p>
+
+                        <div class="mycard-title">13. Loopholes</div>
+                        <p>
+                            Do not attempt to find and/or use loopholes in the rules. Moderators may intervene if they
+                            see behavior they deem inappropriate for the server, even if it isn’t explicitly mentioned
+                            in the rules. To report mod abuse, please submit a ticket in #support-desk.
+                        </p>
+
+                        <div class="mycard-title">14. Professional Advice</div>
+                        <p>
+                            Do not request or give professional advice of any kind in this server.
+                        </p>
+
+                        <div class="mycard-title">15. Substance Use</div>
+                        <p>
+                            Do not encourage drug/alcohol or other substance use. Do not use the server if you are under
+                            the influence of substances. The only acceptable context to discuss substances is talking
+                            about addiction and how it’s affecting your life.
+                        </p>
+
+                        <div class="mycard-title">16. Medical Topics</div>
+                        <p>
+                            Do not discuss medication or supplement use. Do not ask for or give medical advice of any
+                            kind. Do not try to diagnose each other. What you can do is talk about how you’re affected
+                            by medical conditions.
+                        </p>
+
+                        <div class="mycard-title">17. Language</div>
+                        <p>
+                            All messages must be in English only.
+                        </p>
+
+                        <div class="mycard-title">18. Be respectful to others</div>
+                        <p>
+                            Do not insult, judge, invalidate or dismiss others or their experiences. Do not use slurs or
+                            other derogatory language. This extends to memes, GIFs, videos and other content. Do not
+                            engage in ‘edgy’ behavior. ‘It was just a joke’ will not be considered a valid excuse for
+                            problematic behavior.
+                        </p>
+
+                        <div class="mycard-title">19. Do not argue</div>
+                        <p>
+                            If a conversation becomes heated and all parties wish to continue, please move to DMs.
+                        </p>
+
+                        <div class="mycard-title">20. Do not self promote</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section page-title-section">
+                <div class="section-content-column">
+                    <div class="section-title">Communication Guidelines</div>
+                    <div class="mycard clear-mycard centred-mycard">
+                        <p>
+                            Here are some guidelines designed to help us all build a better and more supportive
+                            community.
+                        </p>
+                        <p>
+                        <ol>
+                            <li>
+                                Use the communication skills we learn in group: reflective listening, asking
+                                open-ended questions, relating
+                            </li>
+                            <li>
+                                <strong>Report rule violations</strong> by DMing a moderator
+                            </li>
+                            <li>
+                                If you’re joining a voice call, <strong>listen first</strong> to figure out what people
+                                are talking about before jumping in.
+                            </li>
+                            <li>
+                                <strong>Be patient</strong> with people. Many of us aren't going to be native speakers
+                                or may need extra time to express themselves.
+                            </li>
+                            <li>
+                                <strong>Use spoiler tags</strong> if you’re going to talk about potentially triggering
+                                topics. You can do this by typing <em>|| Insert your message here ||</em>
+                            </li>
+                            <li>
+                                <strong>Do not give advice</strong> unless explicitly asked to do so.
+                            </li>
+                            <li>
+                                <strong>Respect others’ agency and boundaries.</strong> If they don’t want to talk about
+                                something, don’t push it. Ask permission before sending DMs and if they decline, respect
+                                their decision.
+                            </li>
+                            <li>
+                                <strong>Do not flirt</strong> with other members.
+                            </li>
+                        </ol>
+                        </p>
+                    </div>
+                    <div class="mycard-content-block">
+                        <div class="skills-grid">
+                            <div id="skils-card-questions" class="values-item">
+                                <div class="values-icon">
+                                    <i class="fa-solid fa-circle-question fa-2xl"></i>
+                                </div>
+                                <div class="values-label">
+                                    Open-Ended Questions
+                                </div>
+                                <div class="values-hover-content">
+                                    <div class="values-quote">
+                                        Any question that prompts a paragraph answer
+                                    </div>
+                                    <div class="cta-button more-info-button">
+                                        More Info
+                                    </div>
+                                </div>
+                                <div class="popup">
+                                    <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+                                    <div class="popup-content">
+                                        <div class="popup-title">
+                                            Open-Ended Questions
+                                        </div>
+                                        <div class="popup-body">
+                                            <p class="small-mycard-text">Any questions that provoke thought,
+                                                inviting a paragraph answer rather than a single word.
+                                                Basically, not yes/no or multiple choice questions.</p>
+
+                                            <p class="medium-mycard-text">Why?</p>
+                                            <p class="small-mycard-text">
+                                            <ul>
+                                                <li>Encourage further reflection</li>
+                                                <li>Find out more about what someone's going through</li>
+                                                <li>Move the conversation forward</li>
+                                            </ul>
+                                            </p>
+
+                                            <p class="medium-mycard-text">How?</p>
+                                            <p class="small-mycard-text">
+                                            <ul>
+                                                <li>Be curious - what would you like to know more about?</li>
+                                                <li>Clarify statements - is there anything ambiguous or
+                                                    confusing? Ask about it! Chances are, someone else in the
+                                                    group is confused too. Sometimes even the person sharing
+                                                    won't be aware of something inconsistent. Asking for
+                                                    clarification is what often leads to great insights.</li>
+                                                <li>Are you making assumptions about anything? Ask a question to
+                                                    find out what's actually going on!</li>
+                                            </ul>
+                                            </p>
+
+                                            <p class="medium-mycard-text">Examples</p>
+                                            <p class="small-mycard-text">
+                                            <ul>
+                                                <li><em>What do you think about that?</em></li>
+                                                <li><em>How did you learn that...?</em></li>
+                                                <li><em>How do you feel about that?</em></li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="skills-card-reflective-listening" class="values-item">
+                                <div class="values-icon">
+                                    <i class="fa-solid fa-arrows-rotate fa-2xl"></i>
+                                </div>
+                                <div class="values-label">
+                                    Reflective Listening
+                                </div>
+                                <div class="values-hover-content">
+                                    <div class="values-quote">
+                                        What did you hear the other person say?
+                                    </div>
+                                    <div class="cta-button more-info-button">
+                                        More Info
+                                    </div>
+                                </div>
+
+                                <div class="popup">
+                                    <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                    <div class="popup-content">
+                                        <div class="popup-title">
+                                            Reflective Listening
+                                        </div>
+                                        <div class="popup-body">
+                                            <p class="small-mycard-text">
+                                                Reflective listening is any answer to <strong>'What are you
+                                                    hearing the other person say?'</strong>. Could be a summary,
+                                                a direct quote, some key highlights, or even sharing how you got
+                                                a bit lost in thought and only caught the last sentence of what
+                                                someone was saying...
+                                            </p>
+
+                                            <p class="medium-mycard-text">Why?</p>
+                                            <p class="small-mycard-text">
+                                            <ul>
+                                                <li><strong>Check if you're understanding</strong> what the
+                                                    other person is sharing</li>
+                                                <li>Give them an easy way to <strong>clarify
+                                                        misunderstandings</strong></li>
+                                                <li>Help someone <strong>feel heard and understood</strong></li>
+                                                <li><strong>Invite someone to share more</strong>. When you
+                                                    reflect something back to another person, generally they
+                                                    will naturally share more and go more in depth.</li>
+                                                <li>Enable <strong>new insights</strong>. Hearing our words come
+                                                    out of someone else's mouth often makes them land in a
+                                                    different way and we notice things in our own thinking we
+                                                    otherwise wouldn't. You don't have to provide the actual
+                                                    insight - <strong>just tell someone what you're hearing and
+                                                        let them connect the dots</strong>.</li>
+                                            </ul>
+                                            </p>
+
+                                            <p class="medium-mycard-text">Examples</p>
+                                            <p class="small-mycard-text">
+                                            <ul>
+                                                <li><em>I'm hearing that...</em></li>
+                                                <li><em>It sounds like you...</em></li>
+                                                <li><em>That sounds exhausting!</em></li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="skills-card-relating" class="values-item">
+                                <div class="values-icon">
+                                    <i class="fa-solid fa-hand-holding-heart fa-2xl"></i>
+                                </div>
+                                <div class="values-label">
+                                    Relating Your Experience
+                                </div>
+                                <div class="values-hover-content">
+                                    <div class="values-quote">
+                                        Share how you relate to someone's experience
+                                    </div>
+                                    <div class="cta-button more-info-button">
+                                        More Info
+                                    </div>
+                                </div>
+
+                                <div class="popup">
+                                    <div class="close-button"><i class="fa-solid fa-xmark fa-2xl"></i></div>
+
+
+                                    <div class="popup-content">
+                                        <div class="popup-title">
+                                            Relating Your Experience
+                                        </div>
+                                        <div class="popup-body">
+                                            <p class="small-mycard-text">
+                                                Sometimes another group member will share something you relate to -
+                                                consider sharing your experience. If you're unsure about whether they'd
+                                                like to hear it or rather keep the focus on them, you can also ask them.
+                                            </p>
+                                            <p class="medium-mycard-text">Why?</p>
+                                            <p class="small-mycard-text">
+                                            <ul>
+                                                <li>Creates a sense of 'you're not alone in this'</li>
+                                                <li>Especially useful if someone's feelings of judgment or shame
+                                                    associated with their experience</li>
+                                                <li>Helps you connect with others in the group</li>
+                                            </ul>
+                                            </p>
+
+                                            <p class="medium-mycard-text">Examples</p>
+                                            <p class="small-mycard-text">
+                                            <ul>
+                                                <li><em>Me too!</em></li>
+                                                <li><em>I feel like I can relate a lot. Would you be interested in
+                                                        hearing my experience?</em></li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!------------------------------------------------------------------------------------------------->
+        <!-- PAGE FOOTER -->
+        <!------------------------------------------------------------------------------------------------->
+        <div class="page-footer">
+            <div id="footer-columns">
+                <div class="footer-cta-buttons">
+                    <a id="footer-join-button" class="cta-button footer-button" href="https://discord.gg/m9hVVajQU3"
+                        target="_blank">
+                        <i class="fa-brands fa-discord"></i> Join the Community
+                    </a>
+                    <a id="footer-support-us-button" class="cta-button footer-button" href="support_us.html">
+                        <i class="fa-solid fa-hand-holding-heart"></i> Support Us
+                    </a>
+                </div>
+
+                <hr>
+
+                <div id="social-media">
+                    <!-- Discord -->
+                    <a class="social-button" href="https://discord.gg/m9hVVajQU3" target="_blank" role="button">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <!-- Linkedin -->
+                    <a class="social-button" href="https://www.linkedin.com/company/quest-of-life/" target="_blank"
+                        role="button"><i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <!-- Email -->
+                    <a class="social-button" href="mailto:info@questoflife.org" role="button">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Admin Links -->
+            <div id="admin-links">
+                <a href="terms_of_use.html">Terms of Use</a>
+                <a href="privacy_policy.html">Privacy Policy</a>
+                <!-- <a href="sitemap.html">Sitemap</a> -->
+                <a href="code_of_ethics.html">Ethical Framework</a>
+            </div>
+            <!-- Copyright -->
+            <div class="copyright-notice">
+                Copyright ©
+                <script>document.write(new Date().getFullYear())</script> Quest of Life CIC. All
+                rights
+                reserved.
+            </div>
+            <!-- Copyright -->
+            <div class="copyright-notice">
+                Icons provided by <a href="https://fontawesome.com" target="_blank">Font Awesome</a> under <a
+                    href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+            </div>
+        </div>
+    </div>
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/navbar.js"></script>
+</body>
