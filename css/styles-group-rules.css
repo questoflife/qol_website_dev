@@ -118,6 +118,10 @@ strong {
 }
 
 
+#skills-pdf-button {
+    justify-content: center;
+}
+
 @media (min-width:1200px) {
 
     /* Switch to 3 column grid */
