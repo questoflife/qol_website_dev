@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Map of Spiritual Practices (Final Version)</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-font: 'Inter', sans-serif;
+            --serif-font: 'Source Serif 4', serif;
+            --bg-color-main: #f8f9fa;
+            --bg-color-section: #ffffff;
+            --text-color: #212529;
+            --subtle-text-color: #495057;
+            --border-color: #dee2e6;
+            --inactive-bg: #e9ecef;
+            --inactive-text: #495057;
+            --active-bg: #4c6ef5;
+            --active-text: #ffffff;
+            --active-border: #3b5bdb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        body {
+            font-family: var(--primary-font);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--bg-color-main);
+            color: var(--text-color);
+        }
+
+        .header-section {
+            width: 100%;
+            background-color: var(--bg-color-section);
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+        
+        /* --- Path Selector Title --- */
+        .path-selector-container {
+            width: 100%;
+            max-width: 1100px;
+            text-align: center;
+            padding: 1.5rem 24px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--subtle-text-color);
+        }
+
+        .path-option {
+            text-decoration: none;
+            color: var(--subtle-text-color);
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .path-option:hover {
+            background-color: #e9ecef;
+            color: var(--text-color);
+        }
+
+        .path-option.active {
+            color: var(--active-bg);
+            font-weight: 700;
+        }
+
+        .path-separator {
+            margin: 0 4px;
+        }
+
+        /* --- Process Diagram Section --- */
+        .process-diagram-section {
+            padding: 2rem 24px 2.5rem 24px;
+        }
+
+        .process-diagram {
+            display: flex;
+            align-items: flex-start; 
+            justify-content: center;
+            width: 100%;
+            max-width: 1100px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .process-link {
+            text-decoration: none;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+            padding-top: 10px;
+        }
+
+        .process-link:hover {
+            transform: translateY(-2px);
+        }
+
+        .process-step {
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: var(--inactive-bg);
+            color: var(--inactive-text);
+            font-weight: 600;
+            font-size: 14px;
+            white-space: nowrap;
+            transition: all 0.25s ease;
+            box-shadow: var(--shadow-sm);
+            border: 2px solid transparent;
+        }
+        
+        .process-link:hover .process-step {
+            box-shadow: var(--shadow-md);
+            border-color: #adb5bd;
+        }
+
+        .connector {
+            height: 2px;
+            background-color: var(--border-color);
+            flex-grow: 1;
+            min-width: 15px;
+            max-width: 40px;
+            margin-top: 20px; 
+        }
+        
+        .meditation-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .meditation-steps-container {
+            display: flex;
+            gap: 6px;
+            padding: 8px;
+            border-radius: 14px;
+            transition: all 0.25s ease;
+            border: 2px solid transparent;
+            background-color: #f1f3f5;
+        }
+
+        .meditation-group.active .meditation-steps-container {
+            background-color: #dbe4ff;
+            border: 2px solid var(--active-border);
+            box-shadow: var(--shadow-md);
+        }
+
+        .meditation-group .process-step {
+            box-shadow: none; 
+        }
+
+        .meditation-group.active .process-step {
+            background-color: var(--active-bg);
+            color: var(--active-text);
+        }
+        
+        .meditation-group .process-link:hover {
+            transform: none; 
+        }
+        
+        .meditation-group .process-link:hover .process-step {
+            background-color: #5c7cfa; 
+            box-shadow: none;
+            border-color: transparent;
+        }
+        
+        .meditation-label {
+            margin-top: 10px;
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #868e96;
+        }
+
+        .meditation-group.active .meditation-label {
+            color: var(--active-bg);
+        }
+        
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto 2rem auto; 
+            padding: 0 24px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .intro-text {
+            text-align: left;
+            margin-bottom: 2rem;
+            margin-top: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .intro-text h1 {
+            font-family: var(--serif-font);
+            text-align: center;
+        }
+
+        .intro-text p {
+            line-height: 1.6;
+            color: var(--subtle-text-color);
+        }
+        
+        .intro-text .disclaimer {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #6c757d;
+            border-left: 3px solid var(--border-color);
+            padding-left: 1em;
+            background-color: var(--bg-color-section);
+            padding: 1em;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .filter-controls {
+            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color-section);
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: var(--primary-font);
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn:hover {
+            background-color: #f1f3f5;
+            border-color: #adb5bd;
+        }
+
+        .filter-btn.active {
+            background-color: var(--text-color);
+            color: #fff;
+            border-color: var(--text-color);
+        }
+
+        .chart-container {
+            position: relative;
+            background: var(--bg-color-section);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            width: 900px; /* Fixed width */
+            height: 900px; /* Fixed height */
+            border: 1px solid var(--border-color);
+        }
+        
+        .unselectable { -webkit-user-select: none; -ms-user-select: none; user-select: none; }
+        .axis-title { font-size: 14px; font-weight: bold; fill: var(--subtle-text-color); }
+        .axis-subtitle { font-size: 12px; fill: #6c757d; }
+        .quadrant-title { font-size: 18px; font-weight: bold; font-family: var(--serif-font); }
+        .point-label { font-size: 11px; fill: var(--text-color); cursor: default; text-anchor: middle; pointer-events: none; }
+        .label-line { stroke: #ced4da; stroke-width: 1px; stroke-dasharray: 2,2; }
+        .data-point { cursor: pointer; transition: all 0.3s; }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s 0.3s, opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--bg-color-section);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+            transform: scale(0.9);
+            transition: transform 0.3s;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-overlay.visible {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+        
+        .modal-overlay.visible .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #868e96;
+        }
+        
+        .modal-content h2 {
+            font-family: var(--serif-font);
+            margin-top: 0;
+            border-left-style: solid;
+            border-left-width: 5px;
+            padding-left: 15px;
+            margin-bottom: 25px; 
+        }
+
+        .modal-full-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--subtle-text-color);
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+        
+        .modal-content h3 {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            color: var(--text-color);
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .modal-content p {
+            line-height: 1.7;
+            color: #495057;
+            margin-top: 0; 
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="header-section">
+        <div style="width: 100%; max-width: 1100px;">
+            <div class="path-selector-container">
+                <span>The spiritual path of </span>
+                <a href="#" class="path-option active">Discipline (Raja Yoga)</a>
+                <span class="path-separator">/</span>
+                <a href="#" class="path-option">Objective Focus (Kundalini)</a>
+            </div>
+
+            <div class="process-diagram-section">
+                <div class="process-diagram">
+                    <a href="#" class="process-link"><div class="process-step">Yamas</div></a>
+                    <div class="connector"></div>
+                    <a href="#" class="process-link"><div class="process-step">Niyamas</div></a>
+                    <div class="connector"></div>
+                    <a href="#" class="process-link"><div class="process-step">Asanas</div></a>
+                    <div class="connector"></div>
+                    <a href="#" class="process-link"><div class="process-step">Pranayama</div></a>
+                    <div class="connector"></div>
+                    
+                    <div class="meditation-group active">
+                        <div class="meditation-steps-container">
+                            <a href="#" class="process-link" style="padding-top: 0;"><div class="process-step">Pratyahara</div></a>
+                            <a href="#" class="process-link" style="padding-top: 0;"><div class="process-step">Dharana</div></a>
+                            <a href="#" class="process-link" style="padding-top: 0;"><div class="process-step">Dhyana</div></a>
+                        </div>
+                        <div class="meditation-label">Meditation</div>
+                    </div>
+                    
+                    <div class="connector"></div>
+                    <a href="#" class="process-link"><div class="process-step">Samadhi</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-container">
+        <div class="intro-text">
+            <h1>A Map of Spiritual Practices</h1>
+            <p>This interactive guide provides a framework for choosing a meditation practice by helping you find the right point of focus—your <strong>alambana</strong>, or meditative anchor. It visualizes techniques across two primary axes: <strong>Grounding vs. Exploratory</strong> and <strong>Open Awareness vs. Focus</strong>.</p>
+            <p>To help you find what resonates, each practice is classified by its focus type. You can use the filters below to explore practices based on their primary anchor: Body & Breath, Visual Objects, Sound, Mental Qualities, or the vast Formless & Space of awareness itself.</p>
+            <p class="disclaimer"><strong>Disclaimer:</strong> Please consider this map a conceptual model designed to aid discovery, not a rigid scientific classification. The arrangement of practices is interpretive, offering one possible perspective. Ultimately, your own experience is the most valuable guide.</p>
+        </div>
+
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">Show All</button>
+            <button class="filter-btn" data-filter="Body & Breath">Body & Breath</button>
+            <button class="filter-btn" data-filter="Visual Objects & Images">Visual Objects & Images</button>
+            <button class="filter-btn" data-filter="Sound & Vibration">Sound & Vibration</button>
+            <button class="filter-btn" data-filter="Mental Qualities">Mental Qualities</button>
+            <button class="filter-btn" data-filter="The Formless & Space">The Formless & Space</button>
+        </div>
+        
+        <div id="chart-container" class="chart-container"></div>
+    </div>
+    
+    <div id="modal-overlay" class="modal-overlay">
+        <div id="modal-content" class="modal-content">
+            <button id="modal-close-btn" class="modal-close-btn">×</button>
+            <h2 id="modal-title"></h2>
+            
+            <p id="modal-full-name" class="modal-full-name"></p>
+            
+            <h3>Gamer Name</h3>
+            <p id="modal-gamer-name"></p>
+
+            <div id="modal-video-container"></div>
+            
+            <h3>Core Method</h3>
+            <p id="modal-summary"></p>
+            <h3>Primary Transformation</h3>
+            <p id="modal-transformation"></p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const dataPoints = [
+            // Chakra work involves visualizing an image at a location in the body.
+            {"technique": "Dharana", "name": "Activating Ajna", "fullName": "Activating Ajna Chakra", "x": 0.5, "y": 0.5, "summary": "Aim your mental cursor at the 'Third Eye' UI element to unlock the 'Insight' skill tree.", "gamerName": "Charging the Laserbeam", "alambanaPrimary": "Visual Objects & Images", "alambanaSecondary": "Body & Breath", "transformation": "As 'Charging the Laserbeam', mental fog transforms into a 'Clarity' laser beam.", "youtubeVideoId": "-lOTZRpOvxY", "startTime": 47, "endTime": 260},
+            // Emotions manifest as body sensations and are understood as mental qualities.
+            {"technique": "Dhyana", "name": "Emotions", "fullName": "Emotions", "x": -0.3, "y": -0.6, "summary": "Let an 'Emotion' mob fully render in your presence. Scan it, feel its elemental damage, and watch it fade.", "gamerName": "Feeling Alchemist", "alambanaPrimary": "Body & Breath", "alambanaSecondary": "Mental Qualities", "transformation": "As the 'Feeling Alchemist', overwhelming emotion transforms into 'somatic intelligence'.", "youtubeVideoId": "149tYQEhqvY", "startTime": 11, "endTime": 787},
+            // Changing mindset is a practice of cultivating a new mental quality.
+            {"technique": "Dhyana", "name": "Changing Mindset", "fullName": "Changing Mindset Meditation", "x": 0.4, "y": -0.7, "summary": "Equip a new 'Title' or 'Mantle' and consciously battle the 'Old Habits' debuff it triggers.", "gamerName": "Mindset Modder", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "Body & Breath", "transformation": "As the 'Mindset Modder', limiting beliefs transform into 'grindable mobs' for mental fortitude.", "youtubeVideoId": "6KGYCU_INVI", "startTime": 1843, "endTime": 2560},
+            // Japa is a classic sound-based practice.
+            {"technique": "Dharana", "name": "Japa", "fullName": "Japa", "x": 1, "y": 0.8, "summary": "Set a 'Mantra Macro' on repeat to grind 'Concentration' levels and drown out NPC chatter.", "gamerName": "Sonic Shield", "alambanaPrimary": "Sound & Vibration", "alambanaSecondary": "Body & Breath", "transformation": "As the 'Sonic Shield', the 'Worry' DoT transforms into a 'Devotion' HoT.", "youtubeVideoId": "6O7FKXW63II", "startTime": 0, "endTime": 484},
+            // Listening to external sounds.
+            {"technique": "Pratyahara", "name": "Sound Meditation", "fullName": "Sound with Eyes Open and Closed", "x": 0.1, "y": 0.2, "summary": "A/B test your audio perception by toggling the visual rendering engine on and off.", "gamerName": "A/B Tester", "alambanaPrimary": "Sound & Vibration", "alambanaSecondary": "The Formless & Space", "transformation": "As the 'A/B Tester', sensory overwhelm transforms into a controlled 'calibration' process.", "youtubeVideoId": "7VaHh9EUcfE", "startTime": 21, "endTime": 432},
+            // Focus is on an external visual object and the body's reaction to it.
+            {"technique": "Pratyahara", "name": "Watch Food Indriyas", "fullName": "Watch Food Indriyas", "x": -0.4, "y": 0.5, "summary": "Achieve a 'Flow State' with your consumables to maximize their buffs and appreciate their lore.", "gamerName": "Mindful Gourmand", "alambanaPrimary": "Visual Objects & Images", "alambanaSecondary": "Body & Breath", "transformation": "As the 'Mindful Gourmand', mindless consumption transforms into a 'Mindfulness' XP farm.", "youtubeVideoId": "9YRXKVhPQ1g", "startTime": 7, "endTime": 397},
+            // Sleep practices are primarily about relaxing the body.
+            {"technique": "Dhyana", "name": "Sleep Techniques", "fullName": "Techniques Around Sleep", "x": -0.8, "y": 0.4, "summary": "Try to stay logged in as your avatar enters the 'Sleep' idle animation; explore the dream server.", "gamerName": "The Dream Walker", "alambanaPrimary": "Body & Breath", "alambanaSecondary": "The Formless & Space", "transformation": "As 'The Dream Walker', unconscious sleep transforms into a 'conscious deep-rest' state.", "youtubeVideoId": "b2RhXCugEW4", "startTime": 12, "endTime": 588},
+            // Chanting is a sound practice.
+            {"technique": "Dharana", "name": "Om Chanting", "fullName": "Om Chanting", "x": 0.65, "y": 0.65, "summary": "Cast 'Primal Vibration', a spell that harmonizes your avatar and the server environment.", "gamerName": "The Universe's Voice", "alambanaPrimary": "Sound & Vibration", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Universe's Voice', internal dissonance transforms into a full-system 'Harmonize' buff.", "youtubeVideoId": "bavdneN9sKg", "startTime": 2669, "endTime": 2939},
+            // Raga/Dvesha are mental qualities felt in the body.
+            {"technique": "Dhyana", "name": "Raga and Dvesha", "fullName": "Raga and Dvesha", "x": -0.4, "y": -0.8, "summary": "Watch the 'Push' and 'Pull' physics of your mind's engine without getting caught in its gears.", "gamerName": "The Polarity Sage", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Polarity Sage', the drama of desire and aversion transforms into 'observable energy patterns'.", "youtubeVideoId": "BYLg4tKIFNA", "startTime": 7, "endTime": 585},
+            // Neti Neti is the quintessential contemplation of a concept/quality.
+            {"technique": "Dhyana", "name": "Neti Neti", "fullName": "Neti Neti", "x": 0.25, "y": -1, "summary": "Systematically 'unequip' every piece of gear, every title, and every skill to see what remains of the player.", "gamerName": "The Great Undoer", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Great Undoer', false identifications transform into a process of 'liberating elimination'.", "youtubeVideoId": "D3KDTrvUF5M", "startTime": 0, "endTime": 482},
+            // Urges are powerful body sensations.
+            {"technique": "Dhyana", "name": "Urge Surfing", "fullName": "Urge Surfing", "x": 0.4, "y": -0.5, "summary": "When a 'CRAVING' debuff timer appears, don't use an item to cancel it. Watch the timer run its course and disappear.", "gamerName": "The Wave Rider", "alambanaPrimary": "Body & Breath", "alambanaSecondary": "Mental Qualities", "transformation": "As 'The Wave Rider', compulsive action transforms into a 'mastery of non-reactivity'.", "youtubeVideoId": "dHzS_RBtnXE", "startTime": 1, "endTime": 472},
+            // Metta is the cultivation of a mental quality.
+            {"technique": "Dhyana", "name": "Metta", "fullName": "Metta (Loving-Kindness Meditation)", "x": 0.2, "y": 0.9, "summary": "Cast a massive 'AoE Heal' spell, starting with yourself, then your party, then the entire server.", "gamerName": "The Heart Warden", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Heart Warden', feelings of anger and judgment transform into a 'Benevolence' aura.", "youtubeVideoId": "FQ1d5rC062c", "startTime": 1098, "endTime": 1662},
+            // Shoonya (emptiness) is a classic Formless/Spacious awareness practice.
+            {"technique": "Dhyana", "name": "Shoonya", "fullName": "Shoonya", "x": 0.7, "y": -0.6, "summary": "Stare into the 'Void' between pixels on the screen until the screen itself dissolves.", "gamerName": "The Emptiness Gazer", "alambanaPrimary": "The Formless & Space", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Emptiness Gazer', the fear of nothingness transforms into the 'freedom of the void'.", "youtubeVideoId": "gpFKNzX-sF4", "startTime": 0, "endTime": 582},
+            // Sushumna is visualizing an energy current in the body.
+            {"technique": "Dhyana", "name": "Sushumna", "fullName": "Sushumna", "x": 0.9, "y": 0.3, "summary": "Focus all your energy into leveling up your central 'Skill Tree Trunk' instead of minor branches.", "gamerName": "The Central Channeler", "alambanaPrimary": "Visual Objects & Images", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Central Channeler', scattered energy transforms into a unified 'ascension current'.", "youtubeVideoId": "IIwk31ddbPA", "startTime": 23, "endTime": 347},
+            // A mental replay is a conceptual exercise.
+            {"technique": "Dhyana", "name": "Rewind Practice", "fullName": "Meditative Rewind Practice", "x": 0.1, "y": -0.8, "summary": "Open the 'Combat Log' of a recent social encounter and analyze the chain of events frame-by-frame.", "gamerName": "The Replay Analyst", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Replay Analyst', past mistakes transform into 'experience points' for wisdom.", "youtubeVideoId": "k9AoauYfPqc", "startTime": 0, "endTime": 288},
+            // Feeling negativity in the body.
+            {"technique": "Dhyana", "name": "Negativity", "fullName": "Negativity", "x": -0.2, "y": -0.7, "summary": "When a 'Negative' mob appears, don't attack it. Use a 'Taunt' ability to bring it close and study its mechanics.", "gamerName": "The Void-Walker", "alambanaPrimary": "Body & Breath", "alambanaSecondary": "Mental Qualities", "transformation": "As 'The Void-Walker', aversion transforms into a powerful tool for 'integration'.", "youtubeVideoId": "lJCUC0mRkPo", "startTime": 25, "endTime": 445},
+            // Chakra focus is visualizing an image at a body location.
+            {"technique": "Dharana", "name": "Svadhisthana", "fullName": "Svadhisthana Chakra", "x": 0.9, "y": 0.5, "summary": "Channel your energy into your 'Creative Core' to unlock new abilities and emotional fluidity.", "gamerName": "The Flow-State Spring", "alambanaPrimary": "Visual Objects & Images", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Flow-State Spring', emotional rigidity transforms into a 'Creative Mana' pool.", "youtubeVideoId": "lxRh5lVUglg", "startTime": 1, "endTime": 6755},
+            // Focusing on the faculty of hearing is a formless/spacious practice.
+            {"technique": "Pratyahara", "name": "Faculty of Hearing", "fullName": "Notice Faculty of Hearing", "x": -0.9, "y": 0.9, "summary": "Go to your audio settings and observe the 'input device' itself instead of the incoming data stream.", "gamerName": "The Listener", "alambanaPrimary": "The Formless & Space", "alambanaSecondary": "Sound & Vibration", "transformation": "As 'The Listener', distracting sounds transform into simple 'data packets' without meaning.", "youtubeVideoId": "M0qyC_39MZA", "startTime": 712, "endTime": 1418},
+            // Zazen is a quintessential formless awareness practice, grounded in the body.
+            {"technique": "Dhyana", "name": "Zazen", "fullName": "Zazen", "x": -0.2, "y": -0.2, "summary": "The noble art of being 'AFK' (Away From Keyboard) while still being fully logged in. A discipline of presence.", "gamerName": "Just Sitting (AFK)", "alambanaPrimary": "The Formless & Space", "alambanaSecondary": "Body & Breath", "transformation": "As 'Just Sitting (AFK)', restlessness transforms into profound, 'unshakeable stillness'.", "youtubeVideoId": "n_vQVnlgJOI", "startTime": 21, "endTime": 413},
+            // A classic body-focused practice.
+            {"technique": "Dharana", "name": "Body Scan", "fullName": "Body Scan", "x": -0.4, "y": 0.85, "summary": "Run a full system diagnostic on your avatar, checking every component for status effects.", "gamerName": "The System Scanner", "alambanaPrimary": "Body & Breath", "alambanaSecondary": "None", "transformation": "As 'The System Scanner', body tension transforms into a detailed 'bodymap' with points of interest.", "youtubeVideoId": "PKOGu0TSxIs", "startTime": 0, "endTime": 527},
+            // Turiya is the ultimate formless/spacious awareness practice.
+            {"technique": "Dhyana", "name": "Turiya", "fullName": "Turiya Meditation", "x": -0.9, "y": -0.9, "summary": "Seek access to the 'Dev Console' of consciousness, the state that underlies all other game modes.", "gamerName": "The Fourth State", "alambanaPrimary": "The Formless & Space", "alambanaSecondary": "Mental Qualities", "transformation": "As 'The Fourth State', identification with states transforms into 'abiding as the screen'.", "youtubeVideoId": "psiFrJ9Ifv4", "startTime": 4, "endTime": 434},
+            // Listening for internal sound/vibration.
+            {"technique": "Pratyahara", "name": "Indriya of Sound", "fullName": "Indriya of Internal Sound", "x": -0.4, "y": 0.2, "summary": "Tune your inner radio past the static of the world to find the cosmic broadcast frequency.", "gamerName": "Sound Scryer", "alambanaPrimary": "Sound & Vibration", "alambanaSecondary": "Body & Breath", "transformation": "As the 'Sound Scryer', the 'External Noise' debuff transforms into an 'Inner Resonance' buff.", "youtubeVideoId": "qCMbAJ8YXqA", "startTime": 0, "endTime": 538},
+            // A purely conceptual reframing technique.
+            {"technique": "Dhyana", "name": "My mind says", "fullName": "Replace \"I am\" with \"My mind says\"", "x": 0.3, "y": -0.6, "summary": "Add the prefix 'LOG: ' to all negative system alerts to recognize them as automated messages, not core truth.", "gamerName": "The Reframer", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "None", "transformation": "As 'The Reframer', self-identification with thoughts transforms into 'objective observation'.", "youtubeVideoId": "rwqnHm9h1dM", "startTime": 0, "endTime": 420},
+            // Yantra is holding a mental image.
+            {"technique": "Dharana", "name": "Yantra", "fullName": "Yantra (Internal Trataka)", "x": 1, "y": 0.9, "summary": "Screenshot' a sacred glyph and set it as your mental desktop background, holding it in RAM.", "gamerName": "The Inner Glyph", "alambanaPrimary": "Visual Objects & Images", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Inner Glyph', a fleeting image transforms into a persistent 'Mental Object' for focus.", "youtubeVideoId": "snt1i5_1uhY", "startTime": 1, "endTime": 363},
+            // A classic formless awareness practice.
+            {"technique": "Dhyana", "name": "Choiceless Awareness", "fullName": "Choiceless Awareness", "x": -1, "y": -0.8, "summary": "Go into 'Spectator Mode' for your own consciousness, observing the whole map without controlling any unit.", "gamerName": "The Unblinking Mirror", "alambanaPrimary": "The Formless & Space", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Unblinking Mirror', the need to control transforms into a state of 'Effortless Witnessing'.", "youtubeVideoId": "T8nulsue99k", "startTime": 0, "endTime": 241},
+            // The ego is a concept/quality to be investigated.
+            {"technique": "Dhyana", "name": "Ego", "fullName": "Ego Meditation", "x": 0.6, "y": -0.9, "summary": "Run a search query for the 'Ego' process in your system's task manager and examine its source code.", "gamerName": "Self-Trace", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "Body & Breath", "transformation": "As the 'Self-Trace', the solid 'Self' transforms into a transparent, observable 'process'.", "youtubeVideoId": "wDUtQRm9Dl0", "startTime": 1, "endTime": 470},
+            // Chakra focus.
+            {"technique": "Dharana", "name": "Manipura", "fullName": "Manipura Chakra", "x": 0.9, "y": 0.7, "summary": "Channel your energy into your 'Power Core' (solar plexus) to build your 'Willpower' meter.", "gamerName": "Willpower Forge", "alambanaPrimary": "Visual Objects & Images", "alambanaSecondary": "Body & Breath", "transformation": "As the 'Willpower Forge', self-doubt transforms into a source of radiant 'Personal Power'.", "youtubeVideoId": "XOoFuiLeaPg", "startTime": 175, "endTime": 808},
+            // The quintessential body/breath practice.
+            {"technique": "Dharana", "name": "Following the Breath", "fullName": "Following the Breath", "x": 0.7, "y": 0.95, "summary": "Track the 'Breath Caravan' on its full journey through the landscape of your body.", "gamerName": "The Breath Follower", "alambanaPrimary": "Body & Breath", "alambanaSecondary": "None", "transformation": "As 'The Breath Follower', shallow breathing transforms into a full-system 'Prana' AoE buff.", "youtubeVideoId": "yph9VpjW6gg", "startTime": 371, "endTime": 624},
+            // Gazing at an external visual object.
+            {"technique": "Dharana", "name": "Trataka", "fullName": "Trataka (Fixed Point Gazing)", "x": 1, "y": 0.1, "summary": "Hard-lock your targeting system onto a single pixel to max out your 'Focus' stat.", "gamerName": "The Sentinel's Gaze", "alambanaPrimary": "Visual Objects & Images", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Sentinel's Gaze', a wandering gaze transforms into an unbreakable 'Chain-Stun' for the mind.", "youtubeVideoId": "Zv8JdXIHquk", "startTime": 6058, "endTime": 6757},
+            // Expanding a feeling from the body is a focus on body and mental qualities.
+            {"technique": "Dharana", "name": "Namaste Expansion", "fullName": "Namaste Expansion", "x": 0.5, "y": 0.9, "summary": "Cast an 'Area of Effect' (AoE) blessing that expands from your character's core.", "gamerName": "Heart's AoE", "alambanaPrimary": "Body & Breath", "alambanaSecondary": "Mental Qualities", "transformation": "As the 'Heart's AoE', feelings of constriction transform into a 'Generosity' aura.", "youtubeVideoId": "ciJRXgisjbc", "startTime": 86, "endTime": 663},
+            // Using external sound as the anchor.
+            {"technique": "Dharana", "name": "Rotating Sound", "fullName": "Rotating Sound Awareness", "x": -0.1, "y": 0.7, "summary": "Use your 'Audio Radar' to ping different sound sources on your minimap without locking on.", "gamerName": "Audio-Kinesis", "alambanaPrimary": "Sound & Vibration", "alambanaSecondary": "The Formless & Space", "transformation": "As 'Audio-Kinesis', auditory distraction transforms into a 'Situational Awareness' training drill.", "youtubeVideoId": "yQEcvSvXwn4", "startTime": 57, "endTime": 1179},
+            // A formless practice of allowing mental qualities to be.
+            {"technique": "Dhyana", "name": "Let It Be", "fullName": "Let It Be", "x": -0.7, "y": 0.6, "summary": "Activate a passive 'Auto-Resolve' aura for all minor mental conflicts and pop-ups.", "gamerName": "The Yielding Oak", "alambanaPrimary": "The Formless & Space", "alambanaSecondary": "Mental Qualities", "transformation": "As 'The Yielding Oak', mental resistance transforms into a state of 'Graceful Equanimity'.", "youtubeVideoId": "-40Tgg07J9A", "startTime": 27, "endTime": 975},
+            // A direct comparison of a mental quality and a body feeling.
+            {"technique": "Dhyana", "name": "Mentality Materiality", "fullName": "Mentality Materiality", "x": 0.3, "y": -0.3, "summary": "Compare the data type of a 'Thought' (virtual) versus a 'Sensation' (physical I/O). Notice how they differ.", "gamerName": "Mind-Body Debugger", "alambanaPrimary": "Mental Qualities", "alambanaSecondary": "Body & Breath", "transformation": "As the 'Mind-Body Debugger', the mind-body problem transforms into a 'direct, felt experience'.", "youtubeVideoId": "PiPCAwAjdPs", "startTime": 1, "endTime": 806},
+            // Listening for a subtle internal sound.
+            {"technique": "Dhyana", "name": "Unstruck Sound", "fullName": "Unstruck Sound", "x": 0.7, "y": -0.3, "summary": "Listen for the 'background music of the universe' that plays even when all sound effects are muted.", "gamerName": "The Cosmic Hum", "alambanaPrimary": "Sound & Vibration", "alambanaSecondary": "Body & Breath", "transformation": "As 'The Cosmic Hum', focus on created sounds transforms into 'attunement with primal vibration'.", "youtubeVideoId": "zYI3hRs5xB0", "startTime": 0, "endTime": 680}
+        ];
+
+        // Add quadrant and color info to each data point
+        dataPoints.forEach(d => {
+            if (d.x >= 0 && d.y >= 0) {
+                d.quadrant = "Focus Calm";
+                d.color = '#1f77b4';
+            } else if (d.x < 0 && d.y >= 0) {
+                d.quadrant = "Receptive Presence";
+                d.color = '#2ca02c';
+            } else if (d.x < 0 && d.y < 0) {
+                d.quadrant = "Open Exploration";
+                d.color = '#d62728';
+            } else { // d.x >= 0 && d.y < 0
+                d.quadrant = "Focus Exploration";
+                d.color = '#ff7f0e';
+            }
+        });
+
+        // --- D3 SETUP ---
+        const width = 900, height = 900;
+        const margin = { top: 90, right: 80, bottom: 80, left: 80 };
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
+        
+        const svg = d3.select("#chart-container").append("svg")
+            .attr("width", width).attr("height", height);
+
+        const g = svg.append("g").attr("transform", `translate(${margin.left}, ${margin.top})`);
+        const xScale = d3.scaleLinear().domain([-1.2, 1.2]).range([0, innerWidth]);
+        const yScale = d3.scaleLinear().domain([-1.2, 1.2]).range([innerHeight, 0]);
+
+        const quadrant_colors = { "Focus Calm": '#e7f5ff', "Focus Exploration": '#fff9db', "Receptive Presence": '#e6fcf5', "Open Exploration": '#fff0f6' };
+        g.append("rect").attr("x", xScale(-1.2)).attr("y", yScale(1.2)).attr("width", innerWidth / 2).attr("height", innerHeight / 2).attr("fill", quadrant_colors["Receptive Presence"]);
+        g.append("rect").attr("x", xScale(-1.2)).attr("y", yScale(0)).attr("width", innerWidth / 2).attr("height", innerHeight / 2).attr("fill", quadrant_colors["Open Exploration"]);
+        g.append("rect").attr("x", xScale(0)).attr("y", yScale(1.2)).attr("width", innerWidth / 2).attr("height", innerHeight / 2).attr("fill", quadrant_colors["Focus Calm"]);
+        g.append("rect").attr("x", xScale(0)).attr("y", yScale(0)).attr("width", innerWidth / 2).attr("height", innerHeight / 2).attr("fill", quadrant_colors["Focus Exploration"]);
+        
+        g.append("line").attr("x1", xScale(-1.2)).attr("y1", yScale(0)).attr("x2", xScale(1.2)).attr("y2", yScale(0)).attr("stroke", "#ccc").attr("stroke-width", 1.5);
+        g.append("line").attr("x1", xScale(0)).attr("y1", yScale(-1.2)).attr("x2", xScale(0)).attr("y2", yScale(1.2)).attr("stroke", "#ccc").attr("stroke-width", 1.5);
+
+        // --- Axis and Quadrant Titles ---
+        const titleGroup = svg.append("g").attr("class", "unselectable");
+        titleGroup.append("text").text("Mental Stance: From Deconstructive to Stabilizing").attr("class", "axis-title")
+            .attr("transform", `translate(25, ${height/2}) rotate(-90)`).attr("text-anchor", "middle");
+        titleGroup.append("text").text("Attentional Scope: From Expansive to Singular").attr("class", "axis-title")
+            .attr("x", width/2).attr("y", height - 10).attr("text-anchor", "middle");
+        titleGroup.append("text").text("Grounding").attr("class", "axis-subtitle")
+            .attr("x", width/2).attr("y", margin.top - 15).attr("text-anchor", "middle");
+        titleGroup.append("text").text("Inquisitive").attr("class", "axis-subtitle")
+            .attr("x", width/2).attr("y", height - margin.bottom + 25).attr("text-anchor", "middle");
+        titleGroup.append("text").text("Open Awareness").attr("class", "axis-subtitle")
+            .attr("transform", `translate(${margin.left - 20}, ${height/2}) rotate(-90)`).attr("text-anchor", "middle");
+        titleGroup.append("text").text("Focus").attr("class", "axis-subtitle")
+            .attr("transform", `translate(${width - margin.right + 20}, ${height/2}) rotate(-90)`).attr("text-anchor", "middle");
+        
+        const quadrantTitleGroup = g.append("g").attr("class", "unselectable");
+        function getDarkerColor(quadrantName) {
+            return d3.rgb(quadrant_colors[quadrantName]).darker(1.5);
+        }
+        quadrantTitleGroup.append("text").text("Receptive Presence").attr("class", "quadrant-title")
+            .attr("x", xScale(-0.55)).attr("y", yScale(1.15)).attr("dy", "1.5em").attr("text-anchor", "middle")
+            .style("fill", getDarkerColor("Receptive Presence")).style("opacity", 0.7);
+        quadrantTitleGroup.append("text").text("Focus Calm").attr("class", "quadrant-title")
+            .attr("x", xScale(0.55)).attr("y", yScale(1.15)).attr("dy", "1.5em").attr("text-anchor", "middle")
+            .style("fill", getDarkerColor("Focus Calm")).style("opacity", 0.7);
+        quadrantTitleGroup.append("text").text("Open Exploration").attr("class", "quadrant-title")
+            .attr("x", xScale(-0.55)).attr("y", yScale(-1.15)).attr("dy", "-0.8em").attr("text-anchor", "middle")
+            .style("fill", getDarkerColor("Open Exploration")).style("opacity", 0.7);
+        quadrantTitleGroup.append("text").text("Focus Exploration").attr("class", "quadrant-title")
+            .attr("x", xScale(0.55)).attr("y", yScale(-1.15)).attr("dy", "-0.8em").attr("text-anchor", "middle")
+            .style("fill", getDarkerColor("Focus Exploration")).style("opacity", 0.7);
+        
+        // --- DATA POINTS AND LABELS ---
+        const labelGroup = g.append("g");
+        const pointsGroup = g.append("g");
+        
+        const symbolGenerator = d3.symbol().size(128);
+
+        const allPoints = pointsGroup.selectAll(".data-point")
+            .data(dataPoints, d => d.name)
+            .join("path")
+            .attr("class", "data-point")
+            .attr("d", d => {
+                if (d.technique === 'Pratyahara') return symbolGenerator.type(d3.symbolSquare)();
+                if (d.technique === 'Dharana') return symbolGenerator.type(d3.symbolTriangle)();
+                return symbolGenerator.type(d3.symbolCircle)();
+            })
+            .attr("transform", d => `translate(${xScale(d.x)},${yScale(d.y)})`)
+            .attr("fill", d => d.color)
+            .attr("stroke", "white")
+            .attr("stroke-width", 2)
+            .on("mouseover", function(event, d) {
+                d3.select(this).transition().duration(150)
+                    .attr("transform", `translate(${xScale(d.x)},${yScale(d.y)}) scale(1.5)`)
+                    .attr("stroke", d3.rgb(d.color).darker(1.5));
+            })
+            .on("mouseout", function(event, d) {
+                d3.select(this).transition().duration(150)
+                    .attr("transform", `translate(${xScale(d.x)},${yScale(d.y)}) scale(1)`)
+                    .attr("stroke", "white");
+            })
+            .on("click", (event, d) => showModal(d));
+
+        // --- LABELING WITH FORCE SIMULATION ---
+        const labelNodes = dataPoints.map(d => ({ ...d, x: xScale(d.x), y: yScale(d.y) }));
+        const anchorNodes = dataPoints.map(d => ({ fx: xScale(d.x), fy: yScale(d.y), quadrant: d.quadrant, technique: d.technique }));
+        const links = dataPoints.map((d, i) => ({ source: labelNodes[i], target: anchorNodes[i] }));
+        
+        const link = labelGroup.selectAll(".label-line").data(links).join("line").attr("class", "label-line");
+        const label = labelGroup.selectAll(".point-label").data(labelNodes).join("text").attr("class", "point-label unselectable").attr("dy", "0.35em").text(d => d.name);
+        
+        label.each(function(d) {
+            const bbox = this.getBBox();
+            d.labelWidth = bbox.width;
+            d.labelHeight = bbox.height;
+        });
+        
+        const simulation = d3.forceSimulation(labelNodes)
+            .force("link", d3.forceLink(links).distance(3).strength(1.5))
+            .force("charge", d3.forceManyBody().strength(-10))
+            .force("collide", d3.forceCollide(d => d.labelWidth / 8).strength(1))
+            .on("tick", ticked);
+
+        function ticked() {
+            label.attr("x", d => d.x = Math.max(d.labelWidth / 2, Math.min(innerWidth - d.labelWidth / 2, d.x)))
+                 .attr("y", d => d.y = Math.max(d.labelHeight / 2, Math.min(innerHeight - d.labelHeight / 2, d.y)));
+            
+            link.attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.fx)
+                .attr("y2", d => d.target.fy);
+        }
+
+        // --- MODAL LOGIC ---
+        const modalOverlay = d3.select("#modal-overlay");
+        const modalCloseBtn = d3.select("#modal-close-btn");
+        const modalVideoContainer = d3.select("#modal-video-container");
+
+        function showModal(d) {
+            d3.select("#modal-title").text(d.name).style('border-left-color', d.color);
+            d3.select("#modal-gamer-name").text(d.gamerName);
+            d3.select("#modal-summary").text(d.summary);
+            d3.select("#modal-transformation").text(d.transformation);
+            
+            const fullNameEl = d3.select("#modal-full-name");
+            if (d.fullName) {
+                fullNameEl.text(d.fullName).style('display', 'block');
+            } else {
+                fullNameEl.style('display', 'none');
+            }
+
+            modalVideoContainer.html("");
+
+            if (d.youtubeVideoId) {
+                let videoSrc = `https://www.youtube.com/embed/${d.youtubeVideoId}?autoplay=1`;
+                if (d.startTime && d.endTime) {
+                    videoSrc += `&start=${d.startTime}&end=${d.endTime}`;
+                }
+                const videoWrapper = modalVideoContainer.append('div').attr('class', 'video-container');
+                videoWrapper.append('iframe')
+                    .attr('src', videoSrc)
+                    .attr('frameborder', '0')
+                    .attr('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture')
+                    .attr('allowfullscreen', true);
+            }
+            modalOverlay.classed("visible", true);
+        }
+
+        function hideModal() {
+            modalOverlay.classed("visible", false);
+            modalVideoContainer.html("");
+        }
+
+        modalCloseBtn.on("click", hideModal);
+        modalOverlay.on("click", function(event) {
+            if (event.target === this) {
+                hideModal();
+            }
+        });
+
+        // --- FILTER LOGIC ---
+        const filterBtns = d3.selectAll(".filter-btn");
+
+        filterBtns.on("click", function() {
+            const btn = d3.select(this);
+            const filter = btn.attr("data-filter");
+
+            filterBtns.classed("active", false);
+            btn.classed("active", true);
+            
+            function setOpacity(d) {
+                if (filter === "all") {
+                    return 1;
+                }
+                // Check if the filter matches primary or secondary alambana
+                return d.alambanaPrimary === filter || d.alambanaSecondary === filter ? 1 : 0.1;
+            }
+
+            function setPointerEvents(d) {
+               if (filter === "all" || d.alambanaPrimary === filter || d.alambanaSecondary === filter) {
+                   return "all";
+               }
+               return "none";
+            }
+
+            allPoints.transition().duration(300)
+                .style("opacity", setOpacity)
+                .style("pointer-events", setPointerEvents);
+            
+            label.transition().duration(300)
+                .style("opacity", setOpacity);
+                
+            link.transition().duration(300)
+                .style("opacity", d => setOpacity(d.source)); 
+        });
+    </script>
+</body>
+</html>
