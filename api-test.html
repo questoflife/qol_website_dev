@@ -2,22 +2,38 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Test - Quest of Life</title>
-    <link rel="icon" href="images/new_logo_circle.png">
-    <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body { 
             background: linear-gradient(135deg, #1e3a5f 0%, #3ec3dc 100%);
             min-height: 100vh;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .page-header {
+            background: white;
+            border-bottom: 4px solid #1e3a5f;
+            padding: 15px 20px;
+        }
+        .page-header a {
+            color: #1e3a5f;
+            text-decoration: none;
         }
         .test-container { 
             max-width: 800px; 
             margin: 40px auto; 
             padding: 20px; 
+        }
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
         }
         .status { 
             background: rgba(240, 248, 255, 0.9);
@@ -25,13 +41,9 @@
             padding: 15px 20px; 
             border-radius: 10px;
             margin-bottom: 30px;
-            font-family: 'Sarabun', sans-serif;
             font-size: 18px;
-            font-weight: 600;
+            font-weight: bold;
         }
-        .status.loading { background: #F2C12E; color: #1e3a5f; }
-        .status.ok { background: #8FDC3E; color: #1e3a5f; }
-        .status.error { background: rgba(62, 195, 220, 0.8); color: #1e3a5f; }
         .section { 
             background: rgba(240, 248, 255, 0.9);
             color: #1e3a5f;
@@ -40,10 +52,8 @@
             margin-bottom: 20px;
         }
         .section h2 { 
-            font-family: 'Germania One', serif;
             font-size: 24px;
-            margin: 0 0 15px 0;
-            color: #1e3a5f;
+            margin-bottom: 15px;
         }
         button { 
             background: #3ec3dc;
@@ -51,23 +61,23 @@
             border: none;
             padding: 12px 24px;
             border-radius: 5px; 
-            font-family: 'Germania One', serif;
             font-size: 16px;
             cursor: pointer;
             margin: 5px;
         }
-        button:hover { background: #1e3a5f; }
-        button.danger { background: #d32f2f; }
-        button.danger:hover { background: #b71c1c; }
+        button:hover { 
+            background: #1e3a5f; 
+        }
+        button.danger { 
+            background: #d32f2f; 
+        }
         textarea { 
             width: 100%;
             padding: 12px;
             border: 2px solid rgba(30,58,95,0.3);
             border-radius: 5px; 
-            font-family: 'Sarabun', sans-serif;
             margin: 10px 0;
             min-height: 100px;
-            box-sizing: border-box;
         }
         .result { 
             background: rgba(30,58,95,0.6);
@@ -75,92 +85,82 @@
             padding: 15px;
             border-radius: 5px; 
             margin-top: 15px;
-            white-space: pre-wrap;
         }
-        .result.ok { background: #8FDC3E; color: #1e3a5f; }
-        .result.error { background: #d32f2f; color: white; }
-        .hidden { display: none; }
-        h1 {
-            font-family: 'Germania One', serif;
-            font-size: 48px;
-            margin-bottom: 10px;
-            text-align: center;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .page-header {
-            background: rgba(240, 248, 255, 1);
-            border-bottom: 4px solid #1e3a5f;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .page-header a {
-            color: #1e3a5f;
-            font-family: 'Sarabun', sans-serif;
-            text-decoration: none;
-        }
-        .page-header img {
-            height: 50px;
+        .hidden { 
+            display: none !important; 
         }
     </style>
 </head>
 <body>
     <div class="page-header">
-        <a href="index.html"><img src="images/new_logo.svg" alt="Quest of Life"></a>
-        <a href="index.html">← Back</a>
+        <a href="index.html">← Back to Home</a>
     </div>
     
     <div class="test-container">
         <h1>API Test</h1>
-        <div id="status" class="status loading">⏳ Checking session...</div>
+        
+        <div id="status" class="status">🔄 Loading page...</div>
 
-                <div id="loginSection" class="section hidden">
-                    <h2>Login Required</h2>
-                    <button onclick="login()">Login with Discord</button>
-                </div>
+        <div id="loginSection" class="section hidden">
+            <h2>Login Required</h2>
+            <button onclick="login()">Login with Discord</button>
+        </div>
 
-                <div id="userSection" class="section hidden">
-                    <h2>User Info</h2>
-                    <div><strong>Discord ID:</strong> <span id="discordId">-</span></div>
-                    <button onclick="logout()" class="danger">Logout</button>
-                </div>
+        <div id="userSection" class="section hidden">
+            <h2>User Info</h2>
+            <div><strong>Discord ID:</strong> <span id="discordId">-</span></div>
+            <button onclick="logout()" class="danger">Logout</button>
+        </div>
 
-                <div id="getSection" class="section hidden">
-                    <h2>Get Text</h2>
-                    <button onclick="getText()">Get Text</button>
-                    <div id="getResult" class="result hidden"></div>
-                </div>
+        <div id="getSection" class="section hidden">
+            <h2>Get Text</h2>
+            <button onclick="getText()">Get Text</button>
+            <div id="getResult" class="result hidden"></div>
+        </div>
 
-                <div id="setSection" class="section hidden">
-                    <h2>Set Text</h2>
-                    <textarea id="textInput" placeholder="Enter text..."></textarea>
-                    <button onclick="setText()">Save Text</button>
-                    <div id="setResult" class="result hidden"></div>
-                </div>
+        <div id="setSection" class="section hidden">
+            <h2>Set Text</h2>
+            <textarea id="textInput" placeholder="Enter text..."></textarea>
+            <button onclick="setText()">Save Text</button>
+            <div id="setResult" class="result hidden"></div>
+        </div>
     </div>
 
     <script>
         const API_BASE = 'https://p01--qol-build-andtest--w7p9sqwpdrm4.code.run';
         let csrfToken = null;
 
-        window.addEventListener('DOMContentLoaded', checkSession);
+        // Check session after page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded, checking session...');
+            setTimeout(checkSession, 100); // Small delay to ensure rendering
+        });
 
         async function checkSession() {
+            console.log('Fetching /me endpoint...');
+            document.getElementById('status').textContent = '⏳ Checking session...';
             try {
                 const res = await fetch(`${API_BASE}/me`, { credentials: 'include' });
+                console.log('Response status:', res.status);
                 if (res.ok) {
                     const data = await res.json();
+                    console.log('Logged in as:', data.discord_id);
                     csrfToken = data.csrf_token;
                     showLoggedIn(data.discord_id);
-                } else showLoggedOut();
-            } catch (e) { showLoggedOut(); }
+                } else {
+                    console.log('Not logged in');
+                    showLoggedOut();
+                }
+            } catch (e) {
+                console.error('Session check error:', e);
+                showLoggedOut();
+            }
         }
 
         function showLoggedIn(id) {
-            document.getElementById('status').className = 'status ok';
+            document.getElementById('status').className = 'status';
             document.getElementById('status').textContent = '✅ Logged in';
+            document.getElementById('status').style.background = '#8FDC3E';
             document.getElementById('loginSection').classList.add('hidden');
             document.getElementById('userSection').classList.remove('hidden');
             document.getElementById('getSection').classList.remove('hidden');
@@ -169,39 +169,53 @@
         }
 
         function showLoggedOut() {
-            document.getElementById('status').className = 'status error';
+            document.getElementById('status').className = 'status';
             document.getElementById('status').textContent = '❌ Not logged in';
+            document.getElementById('status').style.background = '#F2C12E';
             document.getElementById('loginSection').classList.remove('hidden');
             document.getElementById('userSection').classList.add('hidden');
             document.getElementById('getSection').classList.add('hidden');
             document.getElementById('setSection').classList.add('hidden');
         }
 
-        function login() { window.location.href = `${API_BASE}/login`; }
+        function login() {
+            window.location.href = `${API_BASE}/login`;
+        }
 
         async function logout() {
-            const res = await fetch(`${API_BASE}/logout`, { method: 'POST', credentials: 'include' });
-            if (res.ok) { csrfToken = null; showLoggedOut(); }
+            const res = await fetch(`${API_BASE}/logout`, { 
+                method: 'POST', 
+                credentials: 'include' 
+            });
+            if (res.ok) {
+                csrfToken = null;
+                showLoggedOut();
+            }
         }
 
         async function getText() {
             const div = document.getElementById('getResult');
-            div.className = 'result'; div.textContent = 'Loading...'; div.classList.remove('hidden');
+            div.className = 'result';
+            div.textContent = 'Loading...';
+            div.classList.remove('hidden');
             try {
-                const res = await fetch(`${API_BASE}/user/text`, { credentials: 'include' });
+                const res = await fetch(`${API_BASE}/user/text`, { 
+                    credentials: 'include' 
+                });
                 if (res.ok) {
                     const data = await res.json();
-                    div.className = 'result ok';
+                    div.style.background = '#8FDC3E';
+                    div.style.color = '#1e3a5f';
                     div.textContent = data.text || 'No text saved yet.';
                 } else if (res.status === 404) {
                     div.textContent = 'No text saved yet.';
                 } else {
                     const err = await res.json();
-                    div.className = 'result error';
+                    div.style.background = '#d32f2f';
                     div.textContent = `Error: ${err.detail}`;
                 }
             } catch (e) {
-                div.className = 'result error';
+                div.style.background = '#d32f2f';
                 div.textContent = `Error: ${e.message}`;
             }
         }
@@ -210,28 +224,38 @@
             const text = document.getElementById('textInput').value.trim();
             const div = document.getElementById('setResult');
             if (!text) {
-                div.className = 'result error'; div.textContent = 'Enter some text first.';
-                div.classList.remove('hidden'); return;
+                div.className = 'result';
+                div.style.background = '#d32f2f';
+                div.textContent = 'Enter some text first.';
+                div.classList.remove('hidden');
+                return;
             }
-            div.className = 'result'; div.textContent = 'Saving...'; div.classList.remove('hidden');
+            div.className = 'result';
+            div.textContent = 'Saving...';
+            div.classList.remove('hidden');
             try {
                 const res = await fetch(`${API_BASE}/user/text`, {
-                    method: 'PUT', credentials: 'include',
-                    headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+                    method: 'PUT',
+                    credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-Token': csrfToken
+                    },
                     body: JSON.stringify({ text })
                 });
                 if (res.ok) {
                     const data = await res.json();
-                    div.className = 'result ok';
+                    div.style.background = '#8FDC3E';
+                    div.style.color = '#1e3a5f';
                     div.textContent = `✅ Saved: ${data.text}`;
                     document.getElementById('textInput').value = '';
                 } else {
                     const err = await res.json();
-                    div.className = 'result error';
+                    div.style.background = '#d32f2f';
                     div.textContent = `Error: ${err.detail}`;
                 }
             } catch (e) {
-                div.className = 'result error';
+                div.style.background = '#d32f2f';
                 div.textContent = `Error: ${e.message}`;
             }
         }
