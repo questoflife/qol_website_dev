@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Test - Quest of Life</title>
+    <link rel="icon" href="images/new_logo_circle.png">
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-backgrounds.css">
+    <style>
+        .test-container { max-width: 800px; margin: 40px auto; padding: 20px; }
+        .status { background: var(--color-light-a-bit-transparent); color: var(--color-dark); padding: 15px 20px; 
+                  border-radius: 10px; margin-bottom: 30px; font-family: 'Sarabun', sans-serif; }
+        .status.loading { background: var(--color-gold); }
+        .status.ok { background: var(--color-highlight); }
+        .status.error { background: var(--color-blue-a-bit-transparent); }
+        .section { background: var(--color-light-a-bit-transparent); color: var(--color-dark); padding: 25px; 
+                   border-radius: 10px; margin-bottom: 20px; }
+        .section h2 { font-family: 'Germania One', serif; font-size: 24px; margin: 0 0 15px 0; }
+        button { background: var(--color-blue); color: white; border: none; padding: 12px 24px; border-radius: 5px; 
+                 font-family: 'Germania One', serif; cursor: pointer; margin: 5px; }
+        button:hover { background: var(--color-dark); }
+        button.danger { background: #d32f2f; }
+        textarea { width: 100%; padding: 12px; border: 2px solid rgba(30,58,95,0.3); border-radius: 5px; 
+                   font-family: 'Sarabun', sans-serif; margin: 10px 0; min-height: 100px; }
+        .result { background: rgba(30,58,95,0.6); color: white; padding: 15px; border-radius: 5px; 
+                  margin-top: 15px; white-space: pre-wrap; }
+        .result.ok { background: var(--color-highlight); color: var(--color-dark); }
+        .result.error { background: #d32f2f; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <div class="page-header">
+            <div style="max-width: 1024px; width: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 100%;">
+                <a href="index.html"><img src="images/new_logo.svg" alt="Quest of Life" style="height: 50px;"></a>
+                <a href="index.html" style="color: var(--color-dark); font-family: 'Sarabun', sans-serif; text-decoration: none;">← Back</a>
+            </div>
+        </div>
+        <div class="page-body theme-blue">
+            <div class="test-container">
+                <h1 style="font-family: 'Germania One', serif; font-size: 48px; margin-bottom: 10px; text-align: center;">API Test</h1>
+                <div id="status" class="status loading">⏳ Checking session...</div>
+
+                <div id="loginSection" class="section hidden">
+                    <h2>Login Required</h2>
+                    <button onclick="login()">Login with Discord</button>
+                </div>
+
+                <div id="userSection" class="section hidden">
+                    <h2>User Info</h2>
+                    <div><strong>Discord ID:</strong> <span id="discordId">-</span></div>
+                    <button onclick="logout()" class="danger">Logout</button>
+                </div>
+
+                <div id="getSection" class="section hidden">
+                    <h2>Get Text</h2>
+                    <button onclick="getText()">Get Text</button>
+                    <div id="getResult" class="result hidden"></div>
+                </div>
+
+                <div id="setSection" class="section hidden">
+                    <h2>Set Text</h2>
+                    <textarea id="textInput" placeholder="Enter text..."></textarea>
+                    <button onclick="setText()">Save Text</button>
+                    <div id="setResult" class="result hidden"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'https://p01--qol-build-andtest--w7p9sqwpdrm4.code.run';
+        let csrfToken = null;
+
+        window.addEventListener('DOMContentLoaded', checkSession);
+
+        async function checkSession() {
+            try {
+                const res = await fetch(`${API_BASE}/me`, { credentials: 'include' });
+                if (res.ok) {
+                    const data = await res.json();
+                    csrfToken = data.csrf_token;
+                    showLoggedIn(data.discord_id);
+                } else showLoggedOut();
+            } catch (e) { showLoggedOut(); }
+        }
+
+        function showLoggedIn(id) {
+            document.getElementById('status').className = 'status ok';
+            document.getElementById('status').textContent = '✅ Logged in';
+            document.getElementById('loginSection').classList.add('hidden');
+            document.getElementById('userSection').classList.remove('hidden');
+            document.getElementById('getSection').classList.remove('hidden');
+            document.getElementById('setSection').classList.remove('hidden');
+            document.getElementById('discordId').textContent = id;
+        }
+
+        function showLoggedOut() {
+            document.getElementById('status').className = 'status error';
+            document.getElementById('status').textContent = '❌ Not logged in';
+            document.getElementById('loginSection').classList.remove('hidden');
+            document.getElementById('userSection').classList.add('hidden');
+            document.getElementById('getSection').classList.add('hidden');
+            document.getElementById('setSection').classList.add('hidden');
+        }
+
+        function login() { window.location.href = `${API_BASE}/login`; }
+
+        async function logout() {
+            const res = await fetch(`${API_BASE}/logout`, { method: 'POST', credentials: 'include' });
+            if (res.ok) { csrfToken = null; showLoggedOut(); }
+        }
+
+        async function getText() {
+            const div = document.getElementById('getResult');
+            div.className = 'result'; div.textContent = 'Loading...'; div.classList.remove('hidden');
+            try {
+                const res = await fetch(`${API_BASE}/user/text`, { credentials: 'include' });
+                if (res.ok) {
+                    const data = await res.json();
+                    div.className = 'result ok';
+                    div.textContent = data.text || 'No text saved yet.';
+                } else if (res.status === 404) {
+                    div.textContent = 'No text saved yet.';
+                } else {
+                    const err = await res.json();
+                    div.className = 'result error';
+                    div.textContent = `Error: ${err.detail}`;
+                }
+            } catch (e) {
+                div.className = 'result error';
+                div.textContent = `Error: ${e.message}`;
+            }
+        }
+
+        async function setText() {
+            const text = document.getElementById('textInput').value.trim();
+            const div = document.getElementById('setResult');
+            if (!text) {
+                div.className = 'result error'; div.textContent = 'Enter some text first.';
+                div.classList.remove('hidden'); return;
+            }
+            div.className = 'result'; div.textContent = 'Saving...'; div.classList.remove('hidden');
+            try {
+                const res = await fetch(`${API_BASE}/user/text`, {
+                    method: 'PUT', credentials: 'include',
+                    headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+                    body: JSON.stringify({ text })
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    div.className = 'result ok';
+                    div.textContent = `✅ Saved: ${data.text}`;
+                    document.getElementById('textInput').value = '';
+                } else {
+                    const err = await res.json();
+                    div.className = 'result error';
+                    div.textContent = `Error: ${err.detail}`;
+                }
+            } catch (e) {
+                div.className = 'result error';
+                div.textContent = `Error: ${e.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
