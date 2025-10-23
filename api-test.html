@@ -7,42 +7,114 @@
     <link rel="icon" href="images/new_logo_circle.png">
     <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/styles-backgrounds.css">
     <style>
-        .test-container { max-width: 800px; margin: 40px auto; padding: 20px; }
-        .status { background: var(--color-light-a-bit-transparent); color: var(--color-dark); padding: 15px 20px; 
-                  border-radius: 10px; margin-bottom: 30px; font-family: 'Sarabun', sans-serif; }
-        .status.loading { background: var(--color-gold); }
-        .status.ok { background: var(--color-highlight); }
-        .status.error { background: var(--color-blue-a-bit-transparent); }
-        .section { background: var(--color-light-a-bit-transparent); color: var(--color-dark); padding: 25px; 
-                   border-radius: 10px; margin-bottom: 20px; }
-        .section h2 { font-family: 'Germania One', serif; font-size: 24px; margin: 0 0 15px 0; }
-        button { background: var(--color-blue); color: white; border: none; padding: 12px 24px; border-radius: 5px; 
-                 font-family: 'Germania One', serif; cursor: pointer; margin: 5px; }
-        button:hover { background: var(--color-dark); }
+        body { 
+            background: linear-gradient(135deg, #1e3a5f 0%, #3ec3dc 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .test-container { 
+            max-width: 800px; 
+            margin: 40px auto; 
+            padding: 20px; 
+        }
+        .status { 
+            background: rgba(240, 248, 255, 0.9);
+            color: #1e3a5f;
+            padding: 15px 20px; 
+            border-radius: 10px;
+            margin-bottom: 30px;
+            font-family: 'Sarabun', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .status.loading { background: #F2C12E; color: #1e3a5f; }
+        .status.ok { background: #8FDC3E; color: #1e3a5f; }
+        .status.error { background: rgba(62, 195, 220, 0.8); color: #1e3a5f; }
+        .section { 
+            background: rgba(240, 248, 255, 0.9);
+            color: #1e3a5f;
+            padding: 25px; 
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .section h2 { 
+            font-family: 'Germania One', serif;
+            font-size: 24px;
+            margin: 0 0 15px 0;
+            color: #1e3a5f;
+        }
+        button { 
+            background: #3ec3dc;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px; 
+            font-family: 'Germania One', serif;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #1e3a5f; }
         button.danger { background: #d32f2f; }
-        textarea { width: 100%; padding: 12px; border: 2px solid rgba(30,58,95,0.3); border-radius: 5px; 
-                   font-family: 'Sarabun', sans-serif; margin: 10px 0; min-height: 100px; }
-        .result { background: rgba(30,58,95,0.6); color: white; padding: 15px; border-radius: 5px; 
-                  margin-top: 15px; white-space: pre-wrap; }
-        .result.ok { background: var(--color-highlight); color: var(--color-dark); }
-        .result.error { background: #d32f2f; }
+        button.danger:hover { background: #b71c1c; }
+        textarea { 
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(30,58,95,0.3);
+            border-radius: 5px; 
+            font-family: 'Sarabun', sans-serif;
+            margin: 10px 0;
+            min-height: 100px;
+            box-sizing: border-box;
+        }
+        .result { 
+            background: rgba(30,58,95,0.6);
+            color: white;
+            padding: 15px;
+            border-radius: 5px; 
+            margin-top: 15px;
+            white-space: pre-wrap;
+        }
+        .result.ok { background: #8FDC3E; color: #1e3a5f; }
+        .result.error { background: #d32f2f; color: white; }
         .hidden { display: none; }
+        h1 {
+            font-family: 'Germania One', serif;
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .page-header {
+            background: rgba(240, 248, 255, 1);
+            border-bottom: 4px solid #1e3a5f;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .page-header a {
+            color: #1e3a5f;
+            font-family: 'Sarabun', sans-serif;
+            text-decoration: none;
+        }
+        .page-header img {
+            height: 50px;
+        }
     </style>
 </head>
 <body>
-    <div class="page-content">
-        <div class="page-header">
-            <div style="max-width: 1024px; width: 100%; padding: 0 20px; display: flex; align-items: center; justify-content: space-between; height: 100%;">
-                <a href="index.html"><img src="images/new_logo.svg" alt="Quest of Life" style="height: 50px;"></a>
-                <a href="index.html" style="color: var(--color-dark); font-family: 'Sarabun', sans-serif; text-decoration: none;">← Back</a>
-            </div>
-        </div>
-        <div class="page-body theme-blue">
-            <div class="test-container">
-                <h1 style="font-family: 'Germania One', serif; font-size: 48px; margin-bottom: 10px; text-align: center;">API Test</h1>
-                <div id="status" class="status loading">⏳ Checking session...</div>
+    <div class="page-header">
+        <a href="index.html"><img src="images/new_logo.svg" alt="Quest of Life"></a>
+        <a href="index.html">← Back</a>
+    </div>
+    
+    <div class="test-container">
+        <h1>API Test</h1>
+        <div id="status" class="status loading">⏳ Checking session...</div>
 
                 <div id="loginSection" class="section hidden">
                     <h2>Login Required</h2>
@@ -69,7 +141,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <script>
         const API_BASE = 'https://p01--qol-build-andtest--w7p9sqwpdrm4.code.run';
